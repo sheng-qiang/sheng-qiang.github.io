@@ -9,12 +9,32 @@
 
 <url>
   <loc>https://sheng-qiang.github.io/</loc>
-  <lastmod>2021-02-05T15:35:00+00:00</lastmod>
+  <lastmod>2023-01-27T13:59:21+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://sheng-qiang.github.io/data/CV_QiangSheng.pdf</loc>
-  <lastmod>2021-02-05T15:35:00+00:00</lastmod>
+  <lastmod>2023-01-27T13:59:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sheng-qiang.github.io/news.html</loc>
+  <lastmod>2023-01-27T13:59:21+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://sheng-qiang.github.io/data/NEP-Poster.pdf</loc>
+  <lastmod>2023-01-27T13:59:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sheng-qiang.github.io/data/Pref-FEND-Poster.pdf</loc>
+  <lastmod>2023-01-27T13:59:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sheng-qiang.github.io/data/MTM-Poster.pdf</loc>
+  <lastmod>2023-01-27T13:59:21+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
