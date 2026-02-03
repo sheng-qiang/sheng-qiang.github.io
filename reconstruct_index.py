@@ -161,25 +161,19 @@ def process_tutorials(html):
 
 # --- Execution ---
 
-# 1. Process News and Highlights from Current Index
-# Extract raw news section content
-raw_news = extract_section(current_html, '<section id="news">', '</section>')
+# 1. Highlights from Original
+def process_highlights(html):
+    match = re.search(r'<div style="background-color: #F3F7FC!important;padding: 14px;">(.*?)</div>', html, re.DOTALL)
+    if match:
+        content = match.group(1).strip()
+        return f'<section id="highlights"><div style="background-color: #F3F7FC; padding: 14px; margin-bottom: 20px;">{content}</div></section>'
+    return ''
 
-# Split Highlight and News
-# Find the highlights box
-highlights_match = re.search(r'<div class="news-box">(.*?)</div>', raw_news, re.DOTALL)
-if highlights_match:
-    highlights_content = highlights_match.group(1)
-    # Remove it from raw_news
-    news_list_content = raw_news.replace(highlights_match.group(0), '')
-    
-    # Construct sections
-    # Highlight above News
-    highlights_section = f'<section id="highlights"><div class="news-box">{highlights_content}</div></section>'
-    news_section = f'<section id="news">{news_list_content}</section>'
-else:
-    highlights_section = ''
-    news_section = f'<section id="news">{raw_news}</section>'
+highlights_section = process_highlights(original_html)
+
+# 2. News from Current
+raw_news = extract_section(current_html, '<section id="news">', '</section>')
+news_section = f'<section id="news">{raw_news}</section>'
 
 
 # 2. Intro Section and Header Links
