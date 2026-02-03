@@ -1,0 +1,5 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="512" height="512" rx="256" fill="#1772d0"/>
+<path d="M256 360C313.438 360 360 313.438 360 256C360 198.562 313.438 152 256 152C198.562 152 152 198.562 152 256C152 313.438 198.562 360 256 360Z" fill="#e37222" fill-opacity="0.2"/>
+<text x="50%" y="50%" dy=".35em" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="240" fill="white">QS</text>
+</svg>

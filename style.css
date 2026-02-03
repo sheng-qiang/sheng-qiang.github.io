@@ -1,0 +1,283 @@
+:root {
+  --primary-color: #1772d0;
+  --accent-color: #e37222;
+  --text-color: #333;
+  --text-light: #666;
+  --bg-color: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --border-color: #e1e4e8;
+  --font-main: 'Lato', Verdana, Helvetica, sans-serif;
+  --max-width: 960px;
+  --spacing-sm: 6px;
+  --spacing-md: 12px;
+  --spacing-lg: 18px;
+  --spacing-xl: 32px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  font-size: 16px;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+a.black {
+  color: var(--text-color);
+}
+
+a.black:hover {
+  color: var(--primary-color);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+/* Header / Intro */
+.intro-section {
+  padding: var(--spacing-xl) 0;
+  display: flex;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+.profile-photo {
+  flex-shrink: 0;
+  width: 200px;
+  height: 200px;
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.intro-text {
+  flex-grow: 1;
+}
+
+.name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-color);
+}
+
+.intro-desc {
+  margin-bottom: var(--spacing-md);
+}
+
+.contact-links {
+  margin-top: var(--spacing-md);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  font-size: 0.95rem;
+}
+
+/* Sections */
+section {
+  padding: var(--spacing-md) 0;
+  margin-bottom: var(--spacing-md);
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: var(--spacing-md);
+  border-bottom: 2px solid var(--bg-secondary);
+  padding-bottom: var(--spacing-sm);
+}
+
+/* Legacy Tags Support */
+heading {
+  font-family: var(--font-main);
+  font-size: 22px;
+  color: var(--accent-color);
+  display: block;
+  margin-bottom: var(--spacing-md);
+  font-weight: bold;
+}
+
+subheading,
+.subheading {
+  font-family: var(--font-main);
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--accent-color); /* Changed to accent color to match original */
+  display: block;
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  font-weight: 600;
+}
+
+papertitle {
+  font-family: var(--font-main);
+  font-size: 16px;
+  font-weight: bold;
+  display: inline; /* Keep inline as in original context it might be used that way */
+}
+
+name {
+  font-family: var(--font-main);
+  font-size: 32px;
+  font-weight: bold;
+  display: block;
+}
+
+/* Helper Classes */
+.news-box {
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.news-list {
+  list-style: none;
+}
+
+.news-item {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: 4px;
+  align-items: baseline;
+}
+
+.news-date {
+  font-weight: 600;
+  width: 150px; /* Fixed width for alignment */
+  flex-shrink: 0;
+  color: var(--text-light);
+}
+
+.news-content {
+  flex-grow: 1;
+}
+
+/* Publications */
+.publication-item {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-sm); /* Compact spacing */
+}
+
+.pub-content {
+  flex-grow: 1;
+  line-height: 1.35; /* Smaller line height for inner content */
+}
+
+/* Original Spans */
+span.highlight {
+  background-color: #ffffd0;
+}
+
+span.artifact {
+  color: #6cb41b;
+  padding: 1px;
+}
+
+span.underline {
+  border-bottom: 1px solid black;
+  padding-bottom: 1px;
+}
+
+span.tag {
+  color: #FFFFFF;
+  background-color: #0076df; /* Original blue */
+  padding: 1px 5px 2px 5px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  vertical-align: middle;
+  margin-right: 6px;
+  display: inline-block;
+}
+
+span.tldr {
+  color: #555555;
+  display: block;
+  margin-top: 4px;
+  font-size: 0.9rem;
+}
+
+em.highlight {
+  color: var(--accent-color);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: var(--spacing-xl) 0;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border-color);
+  margin-top: var(--spacing-xl);
+}
+
+.footer {
+  font-family: var(--font-main);
+  font-size: 14px;
+  opacity: 0.75;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--spacing-lg) 0;
+  }
+
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .contact-links {
+    justify-content: center;
+    gap: var(--spacing-sm);
+  }
+  
+  .news-item {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .publication-item {
+    flex-direction: column;
+  }
+}
+.service-item {
+  margin-bottom: 12px;
+}
+
+.service-item h4 {
+  margin-bottom: 4px;
+  color: var(--accent-color);
+}

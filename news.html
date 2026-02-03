@@ -1,549 +1,277 @@
-<!--
- * @Author: Jon Barron
- * @Date: 2019-05-11 22:15:22
- * @Editors: whyisyoung
- * @EditTime: 2020-10-23 10:57:25
- * @LastEditors:sheng-qiang
- * @LastEditTime: 2021-02-05 22:39:00
- -->
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta name=viewport content="width=device-width">
-  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
-  <meta name="google-site-verification" content="p7SNRHPF7y83Q-nNBLkrxFhAAosW2t40unwTxByZ0vo" />
-  <style type="text/css">
-    /* Color scheme stolen from Sergey Karayev */
-
-    a {
-      color: #1772d0;
-      /* color: #07889b; */
-      text-decoration: none;
-    }
-   
-    a.black {
-      color: #000000;
-      /* color: #07889b; */
-      text-decoration: none;
-    }
-
-    a:focus,
-    a:hover {
-      color: #e37222; /* #f09228; */
-      text-decoration: none;
-    }
-
-    body,
-    td,
-    th,
-    tr,
-    p,
-    a {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 16px
-    }
-
-    strong {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 16px;
-    }
-
-    heading {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 22px;
-      color: #e37222;
-    }
-
-    subheading {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 18px;
-      font-style:italic;
-      color: #e37222;
-    }
-
-    papertitle {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 16px;
-      font-weight: bold;
-    }
-
-    name {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 32px;
-    }
-
-    .footer {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 14px;
-      opacity: 0.75;
-      color: #777;
-    }
-
-    .one {
-      width: 160px;
-      height: 160px;
-      position: relative;
-    }
-
-    .two {
-      width: 160px;
-      height: 160px;
-      position: absolute;
-      transition: opacity .2s ease-in-out;
-      -moz-transition: opacity .2s ease-in-out;
-      -webkit-transition: opacity .2s ease-in-out;
-    }
-
-    .fade {
-      transition: opacity .2s ease-in-out;
-      -moz-transition: opacity .2s ease-in-out;
-      -webkit-transition: opacity .2s ease-in-out;
-    }
-
-    span.highlight {
-      background-color: #ffffd0;
-    }
-
-    span.artifact {
-      color:#6cb41b;
-      padding: 1px;
-    }
-
-    span.underline {
-      border-bottom:1px solid black;
-      padding-bottom:1px;
-    }
-
-    span.tldr {
-      color: #555555;
-    }
-
-    em.highlight {
-      color: #e37222;
-    }
-  </style>
-  <link rel="icon" type="image/png" href="images/sq-icon.png">
-  <title>News - Qiang Sheng's Homepage</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - Qiang Sheng's Homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="images/sq-icon.svg">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Analytics -->
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </head>
-
 <body>
-  <table width="960" border="0" align="center" cellspacing="0" cellpadding="0">
-    <tr>
-      <td>
-        <!-- News Begin -->
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="12">
-          <tr>
-            <td>
-              <heading>News</heading>
-            </td>
-          </tr>
-        </table>
-        <table width="100%" align="center" border="0" cellpadding="12" style="table-layout:fixed;">
-          <colgroup>
-            <col span="1" style="width: 23%;">
-            <col span="1" style="width: 77%;">
-          </colgroup>
-           <tr>
-            <td valign="center">
-              7/2024
-            </td>
-            <td valign="center">
-              One co-authored paper on Generated Comments Enhanced Fake News Det. got accepted by CIKM 2024.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              7/2024
-            </td>
-            <td valign="center">
-              One co-authored paper on Short Video Fake News Det. got accepted by MM 2024.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              7/2024
-            </td>
-            <td valign="center">
-              Will co-present <a href="https://sigir-2024.github.io/attend_Tutorials.html#tut5">a tutorial</a> about Preventing and Detecting LLM-generated Misinformation at SIGIR 2024. See you in D.C.!
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              4/2024
-            </td>
-            <td valign="center">
-              Two co-authored papers got accepted by IJCAI 2024.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              2/2024
-            </td>
-            <td valign="center">
-              Recognized as a Great Reviewer in the October 2023 Cycle of ARR.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              1/2024
-            </td>
-            <td valign="center">
-              Invited to serve as an Area Chair for MM 2024.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              1/2024
-            </td>
-            <td valign="center">
-              Invited to serve as a PC member for KDD 2024.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              12/2023
-            </td>
-            <td valign="center">
-              Invited to serve as a PC member for IJCAI 2024.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              12/2023
-            </td>
-            <td valign="center">
-              One co-authored paper on LLM for Fake News Det. got accepted by AAAI 2024.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              12/2023
-            </td>
-            <td valign="center">
-              Invited to serve as a PC member for SIGIR 2024.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              10/2023
-            </td>
-            <td valign="center">
-              One co-authored position paper on AIGC safety was released by Communications of the CCF.
-            </td>
-           </tr>
-            <tr>
-            <td valign="center">
-              09/2023
-            </td>
-            <td valign="center">
-              Invited to serve as a reviewer for TheWebConf (WWW) 2024.
-            </td>
-           </tr>
-            <tr>
-            <td valign="center">
-              09/2023
-            </td>
-            <td valign="center">
-              Invited to serve as a PC member for SDM 2024.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              07/2023
-            </td>
-            <td valign="center">
-              One co-authored survey paper on Misinformation Video Detection got accepted by ACM MM 2023.
-            </td>
-           </tr>
-            <tr>
-            <td valign="center">
-              07/2023
-            </td>
-            <td valign="center">
-              Invited to serve as a PC member for AAAI 2024.
-            </td>
-           </tr>
-            <tr>
-            <td valign="center">
-              06/2023
-            </td>
-            <td valign="center">
-              Invited to serve as a reviewer for EMNLP 2023.
-            </td>
-           </tr>
-            <tr>
-            <td valign="center">
-              06/2023
-            </td>
-            <td valign="center">
-              Will give a talk at the Illinois Institute of Technology.
-            </td>
-           </tr>
-            <tr>
-            <td valign="center">
-              05/2023
-            </td>
-            <td valign="center">
-              Invited to serve as a PC member for CIKM 2023.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              05/2023
-            </td>
-            <td valign="center">
-              One co-authored paper got accepted by ACL 2023.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              05/2023
-            </td>
-            <td valign="center">
-              Invited to serve as a reviewer for MM 2023.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              03/2023
-            </td>
-            <td valign="center">
-              Invited to serve as a PC member for ECML-PKDD 2023.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              02/2023
-            </td>
-            <td valign="center">
-              Invited to serve as a reviewer for KDD 2023.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              01/2023
-            </td>
-            <td valign="center">
-              Invited to serve as a PC member for SIGIR 2023.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              01/2023
-            </td>
-            <td valign="center">
-              Invited to serve as a PC member for IJCAI 2023.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              12/2022
-            </td>
-            <td valign="center">
-              Will give a talk on real-world fake news detection at Tsinghua University.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              12/2022
-            </td>
-            <td valign="center">
-              Will give a talk on research views of NLP applications at CSSNLP 2022.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              12/2022
-            </td>
-            <td valign="center">
-                Invited to serve as a reviewer for ACL 2023.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              10/2022
-            </td>
-            <td valign="center">
-                Invited to serve as a reviewer for EACL 2023.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              10/2022
-            </td>
-            <td valign="center">
-                Invited to serve as a PC Member for TheWebConf (WWW) 2023.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              08/2022
-            </td>
-            <td valign="center">
-                One co-authored paper got accepted by COLING 2022.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              07/2022
-            </td>
-            <td valign="center">
-                Invited to serve as a PC Member for AAAI 2023.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              07/2022
-            </td>
-            <td valign="center">
-                Recognized as the  <a class="black" href="https://aclanthology.org/2022.naacl-main.0.pdf">Outstanding Reviewer</a> (81/2824) by NAACL 2022 Program Committee.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              06/2022
-            </td>
-            <td valign="center">
-                Invited to serve as a Reviewer for EMNLP 2022.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              06/2022
-            </td>
-            <td valign="center">
-                One co-authored paper got accepted by IEEE TKDE.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              04/2022
-            </td>
-            <td valign="center">
-                Will give a spotlight presentation on our ACL 2022 work at the <a href="https://event.baai.ac.cn/activities/385">AIS 2022</a>.
-            </td>
-           </tr>
-            <tr>
-            <td valign="center">
-              04/2022
-            </td>
-            <td valign="center">
-                One first-authored paper got accepted by Information Processing and Management.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              04/2022
-            </td>
-            <td valign="center">
-                Will give talks on <a href="#ACL2022">our ACL 2022 work</a> at the <a href="https://mp.weixin.qq.com/s/h07yRc46bRkDvmrtXvpYOQ">BUAFAI 2022</a> and <a href="https://mp.weixin.qq.com/s/s3tfoLZdYW_K2lq_yYejtA">AI TIME Live</a>.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              04/2022
-            </td>
-            <td valign="center">
-                One co-authored paper got accepted by SIGIR 2022.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              02/2022
-            </td>
-            <td valign="center">
-                One first-authored paper got accepted by ACL 2022.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              12/2021
-            </td>
-            <td valign="center">
-                One co-authored paper got accepted by AAAI 2022.
-            </td>
-           </tr>
-           <tr>
-            <td valign="center">
-              10/2021
-            </td>
-            <td valign="center">
-                Invited to serve as a Reviewer for ACL Rolling Review.
-            </td>
-          </tr>
-           <tr>
-            <td valign="center">
-              09/2021
-            </td>
-            <td valign="center">
-                Served as a PC Member for AAAI 2022.
-            </td>
-          </tr>
-          <tr>
-            <td valign="center">
-              08/2021
-            </td>
-            <td valign="center">
-                One co-authored paper got accepted by ACM MM 2021 Industrial Track.
-            </td>
-          </tr>
-          <tr>
-            <td valign="center">
-              08/2021
-            </td>
-            <td valign="center">
-                One co-first-authored paper got accepted by ACM CIKM 2021.
-            </td>
-          </tr>
-          <tr>
-            <td valign="center">
-              06/2021
-            </td>
-            <td valign="center">
-                Served as a reviewer for EMNLP 2021.
-            </td>
-          </tr>
-          <tr>
-            <td valign="center">
-              05/2021
-            </td>
-            <td valign="center">
-                One first-authored paper got accepted by ACL-IJCNLP 2021.
-            </td>
-          </tr>
-          <tr>
-            <td valign="center">
-              01/2021
-            </td>
-            <td valign="center">
-                One co-authored paper got accepted by TheWebConf 2021.
-            </td>
-          </tr>
-          <tr>
-            <td valign="center">
-              11/2020
-            </td>
-            <td valign="center">
-              One co-authored Chinese paper got accpeted by Journal of Computer Research and Development.
-            </td>
-          </tr>
-          <tr>
-            <td valign="center">
-              04/2020
-            </td>
-            <td valign="center">
-              One co-authored paper got accepted by ACL 2020.
-            </td>
-          </tr>
-        </table>
-        <!-- News End -->
-      </td>
-    </tr>
-  </table>
-</body>
+    <div class="container">
+        <!-- Header -->
+        <header class="intro-section" style="padding: 24px 0; justify-content: space-between;">
+             <div style="display: flex; align-items: center; gap: 16px;">
+                 <a href="index.html" style="display: block; width: 50px; height: 50px;">
+                     <img src="images/sq-icon.svg" alt="SQ Icon" style="width: 100%; height: 100%;">
+                 </a>
+                 <h1 class="name" style="font-size: 1.5rem; margin: 0;">Qiang Sheng's News</h1>
+             </div>
+             <a href="index.html" class="back-link" style="font-weight: 600;">&larr; Back to Home</a>
+        </header>
 
+        <!-- News Section -->
+        <section class="section">
+             <div class="news-list">
+                 <div class="news-item">
+                    <span class="news-date">09/2025</span>
+                    <span class="news-content">One co-authored paper got accepted by AAAI 2026.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">09/2025</span>
+                    <span class="news-content">One co-authored paper got accepted by NeurIPS 2025.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">08/2025</span>
+                    <span class="news-content">Two co-authored papers got accepted by EMNLP 2025 Main/Findings.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">08/2025</span>
+                    <span class="news-content">Two co-authored papers on fake news detection got accepted by CIKM 2025.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">07/2025</span>
+                    <span class="news-content">Received the Best PC Member Award (among 20 awardees) at SIGIR 2025.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">06/2025</span>
+                    <span class="news-content">Will present our recent work on fake news detection at YSSNLP 2025.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">02/2025</span>
+                    <span class="news-content">Will serve as an Area Chair and co-offer a tutorial named <b>Combating Online Misinformation Videos: Characterization, Detection, and Prevention</b> at MM 2025. See you in Dublin!</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">10/2024</span>
+                    <span class="news-content">Recognized as an <a href="https://dl.acm.org/action/showFmPdf?doi=10.1145%2F3664647">Outstanding Area Chair</a> at MM 2024.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">10/2024</span>
+                    <span class="news-content">Will introduce our latest works on LLM-driven misinformation detection at <a href="https://mp.weixin.qq.com/s/LHkiPb_xulmXQlgMnL780g">SMP 2024</a>.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">07/2024</span>
+                    <span class="news-content">One co-authored paper on Generated Comments Enhanced Fake News Det. got accepted by CIKM 2024.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">07/2024</span>
+                    <span class="news-content">One co-authored paper on Short Video Fake News Det. got accepted by MM 2024.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">07/2024</span>
+                    <span class="news-content">Will co-present <a href="https://sigir-2024.github.io/attend_Tutorials.html#tut5">a tutorial</a> about Preventing and Detecting LLM-generated Misinformation at SIGIR 2024. See you in D.C.!</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">04/2024</span>
+                    <span class="news-content">Two co-authored papers got accepted by IJCAI 2024.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">02/2024</span>
+                    <span class="news-content">Recognized as a Great Reviewer in the October 2023 Cycle of ARR.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">01/2024</span>
+                    <span class="news-content">Invited to serve as an Area Chair for MM 2024.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">01/2024</span>
+                    <span class="news-content">Invited to serve as a PC member for KDD 2024.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">12/2023</span>
+                    <span class="news-content">Invited to serve as a PC member for IJCAI 2024.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">12/2023</span>
+                    <span class="news-content">One co-authored paper on LLM for Fake News Det. got accepted by AAAI 2024.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">12/2023</span>
+                    <span class="news-content">Invited to serve as a PC member for SIGIR 2024.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">10/2023</span>
+                    <span class="news-content">One co-authored position paper on AIGC safety was released by Communications of the CCF.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">09/2023</span>
+                    <span class="news-content">Invited to serve as a reviewer for TheWebConf (WWW) 2024.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">09/2023</span>
+                    <span class="news-content">Invited to serve as a PC member for SDM 2024.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">07/2023</span>
+                    <span class="news-content">One co-authored survey paper on Misinformation Video Detection got accepted by ACM MM 2023.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">07/2023</span>
+                    <span class="news-content">Invited to serve as a PC member for AAAI 2024.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">06/2023</span>
+                    <span class="news-content">Invited to serve as a reviewer for EMNLP 2023.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">06/2023</span>
+                    <span class="news-content">Will give a talk at the Illinois Institute of Technology.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">05/2023</span>
+                    <span class="news-content">Invited to serve as a PC member for CIKM 2023.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">05/2023</span>
+                    <span class="news-content">One co-authored paper got accepted by ACL 2023.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">05/2023</span>
+                    <span class="news-content">Invited to serve as a reviewer for MM 2023.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">03/2023</span>
+                    <span class="news-content">Invited to serve as a PC member for ECML-PKDD 2023.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">02/2023</span>
+                    <span class="news-content">Invited to serve as a reviewer for KDD 2023.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">01/2023</span>
+                    <span class="news-content">Invited to serve as a PC member for SIGIR 2023.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">01/2023</span>
+                    <span class="news-content">Invited to serve as a PC member for IJCAI 2023.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">12/2022</span>
+                    <span class="news-content">Will give a talk on real-world fake news detection at Tsinghua University.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">12/2022</span>
+                    <span class="news-content">Will give a talk on research views of NLP applications at CSSNLP 2022.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">12/2022</span>
+                    <span class="news-content">Invited to serve as a reviewer for ACL 2023.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">10/2022</span>
+                    <span class="news-content">Invited to serve as a reviewer for EACL 2023.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">10/2022</span>
+                    <span class="news-content">Invited to serve as a PC Member for TheWebConf (WWW) 2023.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">08/2022</span>
+                    <span class="news-content">One co-authored paper got accepted by COLING 2022.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">07/2022</span>
+                    <span class="news-content">Invited to serve as a PC Member for AAAI 2023.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">07/2022</span>
+                    <span class="news-content">Recognized as the  <a class="black" href="https://aclanthology.org/2022.naacl-main.0.pdf">Outstanding Reviewer</a> (81/2824) by NAACL 2022 Program Committee.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">06/2022</span>
+                    <span class="news-content">Invited to serve as a Reviewer for EMNLP 2022.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">06/2022</span>
+                    <span class="news-content">One co-authored paper got accepted by IEEE TKDE.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">04/2022</span>
+                    <span class="news-content">Will give a spotlight presentation on our ACL 2022 work at the <a href="https://event.baai.ac.cn/activities/385">AIS 2022</a>.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">04/2022</span>
+                    <span class="news-content">One first-authored paper got accepted by Information Processing and Management.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">04/2022</span>
+                    <span class="news-content">Will give talks on <a href="index.html#ACL2022">our ACL 2022 work</a> at the <a href="https://mp.weixin.qq.com/s/h07yRc46bRkDvmrtXvpYOQ">BUAFAI 2022</a> and <a href="https://mp.weixin.qq.com/s/s3tfoLZdYW_K2lq_yYejtA">AI TIME Live</a>.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">04/2022</span>
+                    <span class="news-content">One co-authored paper got accepted by SIGIR 2022.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">02/2022</span>
+                    <span class="news-content">One first-authored paper got accepted by ACL 2022.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">12/2021</span>
+                    <span class="news-content">One co-authored paper got accepted by AAAI 2022.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">10/2021</span>
+                    <span class="news-content">Invited to serve as a Reviewer for ACL Rolling Review.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">09/2021</span>
+                    <span class="news-content">Served as a PC Member for AAAI 2022.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">08/2021</span>
+                    <span class="news-content">One co-authored paper got accepted by ACM MM 2021 Industrial Track.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">08/2021</span>
+                    <span class="news-content">One co-first-authored paper got accepted by ACM CIKM 2021.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">06/2021</span>
+                    <span class="news-content">Served as a reviewer for EMNLP 2021.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">05/2021</span>
+                    <span class="news-content">One first-authored paper got accepted by ACL-IJCNLP 2021.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">01/2021</span>
+                    <span class="news-content">One co-authored paper got accepted by TheWebConf 2021.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">11/2020</span>
+                    <span class="news-content">One co-authored Chinese paper got accpeted by Journal of Computer Research and Development.</span>
+                 </div>
+                 <div class="news-item">
+                    <span class="news-date">04/2020</span>
+                    <span class="news-content">One co-authored paper got accepted by ACL 2020.</span>
+                 </div>
+             </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>
+                Design based on <a href="https://jonbarron.info/">Jon Barron</a>. 
+                Last updated: <script>document.write(new Date().toLocaleDateString())</script>.
+                <span id="busuanzi_container_site_pv">#Visit: <span id="busuanzi_value_site_pv"></span></span>
+            </p>
+        </footer>
+    </div>
+</body>
 </html>
