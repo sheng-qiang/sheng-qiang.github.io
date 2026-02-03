@@ -8,6 +8,226 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="images/sq-icon.svg">
   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script>
+    const bibtexData = {"TVCG2026": "@article{mi2026interactive,\n  title={Interactive Visual Assessment for Text-to-Image Generation Models},\n  author={Mi, Xiaoyue and Tang, Fan and Cao, Juan and Sheng, Qiang and Huang, Ziyao and Li, Peng and Liu, Yang and Lee, Tong-Yee},\n  journal={IEEE Transactions on Visualization and Computer Graphics},\n  year={2026},\n  publisher={IEEE}\n}", "EACL2026": "@inproceedings{pang2026tailoring,\n  title={Tailoring Rumor Debunking to You: Diversifying Chinese Rumor-Debunking Passages with an LLM-Driven Simulated Feedback-Enhanced Framework},\n  author={Pang, Xinle and Wang, Danding and Sheng, Qiang and Sun, Yifan and Hu, Beizhe and Cao, Juan},\n  booktitle={Proceedings of the 19th Conference of the European Chapter of the Association for Computational Linguistics},\n  year={2026}\n}", "AAAI2026": "@inproceedings{wang2026reasoning,\n  title={Reasoning About the Unsaid: Misinformation Detection with Omission-Aware Graph Inference},\n  author={Wang, Zhengjia and Wang, Danding and Sheng, Qiang and Wu, Jiaying and Cao, Juan},\n  booktitle={Proceedings of the 40th AAAI Conference on Artificial Intelligence},\n  year={2026}\n}", "NeurIPS2025": "@inproceedings{li2025judgment,\n  title={From Judgment to Interference: Early Stopping LLM Harmful Outputs via Streaming Content Monitoring},\n  author={Li, Yang and Sheng, Qiang and Yang, Yehan and Zhang, Xueyao and Cao, Juan},\n  booktitle={Proceedings of the 39th Annual Conference on Neural Information Processing Systems},\n  year={2025}\n}", "EMNLP2025Main": "@inproceedings{wu2025staircase,\n  title={The Staircase of Ethics: Probing LLM Value Priorities through Multi-Step Induction to Complex Moral Dilemmas},\n  author={Wu, Ya and Sheng, Qiang and Wang, Danding and Yang, Guang and Sun, Yifan and Wang, Zhengjia and Bu, Yuyan and Cao, Juan},\n  booktitle={Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing},\n  year={2025}\n}", "EMNLP2025Findings": "@inproceedings{liu2025forewarned,\n  title={Forewarned is Forearmed: Pre-Synthesizing Jailbreak-like Instructions to Enhance LLM Safety Guardrail to Potential Attacks},\n  author={Liu, Sheng and Sheng, Qiang and Wang, Danding and Li, Yang and Yang, Guang and Cao, Juan},\n  booktitle={Findings of the Association for Computational Linguistics: EMNLP 2025},\n  year={2025}\n}", "CIKM2025full": "@inproceedings{wang2025bridging,\n  title={Bridging Thoughts and Words: Graph-Based Intent-Semantic Joint Learning for Fake News Detection},\n  author={Wang, Zhengjia and Sheng, Qiang and Wang, Danding and Hu, Beizhe and Cao, Juan},\n  booktitle={Proceedings of the 34th ACM International Conference on Information and Knowledge Management},\n  year={2025}\n}", "CIKM2025short": "@inproceedings{bu2025enhancing,\n  title={Enhancing Fake News Video Detection via LLM-Driven Creative Process Simulation},\n  author={Bu, Yuyan and Sheng, Qiang and Cao, Juan and Wang, Shaofei and Qi, Peng and Shi, Yuhui and Hu, Beizhe},\n  booktitle={Proceedings of the 34th ACM International Conference on Information and Knowledge Management},\n  year={2025}\n}", "IPM2025": "@article{wang2025exploring,\n  title={Exploring News Intent and Its Application: A Theory-Driven Approach},\n  author={Wang, Zhengjia and Wang, Danding and Sheng, Qiang and Cao, Juan and Ma, Siyuan and Cheng, Haonan},\n  journal={Information Processing & Management},\n  year={2025}\n}", "ACL2025Findings": "@inproceedings{sun2025enhancing,\n  title={Enhancing the Comprehensibility of Text Explanations via Unsupervised Concept Discovery},\n  author={Sun, Yifan and Wang, Danding and Sheng, Qiang and Cao, Juan and Li, Jintao},\n  booktitle={Findings of the Association for Computational Linguistics: ACL 2025},\n  year={2025}\n}", "SIGIR2025": "@inproceedings{hu2025llm,\n  title={LLM-Generated Fake News Induces Truth Decay in News Ecosystem: A Case Study on Neural News Recommendation},\n  author={Hu, Beizhe and Sheng, Qiang and Cao, Juan and Li, Yang and Wang, Danding},\n  booktitle={Proceedings of The 48th International ACM SIGIR Conference on Research and Development in Information Retrieval},\n  year={2025}\n}", "CASB2025": "@article{cao2025challenges,\n  title={Challenges on Public Security System in AI Era},\n  author={Cao, Juan and Sheng, Qiang and Li, Guojie},\n  journal={Bulletin of Chinese Academy of Sciences},\n  year={2025}\n}", "FCS2025": "@article{nan2025exploiting,\n  title={Exploiting User Comments for Early Detection of Fake News Prior to Users' Commenting},\n  author={Nan, Qiong and Sheng, Qiang and Cao, Juan and Zhu, Yongchun and Wang, Danding and Yang, Guang and Li, Jintao},\n  journal={Frontiers of Computer Science},\n  year={2025}\n}", "CIKM2024": "@inproceedings{nan2024let,\n  title={Let Silence Speak: Enhancing Fake News Detection with Generated Comments from Large Language Models},\n  author={Nan, Qiong and Sheng, Qiang and Cao, Juan and Hu, Beizhe and Wang, Danding and Li, Jintao},\n  booktitle={Proceedings of the 33rd ACM International Conference on Information and Knowledge Management},\n  year={2024}\n}", "MM2024": "@inproceedings{bu2024fakingrecipe,\n  title={FakingRecipe: Detecting Fake News on Short Video Platforms from the Perspective of Creative Process},\n  author={Bu, Yuyan and Sheng, Qiang and Cao, Juan and Qi, Peng and Wang, Danding and Li, Jintao},\n  booktitle={Proceedings of the 32nd ACM International Conference on Multimedia},\n  year={2024}\n}", "IJCAI2024-1": "@inproceedings{shi2024ten,\n  title={Ten Words Only Still Help: Improving Black-Box AI-Generated Text Detection via Proxy-Guided Efficient Re-Sampling},\n  author={Shi, Yuhui and Sheng, Qiang and Cao, Juan and Mi, Hao and Hu, Beizhe and Wang, Danding},\n  booktitle={Proceedings of the 33rd International Joint Conference on Artificial Intelligence},\n  year={2024}\n}", "IJCAI2024-2": "@inproceedings{xue2024vision,\n  title={Vision-fused Attack: Advancing Aggressive and Stealthy Adversarial Text against Neural Machine Translation},\n  author={Xue, Yanni and Hao, Haojie and Wang, Jiakai and Sheng, Qiang and Tao, Renshuai and Liang, Yu and Feng, Pu and Liu, Xianglong},\n  booktitle={Proceedings of the 33rd International Joint Conference on Artificial Intelligence},\n  year={2024}\n}", "AAAI2024": "@inproceedings{hu2024bad,\n  title={Bad Actor, Good Advisor: Exploring the Role of Large Language Models in Fake News Detection},\n  author={Hu, Beizhe and Sheng, Qiang and Cao, Juan and Shi, Yuhui and Li, Yang and Wang, Danding and Qi, Peng},\n  booktitle={Proceedings of the 38th AAAI Conference on Artificial Intelligence},\n  year={2024}\n}", "CCCF2023": "@article{cao2023safety,\n  title={The Safety in the AIGC era: Techniques Make the World More Credible},\n  author={Cao, Juan and Sheng, Qiang},\n  journal={Communications of the China Computer Federation},\n  year={2023}\n}", "MM2023": "@inproceedings{bu2023combating,\n  title={Combating Online Misinformation Videos: Characterization, Detection, and Future Directions},\n  author={Bu, Yuyan and Sheng, Qiang and Cao, Juan and Qi, Peng and Wang, Danding and Li, Jintao},\n  booktitle={Proceedings of the 31st ACM International Conference on Multimedia},\n  year={2023}\n}"};
+
+    function copyBibtex(paperId) {
+        const bibtex = bibtexData[paperId];
+        if (bibtex) {
+            navigator.clipboard.writeText(bibtex).then(() => {
+                showNotification("BibTeX copied to clipboard!");
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                alert("Failed to copy BibTeX.");
+            });
+        } else {
+            alert("BibTeX not found for this paper.");
+        }
+    }
+
+    function showNotification(message) {
+        let notification = document.createElement('div');
+        notification.innerText = message;
+        notification.style.position = 'fixed';
+        notification.style.bottom = '20px';
+        notification.style.right = '20px';
+        notification.style.backgroundColor = '#333';
+        notification.style.color = '#fff';
+        notification.style.padding = '10px 20px';
+        notification.style.borderRadius = '5px';
+        notification.style.zIndex = '1000';
+        notification.style.opacity = '0';
+        notification.style.transition = 'opacity 0.5s';
+        document.body.appendChild(notification);
+
+        // Fade in
+        setTimeout(() => { notification.style.opacity = '1'; }, 10);
+
+        // Fade out and remove
+        setTimeout(() => {
+            notification.style.opacity = '0';
+            setTimeout(() => { document.body.removeChild(notification); }, 500);
+        }, 2000);
+    }
+</script>
+
+
+<script>
+    const bibtexData = {"TVCG2026": "@article{mi2026interactive,\n  title={Interactive Visual Assessment for Text-to-Image Generation Models},\n  author={Mi, Xiaoyue and Tang, Fan and Cao, Juan and Sheng, Qiang and Huang, Ziyao and Li, Peng and Liu, Yang and Lee, Tong-Yee},\n  journal={IEEE Transactions on Visualization and Computer Graphics},\n  year={2026},\n  publisher={IEEE}\n}", "EACL2026": "@inproceedings{pang2026tailoring,\n  title={Tailoring Rumor Debunking to You: Diversifying Chinese Rumor-Debunking Passages with an LLM-Driven Simulated Feedback-Enhanced Framework},\n  author={Pang, Xinle and Wang, Danding and Sheng, Qiang and Sun, Yifan and Hu, Beizhe and Cao, Juan},\n  booktitle={Proceedings of the 19th Conference of the European Chapter of the Association for Computational Linguistics},\n  year={2026}\n}", "AAAI2026": "@inproceedings{wang2026reasoning,\n  title={Reasoning About the Unsaid: Misinformation Detection with Omission-Aware Graph Inference},\n  author={Wang, Zhengjia and Wang, Danding and Sheng, Qiang and Wu, Jiaying and Cao, Juan},\n  booktitle={Proceedings of the 40th AAAI Conference on Artificial Intelligence},\n  year={2026}\n}", "NeurIPS2025": "@inproceedings{li2025judgment,\n  title={From Judgment to Interference: Early Stopping LLM Harmful Outputs via Streaming Content Monitoring},\n  author={Li, Yang and Sheng, Qiang and Yang, Yehan and Zhang, Xueyao and Cao, Juan},\n  booktitle={Proceedings of the 39th Annual Conference on Neural Information Processing Systems},\n  year={2025}\n}", "EMNLP2025Main": "@inproceedings{wu2025staircase,\n  title={The Staircase of Ethics: Probing LLM Value Priorities through Multi-Step Induction to Complex Moral Dilemmas},\n  author={Wu, Ya and Sheng, Qiang and Wang, Danding and Yang, Guang and Sun, Yifan and Wang, Zhengjia and Bu, Yuyan and Cao, Juan},\n  booktitle={Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing},\n  year={2025}\n}", "EMNLP2025Findings": "@inproceedings{liu2025forewarned,\n  title={Forewarned is Forearmed: Pre-Synthesizing Jailbreak-like Instructions to Enhance LLM Safety Guardrail to Potential Attacks},\n  author={Liu, Sheng and Sheng, Qiang and Wang, Danding and Li, Yang and Yang, Guang and Cao, Juan},\n  booktitle={Findings of the Association for Computational Linguistics: EMNLP 2025},\n  year={2025}\n}", "CIKM2025full": "@inproceedings{wang2025bridging,\n  title={Bridging Thoughts and Words: Graph-Based Intent-Semantic Joint Learning for Fake News Detection},\n  author={Wang, Zhengjia and Sheng, Qiang and Wang, Danding and Hu, Beizhe and Cao, Juan},\n  booktitle={Proceedings of the 34th ACM International Conference on Information and Knowledge Management},\n  year={2025}\n}", "CIKM2025short": "@inproceedings{bu2025enhancing,\n  title={Enhancing Fake News Video Detection via LLM-Driven Creative Process Simulation},\n  author={Bu, Yuyan and Sheng, Qiang and Cao, Juan and Wang, Shaofei and Qi, Peng and Shi, Yuhui and Hu, Beizhe},\n  booktitle={Proceedings of the 34th ACM International Conference on Information and Knowledge Management},\n  year={2025}\n}", "IPM2025": "@article{wang2025exploring,\n  title={Exploring News Intent and Its Application: A Theory-Driven Approach},\n  author={Wang, Zhengjia and Wang, Danding and Sheng, Qiang and Cao, Juan and Ma, Siyuan and Cheng, Haonan},\n  journal={Information Processing & Management},\n  year={2025}\n}", "ACL2025Findings": "@inproceedings{sun2025enhancing,\n  title={Enhancing the Comprehensibility of Text Explanations via Unsupervised Concept Discovery},\n  author={Sun, Yifan and Wang, Danding and Sheng, Qiang and Cao, Juan and Li, Jintao},\n  booktitle={Findings of the Association for Computational Linguistics: ACL 2025},\n  year={2025}\n}", "SIGIR2025": "@inproceedings{hu2025llm,\n  title={LLM-Generated Fake News Induces Truth Decay in News Ecosystem: A Case Study on Neural News Recommendation},\n  author={Hu, Beizhe and Sheng, Qiang and Cao, Juan and Li, Yang and Wang, Danding},\n  booktitle={Proceedings of The 48th International ACM SIGIR Conference on Research and Development in Information Retrieval},\n  year={2025}\n}", "CASB2025": "@article{cao2025challenges,\n  title={Challenges on Public Security System in AI Era},\n  author={Cao, Juan and Sheng, Qiang and Li, Guojie},\n  journal={Bulletin of Chinese Academy of Sciences},\n  year={2025}\n}", "FCS2025": "@article{nan2025exploiting,\n  title={Exploiting User Comments for Early Detection of Fake News Prior to Users' Commenting},\n  author={Nan, Qiong and Sheng, Qiang and Cao, Juan and Zhu, Yongchun and Wang, Danding and Yang, Guang and Li, Jintao},\n  journal={Frontiers of Computer Science},\n  year={2025}\n}", "CIKM2024": "@inproceedings{nan2024let,\n  title={Let Silence Speak: Enhancing Fake News Detection with Generated Comments from Large Language Models},\n  author={Nan, Qiong and Sheng, Qiang and Cao, Juan and Hu, Beizhe and Wang, Danding and Li, Jintao},\n  booktitle={Proceedings of the 33rd ACM International Conference on Information and Knowledge Management},\n  year={2024}\n}", "MM2024": "@inproceedings{bu2024fakingrecipe,\n  title={FakingRecipe: Detecting Fake News on Short Video Platforms from the Perspective of Creative Process},\n  author={Bu, Yuyan and Sheng, Qiang and Cao, Juan and Qi, Peng and Wang, Danding and Li, Jintao},\n  booktitle={Proceedings of the 32nd ACM International Conference on Multimedia},\n  year={2024}\n}", "IJCAI2024-1": "@inproceedings{shi2024ten,\n  title={Ten Words Only Still Help: Improving Black-Box AI-Generated Text Detection via Proxy-Guided Efficient Re-Sampling},\n  author={Shi, Yuhui and Sheng, Qiang and Cao, Juan and Mi, Hao and Hu, Beizhe and Wang, Danding},\n  booktitle={Proceedings of the 33rd International Joint Conference on Artificial Intelligence},\n  year={2024}\n}", "IJCAI2024-2": "@inproceedings{xue2024vision,\n  title={Vision-fused Attack: Advancing Aggressive and Stealthy Adversarial Text against Neural Machine Translation},\n  author={Xue, Yanni and Hao, Haojie and Wang, Jiakai and Sheng, Qiang and Tao, Renshuai and Liang, Yu and Feng, Pu and Liu, Xianglong},\n  booktitle={Proceedings of the 33rd International Joint Conference on Artificial Intelligence},\n  year={2024}\n}", "AAAI2024": "@inproceedings{hu2024bad,\n  title={Bad Actor, Good Advisor: Exploring the Role of Large Language Models in Fake News Detection},\n  author={Hu, Beizhe and Sheng, Qiang and Cao, Juan and Shi, Yuhui and Li, Yang and Wang, Danding and Qi, Peng},\n  booktitle={Proceedings of the 38th AAAI Conference on Artificial Intelligence},\n  year={2024}\n}", "CCCF2023": "@article{cao2023safety,\n  title={The Safety in the AIGC era: Techniques Make the World More Credible},\n  author={Cao, Juan and Sheng, Qiang},\n  journal={Communications of the China Computer Federation},\n  year={2023}\n}", "MM2023": "@inproceedings{bu2023combating,\n  title={Combating Online Misinformation Videos: Characterization, Detection, and Future Directions},\n  author={Bu, Yuyan and Sheng, Qiang and Cao, Juan and Qi, Peng and Wang, Danding and Li, Jintao},\n  booktitle={Proceedings of the 31st ACM International Conference on Multimedia},\n  year={2023}\n}"};
+
+    function copyBibtex(paperId) {
+        const bibtex = bibtexData[paperId];
+        if (bibtex) {
+            navigator.clipboard.writeText(bibtex).then(() => {
+                showNotification("BibTeX copied to clipboard!");
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                alert("Failed to copy BibTeX.");
+            });
+        } else {
+            alert("BibTeX not found for this paper.");
+        }
+    }
+
+    function showNotification(message) {
+        let notification = document.createElement('div');
+        notification.innerText = message;
+        notification.style.position = 'fixed';
+        notification.style.bottom = '20px';
+        notification.style.right = '20px';
+        notification.style.backgroundColor = '#333';
+        notification.style.color = '#fff';
+        notification.style.padding = '10px 20px';
+        notification.style.borderRadius = '5px';
+        notification.style.zIndex = '1000';
+        notification.style.opacity = '0';
+        notification.style.transition = 'opacity 0.5s';
+        document.body.appendChild(notification);
+
+        // Fade in
+        setTimeout(() => { notification.style.opacity = '1'; }, 10);
+
+        // Fade out and remove
+        setTimeout(() => {
+            notification.style.opacity = '0';
+            setTimeout(() => { document.body.removeChild(notification); }, 500);
+        }, 2000);
+    }
+</script>
+
+
+<script>
+    const bibtexData = {"TVCG2026": "@article{mi2026interactive,\n  title={Interactive Visual Assessment for Text-to-Image Generation Models},\n  author={Mi, Xiaoyue and Tang, Fan and Cao, Juan and Sheng, Qiang and Huang, Ziyao and Li, Peng and Liu, Yang and Lee, Tong-Yee},\n  journal={IEEE Transactions on Visualization and Computer Graphics},\n  year={2026},\n  publisher={IEEE}\n}", "EACL2026": "@inproceedings{pang2026tailoring,\n  title={Tailoring Rumor Debunking to You: Diversifying Chinese Rumor-Debunking Passages with an LLM-Driven Simulated Feedback-Enhanced Framework},\n  author={Pang, Xinle and Wang, Danding and Sheng, Qiang and Sun, Yifan and Hu, Beizhe and Cao, Juan},\n  booktitle={Proceedings of the 19th Conference of the European Chapter of the Association for Computational Linguistics},\n  year={2026}\n}", "AAAI2026": "@inproceedings{wang2026reasoning,\n  title={Reasoning About the Unsaid: Misinformation Detection with Omission-Aware Graph Inference},\n  author={Wang, Zhengjia and Wang, Danding and Sheng, Qiang and Wu, Jiaying and Cao, Juan},\n  booktitle={Proceedings of the 40th AAAI Conference on Artificial Intelligence},\n  year={2026}\n  doi={},\n  pages={}}", "NeurIPS2025": "@inproceedings{li2025judgment,\n  title={From Judgment to Interference: Early Stopping LLM Harmful Outputs via Streaming Content Monitoring},\n  author={Li, Yang and Sheng, Qiang and Yang, Yehan and Zhang, Xueyao and Cao, Juan},\n  booktitle={Proceedings of the 39th Annual Conference on Neural Information Processing Systems},\n  year={2025}\n}", "EMNLP2025Main": "@inproceedings{wu2025staircase,\n  title={The Staircase of Ethics: Probing LLM Value Priorities through Multi-Step Induction to Complex Moral Dilemmas},\n  author={Wu, Ya and Sheng, Qiang and Wang, Danding and Yang, Guang and Sun, Yifan and Wang, Zhengjia and Bu, Yuyan and Cao, Juan},\n  booktitle={Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing},\n  year={2025}\n}", "EMNLP2025Findings": "@inproceedings{liu2025forewarned,\n  title={Forewarned is Forearmed: Pre-Synthesizing Jailbreak-like Instructions to Enhance LLM Safety Guardrail to Potential Attacks},\n  author={Liu, Sheng and Sheng, Qiang and Wang, Danding and Li, Yang and Yang, Guang and Cao, Juan},\n  booktitle={Findings of the Association for Computational Linguistics: EMNLP 2025},\n  year={2025}\n}", "CIKM2025full": "@inproceedings{wang2025bridging,\n  title={Bridging Thoughts and Words: Graph-Based Intent-Semantic Joint Learning for Fake News Detection},\n  author={Wang, Zhengjia and Sheng, Qiang and Wang, Danding and Hu, Beizhe and Cao, Juan},\n  booktitle={Proceedings of the 34th ACM International Conference on Information and Knowledge Management},\n  year={2025}\n}", "CIKM2025short": "@inproceedings{bu2025enhancing,\n  title={Enhancing Fake News Video Detection via LLM-Driven Creative Process Simulation},\n  author={Bu, Yuyan and Sheng, Qiang and Cao, Juan and Wang, Shaofei and Qi, Peng and Shi, Yuhui and Hu, Beizhe},\n  booktitle={Proceedings of the 34th ACM International Conference on Information and Knowledge Management},\n  year={2025}\n}", "IPM2025": "@article{wang2025exploring,\n  title={Exploring News Intent and Its Application: A Theory-Driven Approach},\n  author={Wang, Zhengjia and Wang, Danding and Sheng, Qiang and Cao, Juan and Ma, Siyuan and Cheng, Haonan},\n  journal={Information Processing & Management},\n  year={2025}\n}", "ACL2025Findings": "@inproceedings{sun2025enhancing,\n  title={Enhancing the Comprehensibility of Text Explanations via Unsupervised Concept Discovery},\n  author={Sun, Yifan and Wang, Danding and Sheng, Qiang and Cao, Juan and Li, Jintao},\n  booktitle={Findings of the Association for Computational Linguistics: ACL 2025},\n  year={2025}\n}", "SIGIR2025": "@inproceedings{hu2025llm,\n  title={LLM-Generated Fake News Induces Truth Decay in News Ecosystem: A Case Study on Neural News Recommendation},\n  author={Hu, Beizhe and Sheng, Qiang and Cao, Juan and Li, Yang and Wang, Danding},\n  booktitle={Proceedings of The 48th International ACM SIGIR Conference on Research and Development in Information Retrieval},\n  year={2025}\n}", "CASB2025": "@article{cao2025challenges,\n  title={Challenges on Public Security System in AI Era},\n  author={Cao, Juan and Sheng, Qiang and Li, Guojie},\n  journal={Bulletin of Chinese Academy of Sciences},\n  year={2025}\n}", "FCS2025": "@article{nan2025exploiting,\n  title={Exploiting User Comments for Early Detection of Fake News Prior to Users' Commenting},\n  author={Nan, Qiong and Sheng, Qiang and Cao, Juan and Zhu, Yongchun and Wang, Danding and Yang, Guang and Li, Jintao},\n  journal={Frontiers of Computer Science},\n  year={2025}\n}", "CIKM2024": "@inproceedings{nan2024let,\n  title={Let Silence Speak: Enhancing Fake News Detection with Generated Comments from Large Language Models},\n  author={Nan, Qiong and Sheng, Qiang and Cao, Juan and Hu, Beizhe and Wang, Danding and Li, Jintao},\n  booktitle={Proceedings of the 33rd ACM International Conference on Information and Knowledge Management},\n  year={2024}\n}", "MM2024": "@inproceedings{bu2024fakingrecipe,\n  title={FakingRecipe: Detecting Fake News on Short Video Platforms from the Perspective of Creative Process},\n  author={Bu, Yuyan and Sheng, Qiang and Cao, Juan and Qi, Peng and Wang, Danding and Li, Jintao},\n  booktitle={Proceedings of the 32nd ACM International Conference on Multimedia},\n  year={2024}\n}", "IJCAI2024-1": "@inproceedings{shi2024ten,\n  title={Ten Words Only Still Help: Improving Black-Box AI-Generated Text Detection via Proxy-Guided Efficient Re-Sampling},\n  author={Shi, Yuhui and Sheng, Qiang and Cao, Juan and Mi, Hao and Hu, Beizhe and Wang, Danding},\n  booktitle={Proceedings of the 33rd International Joint Conference on Artificial Intelligence},\n  year={2024}\n}", "IJCAI2024-2": "@inproceedings{xue2024vision,\n  title={Vision-fused Attack: Advancing Aggressive and Stealthy Adversarial Text against Neural Machine Translation},\n  author={Xue, Yanni and Hao, Haojie and Wang, Jiakai and Sheng, Qiang and Tao, Renshuai and Liang, Yu and Feng, Pu and Liu, Xianglong},\n  booktitle={Proceedings of the 33rd International Joint Conference on Artificial Intelligence},\n  year={2024}\n}", "AAAI2024": "@inproceedings{hu2024bad,\n  title={Bad Actor, Good Advisor: Exploring the Role of Large Language Models in Fake News Detection},\n  author={Hu, Beizhe and Sheng, Qiang and Cao, Juan and Shi, Yuhui and Li, Yang and Wang, Danding and Qi, Peng},\n  booktitle={Proceedings of the 38th AAAI Conference on Artificial Intelligence},\n  year={2024}\n}", "CCCF2023": "@article{cao2023safety,\n  title={The Safety in the AIGC era: Techniques Make the World More Credible},\n  author={Cao, Juan and Sheng, Qiang},\n  journal={Communications of the China Computer Federation},\n  year={2023}\n}", "MM2023": "@inproceedings{bu2023combating,\n  title={Combating Online Misinformation Videos: Characterization, Detection, and Future Directions},\n  author={Bu, Yuyan and Sheng, Qiang and Cao, Juan and Qi, Peng and Wang, Danding and Li, Jintao},\n  booktitle={Proceedings of the 31st ACM International Conference on Multimedia},\n  year={2023}\n}"};
+
+    function copyBibtex(paperId) {
+        const bibtex = bibtexData[paperId];
+        if (bibtex) {
+            navigator.clipboard.writeText(bibtex).then(() => {
+                showNotification("BibTeX copied to clipboard!");
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                alert("Failed to copy BibTeX.");
+            });
+        } else {
+            alert("BibTeX not found for this paper.");
+        }
+    }
+
+    function showNotification(message) {
+        let notification = document.createElement('div');
+        notification.innerText = message;
+        notification.style.position = 'fixed';
+        notification.style.bottom = '20px';
+        notification.style.right = '20px';
+        notification.style.backgroundColor = '#333';
+        notification.style.color = '#fff';
+        notification.style.padding = '10px 20px';
+        notification.style.borderRadius = '5px';
+        notification.style.zIndex = '1000';
+        notification.style.opacity = '0';
+        notification.style.transition = 'opacity 0.5s';
+        document.body.appendChild(notification);
+
+        // Fade in
+        setTimeout(() => { notification.style.opacity = '1'; }, 10);
+
+        // Fade out and remove
+        setTimeout(() => {
+            notification.style.opacity = '0';
+            setTimeout(() => { document.body.removeChild(notification); }, 500);
+        }, 2000);
+    }
+</script>
+
+
+<script>
+    const bibtexData = {"TVCG2026": "@article{mi2026interactive,\n  title={Interactive Visual Assessment for Text-to-Image Generation Models},\n  author={Mi, Xiaoyue and Tang, Fan and Cao, Juan and Sheng, Qiang and Huang, Ziyao and Li, Peng and Liu, Yang and Lee, Tong-Yee},\n  journal={IEEE Transactions on Visualization and Computer Graphics},\n  year={2026},\n  publisher={IEEE}\n}", "EACL2026": "@inproceedings{pang2026tailoring,\n  title={Tailoring Rumor Debunking to You: Diversifying Chinese Rumor-Debunking Passages with an LLM-Driven Simulated Feedback-Enhanced Framework},\n  author={Pang, Xinle and Wang, Danding and Sheng, Qiang and Sun, Yifan and Hu, Beizhe and Cao, Juan},\n  booktitle={Proceedings of the 19th Conference of the European Chapter of the Association for Computational Linguistics},\n  year={2026}\n}", "AAAI2026": "@inproceedings{wang2026reasoning,\n  title={Reasoning About the Unsaid: Misinformation Detection with Omission-Aware Graph Inference},\n  author={Wang, Zhengjia and Wang, Danding and Sheng, Qiang and Wu, Jiaying and Cao, Juan},\n  booktitle={Proceedings of the 40th AAAI Conference on Artificial Intelligence},\n  year={2026}}", "NeurIPS2025": "@inproceedings{li2025judgment,\n  title={From Judgment to Interference: Early Stopping LLM Harmful Outputs via Streaming Content Monitoring},\n  author={Li, Yang and Sheng, Qiang and Yang, Yehan and Zhang, Xueyao and Cao, Juan},\n  booktitle={Proceedings of the 39th Annual Conference on Neural Information Processing Systems},\n  year={2025},\n  doi={10.48550/arXiv.2506.09996}\n}", "EMNLP2025Main": "@inproceedings{wu2025staircase,\n  title={The Staircase of Ethics: Probing LLM Value Priorities through Multi-Step Induction to Complex Moral Dilemmas},\n  author={Wu, Ya and Sheng, Qiang and Wang, Danding and Yang, Guang and Sun, Yifan and Wang, Zhengjia and Bu, Yuyan and Cao, Juan},\n  booktitle={Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing},\n  year={2025},\n  doi={10.18653/v1/2025.emnlp-main.806},\n  pages={15950--15970}}", "EMNLP2025Findings": "@inproceedings{liu2025forewarned,\n  title={Forewarned is Forearmed: Pre-Synthesizing Jailbreak-like Instructions to Enhance LLM Safety Guardrail to Potential Attacks},\n  author={Liu, Sheng and Sheng, Qiang and Wang, Danding and Li, Yang and Yang, Guang and Cao, Juan},\n  booktitle={Findings of the Association for Computational Linguistics: EMNLP 2025},\n  year={2025},\n  doi={10.48550/arXiv.2508.20038}\n}", "CIKM2025full": "@inproceedings{wang2025bridging,\n  title={Bridging Thoughts and Words: Graph-Based Intent-Semantic Joint Learning for Fake News Detection},\n  author={Wang, Zhengjia and Sheng, Qiang and Wang, Danding and Hu, Beizhe and Cao, Juan},\n  booktitle={Proceedings of the 34th ACM International Conference on Information and Knowledge Management},\n  year={2025},\n  doi={10.48550/arXiv.2509.01660}\n}", "CIKM2025short": "@inproceedings{bu2025enhancing,\n  title={Enhancing Fake News Video Detection via LLM-Driven Creative Process Simulation},\n  author={Bu, Yuyan and Sheng, Qiang and Cao, Juan and Wang, Shaofei and Qi, Peng and Shi, Yuhui and Hu, Beizhe},\n  booktitle={Proceedings of the 34th ACM International Conference on Information and Knowledge Management},\n  year={2025},\n  doi={10.1145/3746252.3760933}\n}", "IPM2025": "@article{wang2025exploring,\n  title={Exploring News Intent and Its Application: A Theory-Driven Approach},\n  author={Wang, Zhengjia and Wang, Danding and Sheng, Qiang and Cao, Juan and Ma, Siyuan and Cheng, Haonan},\n  journal={Information Processing & Management},\n  year={2025},\n  volume={62},\n  number={6},\n  pages={104229},\n  doi={10.1016/j.ipm.2025.104229}\n}", "ACL2025Findings": "@inproceedings{sun2025enhancing,\n  title={Enhancing the Comprehensibility of Text Explanations via Unsupervised Concept Discovery},\n  author={Sun, Yifan and Wang, Danding and Sheng, Qiang and Cao, Juan and Li, Jintao},\n  booktitle={Findings of the Association for Computational Linguistics: ACL 2025},\n  year={2025},\n  pages={14695--14713},\n  doi={10.18653/v1/2025.findings-acl.758}\n}", "SIGIR2025": "@inproceedings{hu2025llm,\n  title={LLM-Generated Fake News Induces Truth Decay in News Ecosystem: A Case Study on Neural News Recommendation},\n  author={Hu, Beizhe and Sheng, Qiang and Cao, Juan and Li, Yang and Wang, Danding},\n  booktitle={Proceedings of The 48th International ACM SIGIR Conference on Research and Development in Information Retrieval},\n  year={2025},\n  doi={10.1145/3726302.3730027}\n}", "CASB2025": "@article{cao2025challenges,\n  title={Challenges on Public Security System in AI Era},\n  author={Cao, Juan and Sheng, Qiang and Li, Guojie},\n  journal={Bulletin of Chinese Academy of Sciences},\n  year={2025}\n}", "FCS2025": "@article{nan2025exploiting,\n  title={Exploiting User Comments for Early Detection of Fake News Prior to Users' Commenting},\n  author={Nan, Qiong and Sheng, Qiang and Cao, Juan and Zhu, Yongchun and Wang, Danding and Yang, Guang and Li, Jintao},\n  journal={Frontiers of Computer Science},\n  year={2025},\n  doi={10.1007/s11704-024-40674-6}\n}", "CIKM2024": "@inproceedings{nan2024let,\n  title={Let Silence Speak: Enhancing Fake News Detection with Generated Comments from Large Language Models},\n  author={Nan, Qiong and Sheng, Qiang and Cao, Juan and Hu, Beizhe and Wang, Danding and Li, Jintao},\n  booktitle={Proceedings of the 33rd ACM International Conference on Information and Knowledge Management},\n  year={2024},\n  pages={1732--1742},\n  doi={10.1145/3627673.3679519}\n}", "MM2024": "@inproceedings{bu2024fakingrecipe,\n  title={FakingRecipe: Detecting Fake News on Short Video Platforms from the Perspective of Creative Process},\n  author={Bu, Yuyan and Sheng, Qiang and Cao, Juan and Qi, Peng and Wang, Danding and Li, Jintao},\n  booktitle={Proceedings of the 32nd ACM International Conference on Multimedia},\n  year={2024},\n  doi={10.1145/3664647.3680663}\n}", "IJCAI2024-1": "@inproceedings{shi2024ten,\n  title={Ten Words Only Still Help: Improving Black-Box AI-Generated Text Detection via Proxy-Guided Efficient Re-Sampling},\n  author={Shi, Yuhui and Sheng, Qiang and Cao, Juan and Mi, Hao and Hu, Beizhe and Wang, Danding},\n  booktitle={Proceedings of the 33rd International Joint Conference on Artificial Intelligence},\n  year={2024}\n}", "IJCAI2024-2": "@inproceedings{xue2024vision,\n  title={Vision-fused Attack: Advancing Aggressive and Stealthy Adversarial Text against Neural Machine Translation},\n  author={Xue, Yanni and Hao, Haojie and Wang, Jiakai and Sheng, Qiang and Tao, Renshuai and Liang, Yu and Feng, Pu and Liu, Xianglong},\n  booktitle={Proceedings of the 33rd International Joint Conference on Artificial Intelligence},\n  year={2024},\n  pages={6606--6614},\n  doi={10.24963/ijcai.2024/730}\n}", "AAAI2024": "@inproceedings{hu2024bad,\n  title={Bad Actor, Good Advisor: Exploring the Role of Large Language Models in Fake News Detection},\n  author={Hu, Beizhe and Sheng, Qiang and Cao, Juan and Shi, Yuhui and Li, Yang and Wang, Danding and Qi, Peng},\n  booktitle={Proceedings of the 38th AAAI Conference on Artificial Intelligence},\n  year={2024},\n  pages={22105--22113}\n}", "CCCF2023": "@article{cao2023safety,\n  title={The Safety in the AIGC era: Techniques Make the World More Credible},\n  author={Cao, Juan and Sheng, Qiang},\n  journal={Communications of the China Computer Federation},\n  year={2023}\n}", "MM2023": "@inproceedings{bu2023combating,\n  title={Combating Online Misinformation Videos: Characterization, Detection, and Future Directions},\n  author={Bu, Yuyan and Sheng, Qiang and Cao, Juan and Qi, Peng and Wang, Danding and Li, Jintao},\n  booktitle={Proceedings of the 31st ACM International Conference on Multimedia},\n  year={2023},\n  pages={8770--8780},\n  doi={10.1145/3581783.3612426}\n}"};
+
+    function copyBibtex(paperId) {
+        const bibtex = bibtexData[paperId];
+        if (bibtex) {
+            navigator.clipboard.writeText(bibtex).then(() => {
+                showNotification("BibTeX copied to clipboard!");
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                alert("Failed to copy BibTeX.");
+            });
+        } else {
+            alert("BibTeX not found for this paper.");
+        }
+    }
+
+    function showNotification(message) {
+        let notification = document.createElement('div');
+        notification.innerText = message;
+        notification.style.position = 'fixed';
+        notification.style.bottom = '20px';
+        notification.style.right = '20px';
+        notification.style.backgroundColor = '#333';
+        notification.style.color = '#fff';
+        notification.style.padding = '10px 20px';
+        notification.style.borderRadius = '5px';
+        notification.style.zIndex = '1000';
+        notification.style.opacity = '0';
+        notification.style.transition = 'opacity 0.5s';
+        document.body.appendChild(notification);
+
+        // Fade in
+        setTimeout(() => { notification.style.opacity = '1'; }, 10);
+
+        // Fade out and remove
+        setTimeout(() => {
+            notification.style.opacity = '0';
+            setTimeout(() => { document.body.removeChild(notification); }, 500);
+        }, 2000);
+    }
+</script>
+
+
+<script>
+    const bibtexData = {"TVCG2026": "@article{mi2026interactive,\n  title={Interactive Visual Assessment for Text-to-Image Generation Models},\n  author={Mi, Xiaoyue and Tang, Fan and Cao, Juan and Sheng, Qiang and Huang, Ziyao and Li, Peng and Liu, Yang and Lee, Tong-Yee},\n  journal={IEEE Transactions on Visualization and Computer Graphics},\n  year={2026},\n  publisher={IEEE}\n}", "EACL2026": "@inproceedings{pang2026tailoring,\n  title={Tailoring Rumor Debunking to You: Diversifying Chinese Rumor-Debunking Passages with an LLM-Driven Simulated Feedback-Enhanced Framework},\n  author={Pang, Xinle and Wang, Danding and Sheng, Qiang and Sun, Yifan and Hu, Beizhe and Cao, Juan},\n  booktitle={Proceedings of the 19th Conference of the European Chapter of the Association for Computational Linguistics},\n  year={2026}\n}", "AAAI2026": "@inproceedings{wang2026reasoning,\n  title={Reasoning About the Unsaid: Misinformation Detection with Omission-Aware Graph Inference},\n  author={Wang, Zhengjia and Wang, Danding and Sheng, Qiang and Wu, Jiaying and Cao, Juan},\n  booktitle={Proceedings of the 40th AAAI Conference on Artificial Intelligence},\n  year={2026}}", "NeurIPS2025": "@inproceedings{li2025judgment,\n  title={From Judgment to Interference: Early Stopping LLM Harmful Outputs via Streaming Content Monitoring},\n  author={Li, Yang and Sheng, Qiang and Yang, Yehan and Zhang, Xueyao and Cao, Juan},\n  booktitle={Proceedings of the 39th Annual Conference on Neural Information Processing Systems},\n  year={2025}}", "EMNLP2025Main": "@inproceedings{wu2025staircase,\n  title={The Staircase of Ethics: Probing LLM Value Priorities through Multi-Step Induction to Complex Moral Dilemmas},\n  author={Wu, Ya and Sheng, Qiang and Wang, Danding and Yang, Guang and Sun, Yifan and Wang, Zhengjia and Bu, Yuyan and Cao, Juan},\n  booktitle={Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing},\n  year={2025},\n  doi={10.18653/v1/2025.emnlp-main.806},\n  pages={15950--15970}}", "EMNLP2025Findings": "@inproceedings{liu2025forewarned,\n  title={Forewarned is Forearmed: Pre-Synthesizing Jailbreak-like Instructions to Enhance LLM Safety Guardrail to Potential Attacks},\n  author={Liu, Sheng and Sheng, Qiang and Wang, Danding and Li, Yang and Yang, Guang and Cao, Juan},\n  booktitle={Findings of the Association for Computational Linguistics: EMNLP 2025},\n  year={2025},\n  doi={10.18653/v1/2025.findings-emnlp.266}\n, pages={4957--4974}}", "CIKM2025full": "@inproceedings{wang2025bridging,\n  title={Bridging Thoughts and Words: Graph-Based Intent-Semantic Joint Learning for Fake News Detection},\n  author={Wang, Zhengjia and Sheng, Qiang and Wang, Danding and Hu, Beizhe and Cao, Juan},\n  booktitle={Proceedings of the 34th ACM International Conference on Information and Knowledge Management},\n  year={2025},\n  doi={10.1145/3746252.3761400}\n, pages={3250--3260}}", "CIKM2025short": "@inproceedings{bu2025enhancing,\n  title={Enhancing Fake News Video Detection via LLM-Driven Creative Process Simulation},\n  author={Bu, Yuyan and Sheng, Qiang and Cao, Juan and Wang, Shaofei and Qi, Peng and Shi, Yuhui and Hu, Beizhe},\n  booktitle={Proceedings of the 34th ACM International Conference on Information and Knowledge Management},\n  year={2025},\n  doi={10.1145/3746252.3760933}\n, pages={4618--4622}}", "IPM2025": "@article{wang2025exploring,\n  title={Exploring News Intent and Its Application: A Theory-Driven Approach},\n  author={Wang, Zhengjia and Wang, Danding and Sheng, Qiang and Cao, Juan and Ma, Siyuan and Cheng, Haonan},\n  journal={Information Processing & Management},\n  year={2025},\n  volume={62},\n  number={6},\n  pages={104229},\n  doi={10.1016/j.ipm.2025.104229}\n}", "ACL2025Findings": "@inproceedings{sun2025enhancing,\n  title={Enhancing the Comprehensibility of Text Explanations via Unsupervised Concept Discovery},\n  author={Sun, Yifan and Wang, Danding and Sheng, Qiang and Cao, Juan and Li, Jintao},\n  booktitle={Findings of the Association for Computational Linguistics: ACL 2025},\n  year={2025},\n  pages={14695--14713},\n  doi={10.18653/v1/2025.findings-acl.758}\n}", "SIGIR2025": "@inproceedings{hu2025llm,\n  title={LLM-Generated Fake News Induces Truth Decay in News Ecosystem: A Case Study on Neural News Recommendation},\n  author={Hu, Beizhe and Sheng, Qiang and Cao, Juan and Li, Yang and Wang, Danding},\n  booktitle={Proceedings of The 48th International ACM SIGIR Conference on Research and Development in Information Retrieval},\n  year={2025},\n  doi={10.1145/3726302.3730027}\n, pages={435--445}}", "CASB2025": "@article{cao2025challenges,\n  title={Challenges on Public Security System in AI Era},\n  author={Cao, Juan and Sheng, Qiang and Li, Guojie},\n  journal={Bulletin of Chinese Academy of Sciences},\n  year={2025}\n}", "FCS2025": "@article{nan2025exploiting,\n  title={Exploiting User Comments for Early Detection of Fake News Prior to Users' Commenting},\n  author={Nan, Qiong and Sheng, Qiang and Cao, Juan and Zhu, Yongchun and Wang, Danding and Yang, Guang and Li, Jintao},\n  journal={Frontiers of Computer Science},\n  year={2025},\n  doi={10.1007/s11704-024-40674-6}\n}", "CIKM2024": "@inproceedings{nan2024let,\n  title={Let Silence Speak: Enhancing Fake News Detection with Generated Comments from Large Language Models},\n  author={Nan, Qiong and Sheng, Qiang and Cao, Juan and Hu, Beizhe and Wang, Danding and Li, Jintao},\n  booktitle={Proceedings of the 33rd ACM International Conference on Information and Knowledge Management},\n  year={2024},\n  pages={1732--1742},\n  doi={10.1145/3627673.3679519}\n}", "MM2024": "@inproceedings{bu2024fakingrecipe,\n  title={FakingRecipe: Detecting Fake News on Short Video Platforms from the Perspective of Creative Process},\n  author={Bu, Yuyan and Sheng, Qiang and Cao, Juan and Qi, Peng and Wang, Danding and Li, Jintao},\n  booktitle={Proceedings of the 32nd ACM International Conference on Multimedia},\n  year={2024},\n  doi={10.1145/3664647.3680663}\n}", "IJCAI2024-1": "@inproceedings{shi2024ten,\n  title={Ten Words Only Still Help: Improving Black-Box AI-Generated Text Detection via Proxy-Guided Efficient Re-Sampling},\n  author={Shi, Yuhui and Sheng, Qiang and Cao, Juan and Mi, Hao and Hu, Beizhe and Wang, Danding},\n  booktitle={Proceedings of the 33rd International Joint Conference on Artificial Intelligence},\n  year={2024}\n, doi={10.24963/ijcai.2024/55}}", "IJCAI2024-2": "@inproceedings{xue2024vision,\n  title={Vision-fused Attack: Advancing Aggressive and Stealthy Adversarial Text against Neural Machine Translation},\n  author={Xue, Yanni and Hao, Haojie and Wang, Jiakai and Sheng, Qiang and Tao, Renshuai and Liang, Yu and Feng, Pu and Liu, Xianglong},\n  booktitle={Proceedings of the 33rd International Joint Conference on Artificial Intelligence},\n  year={2024},\n  pages={6606--6614},\n  doi={10.24963/ijcai.2024/730}\n}", "AAAI2024": "@inproceedings{hu2024bad,\n  title={Bad Actor, Good Advisor: Exploring the Role of Large Language Models in Fake News Detection},\n  author={Hu, Beizhe and Sheng, Qiang and Cao, Juan and Shi, Yuhui and Li, Yang and Wang, Danding and Qi, Peng},\n  booktitle={Proceedings of the 38th AAAI Conference on Artificial Intelligence},\n  year={2024},\n  pages={22105--22113},\n  doi={10.1609/aaai.v38i20.30214}\n}", "CCCF2023": "@article{cao2023safety,\n  title={The Safety in the AIGC era: Techniques Make the World More Credible},\n  author={Cao, Juan and Sheng, Qiang},\n  journal={Communications of the China Computer Federation},\n  year={2023}\n}", "MM2023": "@inproceedings{bu2023combating,\n  title={Combating Online Misinformation Videos: Characterization, Detection, and Future Directions},\n  author={Bu, Yuyan and Sheng, Qiang and Cao, Juan and Qi, Peng and Wang, Danding and Li, Jintao},\n  booktitle={Proceedings of the 31st ACM International Conference on Multimedia},\n  year={2023},\n  pages={8770--8780},\n  doi={10.1145/3581783.3612426}\n}"};
+
+    function copyBibtex(paperId) {
+        const bibtex = bibtexData[paperId];
+        if (bibtex) {
+            navigator.clipboard.writeText(bibtex).then(() => {
+                showNotification("BibTeX copied to clipboard!");
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                alert("Failed to copy BibTeX.");
+            });
+        } else {
+            alert("BibTeX not found for this paper.");
+        }
+    }
+
+    function showNotification(message) {
+        let notification = document.createElement('div');
+        notification.innerText = message;
+        notification.style.position = 'fixed';
+        notification.style.bottom = '20px';
+        notification.style.right = '20px';
+        notification.style.backgroundColor = '#333';
+        notification.style.color = '#fff';
+        notification.style.padding = '10px 20px';
+        notification.style.borderRadius = '5px';
+        notification.style.zIndex = '1000';
+        notification.style.opacity = '0';
+        notification.style.transition = 'opacity 0.5s';
+        document.body.appendChild(notification);
+
+        // Fade in
+        setTimeout(() => { notification.style.opacity = '1'; }, 10);
+
+        // Fade out and remove
+        setTimeout(() => {
+            notification.style.opacity = '0';
+            setTimeout(() => { document.body.removeChild(notification); }, 500);
+        }, 2000);
+    }
+</script>
+
 </head>
 <body>
   <div class="container">
@@ -132,7 +352,7 @@
                 <i>IEEE Transactions on Visualization and Computer Graphics (IEEE TVCG)</i>
                 <br>
                 <a href="https://arxiv.org/pdf/2411.15509">Preprint</a>
-            </div></div>
+             / <a href="javascript:void(0)" onclick="copyBibtex('TVCG2026')">BibTeX</a></div></div>
           <div class="publication-item"><div class="pub-content">
                 <papertitle id="EACL2026"> <span class="tag">EACL'26</span> Tailoring Rumor Debunking to You: Diversifying Chinese Rumor-Debunking Passages with an LLM-Driven Simulated Feedback-Enhanced Framework</papertitle>
                 <br>
@@ -140,7 +360,7 @@
                 <br>
                 <i>Proceedings of the 19th Conference of the European Chapter of the Association for Computational Linguistics</i>
                 <br>
-                <a href="#">Paper (TBA)</a>
+                <a href="#">Paper (TBA)</a> / <a href="javascript:void(0)" onclick="copyBibtex('EACL2026')">BibTeX</a>
                 <br>
                 <span class="tldr">TL;DR: We build an LLM-driven framework that generates rumor-debunking passages for various groups of people.</span>
             </div></div>
@@ -151,7 +371,7 @@
                 <br>
                 <i>Proceedings of the 40th AAAI Conference on Artificial Intelligence (Acceptance Rate: 4167/23680=17.60%)</i>
                 <br>
-                <a href="https://arxiv.org/abs/2512.01728">Preprint</a>
+                <a href="https://arxiv.org/abs/2512.01728">Preprint</a> / <a href="javascript:void(0)" onclick="copyBibtex('AAAI2026')">BibTeX</a>
                 <br>
                 <span class="tldr">TL;DR: We consider the omitted information to better reason the creator's intent for misinformation detection.</span>
             </div></div>
@@ -168,7 +388,7 @@
                 <a href="https://liesy.github.io/SCM/">Project Page</a> / 
                 <a href="https://github.com/ICTMCG/SCM">Github Repo</a> / 
                 <a href="https://mp.weixin.qq.com/s/rHu1SeQmwBcVbB34MAHD7w">Chinese Blog</a> / 
-                <a href="https://www.bilibili.com/video/BV1NYUqBKEcX/">Chinese Video</a>
+                <a href="https://www.bilibili.com/video/BV1NYUqBKEcX/">Chinese Video</a> / <a href="javascript:void(0)" onclick="copyBibtex('NeurIPS2025')">BibTeX</a>
                 <br>
                 <span class="tldr">TL;DR: We build a content moderator that can early stop LLMs' harmful outputs with low latency. </span>
             </div></div>
@@ -182,7 +402,7 @@
                 <a href="https://arxiv.org/abs/2505.18154">Preprint</a> / 
                 <a href="https://aclanthology.org/2025.emnlp-main.806/">Paper</a> /
                 <a href="https://isir-wuya.github.io/Multi-step-Moral-Dilemmas/">Project Page</a> / 
-                <a href="https://mp.weixin.qq.com/s/923kvfRuptKkhBmB6FFJ9w">Chinese Blog</a> 
+                <a href="https://mp.weixin.qq.com/s/923kvfRuptKkhBmB6FFJ9w">Chinese Blog</a> / <a href="javascript:void(0)" onclick="copyBibtex('EMNLP2025Main')">BibTeX</a> 
                 <br> 
                 <span class="tldr">TL;DR: We build the MMD benchmark to probe the LLMs' value preferences in complex moral dilemmas. </span>
             </div></div>
@@ -195,7 +415,7 @@
                 <a href="https://aclanthology.org/2025.findings-emnlp.266">Paper</a> / 
                 <a href="https://mp.weixin.qq.com/s/j2pIJTCRtPIkg7ewPx3W_A">Chinese Blog</a> 
                 <br>
-                <i>Findings of the Association for Computational Linguistics: EMNLP 2025 (Acceptance Rate: 1417/8174=17.34%) </i>
+                <i>Findings of the Association for Computational Linguistics: EMNLP 2025 (Acceptance Rate: 1417/8174=17.34%) </i> / <a href="javascript:void(0)" onclick="copyBibtex('EMNLP2025Findings')">BibTeX</a>
                 <br>
                 <span class="tldr">TL;DR: We enhance LLM resistance to jailbreaking by synthesizing instructions that may fall into the potentially risky space.</span>
             </div></div>
@@ -208,7 +428,7 @@
                 <br>
                 <a href="https://arxiv.org/abs/2509.01660">Preprint</a> / 
                 <a href="https://doi.org/10.1145/3746252.3761400">Paper</a> / 
-                <a href="https://mp.weixin.qq.com/s/N4veR9fy1rhHtrormOVfYg">Chinese Blog</a>
+                <a href="https://mp.weixin.qq.com/s/N4veR9fy1rhHtrormOVfYg">Chinese Blog</a> / <a href="javascript:void(0)" onclick="copyBibtex('CIKM2025full')">BibTeX</a>
                 <br>
                 <span class="tldr">TL;DR: We propose to inject intent information with graph-based joint learning into fake news detection. </span>
             </div></div>
@@ -221,7 +441,7 @@
                 <br>
                 <a href="https://arxiv.org/abs/2510.04024">Preprint</a> / 
                 <a href="https://doi.org/10.1145/3746252.3760933">Paper</a> / 
-                Media Coverage: <a href="https://mp.weixin.qq.com/s/t9RNvAhscjDPrz3q8_K2ZA"> 52CV</a>
+                Media Coverage: <a href="https://mp.weixin.qq.com/s/t9RNvAhscjDPrz3q8_K2ZA"> 52CV</a> / <a href="javascript:void(0)" onclick="copyBibtex('CIKM2025short')">BibTeX</a>
                 <br>
                 <span class="tldr">TL;DR: We propose AgentAug, which simulates the creative process of fake news videos using LLMs to mitigate the data scarcity issue. </span>
             </div></div>
@@ -234,7 +454,7 @@
                 <a href="https://doi.org/10.1016/j.ipm.2025.104229">Paper</a> / 
                 <a href="https://mp.weixin.qq.com/s/PGOGAkA7iRI160TufYCPQA">Chinese Blog</a>
                 <br>
-                <i><a class="black" href="https://www.sciencedirect.com/journal/information-processing-and-management">Information Processing and Management</a>, 2025</i>
+                <i><a class="black" href="https://www.sciencedirect.com/journal/information-processing-and-management">Information Processing and Management</a>, 2025</i> / <a href="javascript:void(0)" onclick="copyBibtex('IPM2025')">BibTeX</a>
                 <br>
                 <span class="tldr">TL;DR: We, for the first time, conceptualize and computerize news intent modeling and showcase its application on fake news detection, popularity prediction, and propaganda detection.</span>
             </div></div>
@@ -247,7 +467,7 @@
                 <a href="https://aclanthology.org/2025.findings-acl.758/">Paper</a> / 
                 <a href="https://mp.weixin.qq.com/s/sNgQQ9wrLVa4LfCDI6FdCQ">Chinese Blog</a>
                 <br>
-                <i>Findings of the Association for Computational Linguistics: ACL 2025</i>
+                <i>Findings of the Association for Computational Linguistics: ACL 2025</i> / <a href="javascript:void(0)" onclick="copyBibtex('ACL2025Findings')">BibTeX</a>
                 <br>
                 <span class="tldr">TL;DR: We exploit LLMs to automatically discover key concepts for text classification to enhance the comprehensibility of text explanations.</span>
             </div></div>
@@ -260,7 +480,7 @@
                 <br>
                 <a href="https://arxiv.org/abs/2504.20013">Preprint</a> /
                 <a href="https://doi.org/10.1145/3726302.3730027">Paper</a> / 
-                <a href="https://beanandrew.github.io/projects/TruthDecay">Project Page</a>
+                <a href="https://beanandrew.github.io/projects/TruthDecay">Project Page</a> / <a href="javascript:void(0)" onclick="copyBibtex('SIGIR2025')">BibTeX</a>
                 <br>
                 <span class="tldr">TL;DR: We reveal the truth-decay phenomenon where real news gradually loses its top-ranked advantage against fake news when LLM-generated news penetrates. </span>
             </div></div>
@@ -272,7 +492,7 @@
                 <i>Bulletin of Chinese Academy of Sciences</i>
                 <br>
                 <a href="http://www.bulletin.cas.cn/BCAS_CH/doi/10.16418/j.issn.1000-3045.20241027003">Paper</a> /
-                Media Coverage: <a href="http://paper.jyb.cn/zgjyb/html/2025-04/17/content_144744_18446043.htm">中国教育报</a>, <a href="https://lib.cqvip.com/Qikan/Article/Detail?id=7201658711">新华文摘</a>
+                Media Coverage: <a href="http://paper.jyb.cn/zgjyb/html/2025-04/17/content_144744_18446043.htm">中国教育报</a>, <a href="https://lib.cqvip.com/Qikan/Article/Detail?id=7201658711">新华文摘</a> / <a href="javascript:void(0)" onclick="copyBibtex('CASB2025')">BibTeX</a>
                 <br>
                 <span class="tldr">TL;DR: We discussed new challenges and countermeasures in public security brought by AIGC techniques. </span>
             </div></div>
@@ -284,7 +504,7 @@
                 <i>Frontiers of Computer Science</i>
                 <br>
                 <a href="https://arxiv.org/pdf/2310.10429">Preprint</a> / 
-                <a href="https://doi.org/10.1007/s11704-024-40674-6">Paper</a>
+                <a href="https://doi.org/10.1007/s11704-024-40674-6">Paper</a> / <a href="javascript:void(0)" onclick="copyBibtex('FCS2025')">BibTeX</a>
                 <br>
                 <span class="tldr">TL;DR: We explored how to let a comment-based model effectively help a content-only one in fake news early detection. </span>
             </div></div>
@@ -299,7 +519,7 @@
                 <a href="https://arxiv.org/pdf/2405.16631">Preprint</a> / 
                 <a href="https://doi.org/10.1145/3627673.3679519">Paper</a> / 
                 <a href="https://github.com/ICTMCG/GenFEND">GitHub Repo</a> / 
-                <a href="https://mp.weixin.qq.com/s/ClcpdlO3iZPcnm_v_ryHLA">Chinese Blog</a>
+                <a href="https://mp.weixin.qq.com/s/ClcpdlO3iZPcnm_v_ryHLA">Chinese Blog</a> / <a href="javascript:void(0)" onclick="copyBibtex('CIKM2024')">BibTeX</a>
                 <br>
                 <span class="tldr">TL;DR: We prompt LLMs to role-play social media users to obtain generated comments for enhancing fake news detection. </span>
             </div></div>
@@ -314,7 +534,7 @@
                 <a href="	https://doi.org/10.1145/3664647.3680663">Paper</a> / 
                 <a href="https://github.com/ICTMCG/FakingRecipe">GitHub Repo</a> / 
                 <a href="https://mp.weixin.qq.com/s/AmB0eDr0s-AF0KufV_IlkA">Chinese Blog</a> / 
-                <a href="https://mp.weixin.qq.com/s/lORtwWWUW8ewlt78luJ0uQ">CSIG MM论文导读</a>
+                <a href="https://mp.weixin.qq.com/s/lORtwWWUW8ewlt78luJ0uQ">CSIG MM论文导读</a> / <a href="javascript:void(0)" onclick="copyBibtex('MM2024')">BibTeX</a>
                 <br>
                 <span class="tldr">TL;DR: We detect fake news on short video platforms by modeling videos from the faking process perspective and constructed a FakeSV's sister dataset in English, namely FakeTT. </span>
             </div></div>
@@ -329,7 +549,7 @@
                 <a href="https://doi.org/10.24963/ijcai.2024/55">Paper</a> / 
                 <a href="https://github.com/ICTMCG/POGER">GitHub Repo</a> / 
                 <a href="data/POGER-Slides.pdf">Slides</a> /
-                <a href="https://mp.weixin.qq.com/s/2-cWJAxvOuGanR6wo6J9jQ">Chinese Blog</a>
+                <a href="https://mp.weixin.qq.com/s/2-cWJAxvOuGanR6wo6J9jQ">Chinese Blog</a> / <a href="javascript:void(0)" onclick="copyBibtex('IJCAI2024-1')">BibTeX</a>
                 <br>
                 <span class="tldr">TL;DR: To detect and attribute text generated by black-box LMs, we estimate their generation probabilities of representative words guided by a white-box proxy LM to obtain a strong feature. </span>
             </div></div>
@@ -342,7 +562,7 @@
                 <br>
                 <a href="https://doi.org/10.24963/ijcai.2024/730">Paper</a> / 
                 <a href="https://github.com/Levelower/VFA">GitHub Repo</a> / 
-                <a href="https://mp.weixin.qq.com/s/YfV-pqaLSXz2zWVgR8x8Ew">Chinese Blog</a>
+                <a href="https://mp.weixin.qq.com/s/YfV-pqaLSXz2zWVgR8x8Ew">Chinese Blog</a> / <a href="javascript:void(0)" onclick="copyBibtex('IJCAI2024-2')">BibTeX</a>
                 <br>
                 <span class="tldr">TL;DR: We propose a vision-fused attack framework to acquire powerful adversarial text (i.e., more aggressive and stealthy) in neural machine translation. </span>
             </div></div>
@@ -356,7 +576,7 @@
                 <a href="https://arxiv.org/pdf/2309.12247">Preprint</a> / 
                 <a href="https://doi.org/10.1609/aaai.v38i20.30214">Paper</a> / 
                 <a href="https://github.com/ICTMCG/ARG">GitHub Repo</a> /
-                <a href="https://underline.io/lecture/94054-bad-actor-good-advisor-exploring-the-role-of-large-language-models-in-fake-news-detection">English Video & Slides</a>
+                <a href="https://underline.io/lecture/94054-bad-actor-good-advisor-exploring-the-role-of-large-language-models-in-fake-news-detection">English Video & Slides</a> / <a href="javascript:void(0)" onclick="copyBibtex('AAAI2024')">BibTeX</a>
                 <br>
                 <span class="tldr">TL;DR: Large LMs generally underperform fine-tuned Small LMs for fake news detection, but they can be good advisors by providing rationales. </span>
             </div></div>
@@ -369,7 +589,7 @@
                 <i>Communications of the China Computer Federation, October 2023</i>
                 <br>
                 <a href="https://dl.ccf.org.cn/article/articleDetail.html?id=6693892601366528">Paper</a> / 
-                <a href="https://mp.weixin.qq.com/s/AUiDKYaLkjtcoqldgFNJFA">WeChat Release</a>
+                <a href="https://mp.weixin.qq.com/s/AUiDKYaLkjtcoqldgFNJFA">WeChat Release</a> / <a href="javascript:void(0)" onclick="copyBibtex('CCCF2023')">BibTeX</a>
                 <br>
                 <span class="tldr">TL;DR: Our perspective paper on the safety issues brought by AI-generated content. </span>
             </div></div>
@@ -383,7 +603,7 @@
                 <a href="https://arxiv.org/pdf/2302.03242">Preprint</a> / 
                 <a href="https://dl.acm.org/doi/abs/10.1145/3581783.3612426">Paper</a> / 
                 <a href="https://github.com/ICTMCG/Awesome-Misinfo-Video-Detection">GitHub Repo</a> / 
-                <a href="https://mp.weixin.qq.com/s/V00ArOksaKi3GXFSZEDsNA">Chinese Blog</a>
+                <a href="https://mp.weixin.qq.com/s/V00ArOksaKi3GXFSZEDsNA">Chinese Blog</a> / <a href="javascript:void(0)" onclick="copyBibtex('MM2023')">BibTeX</a>
                 <br>
                 <span class="tldr">TL;DR: We conduct the very first survey focusing on online misinformation video detection, to the best of our knowledge.</span>
             </div></div>
@@ -651,55 +871,55 @@
          <ul class="news-list">
         <li class="news-item">
             <span class="news-date">2025/11/15</span>
-            <span class="news-content"><strong> Advances and Changes of Misinformation Detection in the LLM era</strong><br><strong>大模型时代虚假信息检测的发展与变化</strong>
+            <span class="news-content"><strong>Advances and Changes of Misinformation Detection in the LLM era</strong><br><strong>大模型时代虚假信息检测的发展与变化</strong>
                 <br>
                 @ People's Public Security University of China</span>
         </li>
         <li class="news-item">
             <span class="news-date">2025/9/11</span>
-            <span class="news-content"><strong> Advances and Changes of Misinformation Detection in the LLM era</strong><br><strong>大模型时代虚假信息检测的发展与变化</strong>
+            <span class="news-content"><strong>Advances and Changes of Misinformation Detection in the LLM era</strong><br><strong>大模型时代虚假信息检测的发展与变化</strong>
                 <br>
                 @ Institute of Information Engineering, Chinese Academy of Sciences</span>
         </li>
         <li class="news-item">
             <span class="news-date">2025/6/28</span>
-            <span class="news-content"><strong> Content Safety in the LLM era: From Detection to Interference</strong><br><strong>大模型时代的内容安全：从识别到干预</strong>
+            <span class="news-content"><strong>Content Safety in the LLM era: From Detection to Interference</strong><br><strong>大模型时代的内容安全：从识别到干预</strong>
                 <br>
                 @ The Youth Forum on AI Language Capabilities and Safety Governance, Beijing Foreign Studies University (<a href="https://mp.weixin.qq.com/s/WUWaf5Wr2sVO_em2eQxtGA">Event</a>)</span>
         </li>
         <li class="news-item">
             <span class="news-date">2025/6/14</span>
-            <span class="news-content"><strong> Advances and Changes of Misinformation Detection in the LLM era</strong><br><strong>大模型时代虚假信息检测的发展与变化</strong>
+            <span class="news-content"><strong>Advances and Changes of Misinformation Detection in the LLM era</strong><br><strong>大模型时代虚假信息检测的发展与变化</strong>
                 <br>
                 @ YSSNLP 2025 (<a href="https://mp.weixin.qq.com/s/buWUqwltl2dcIK4z4tMrYQ">Event</a>)</span>
         </li>
         <li class="news-item">
             <span class="news-date">2025/1/16</span>
-            <span class="news-content"><strong> LLMs and Misinformation Detection</strong><br><strong>大模型与虚假信息检测</strong>
+            <span class="news-content"><strong>LLMs and Misinformation Detection</strong><br><strong>大模型与虚假信息检测</strong>
                 <br>
                 @ AI TIME (<a href="https://mp.weixin.qq.com/s/ejXVBUDSp-T0INjTH5JrDQ">Event</a>)</span>
         </li>
         <li class="news-item">
             <span class="news-date">2024/11/8</span>
-            <span class="news-content"><strong> Misinformation Detection in the Era of LLMs: Recent Advances and Discussions</strong><br><strong>大模型时代的虚假信息检测：进展与探讨</strong>
+            <span class="news-content"><strong>Misinformation Detection in the Era of LLMs: Recent Advances and Discussions</strong><br><strong>大模型时代的虚假信息检测：进展与探讨</strong>
                 <br>
                 @ Institute of Information Engineering, Chinese Academy of Sciences (<a href="https://mp.weixin.qq.com/s/LcqhK_1TOeraQKOdSMbcLw">Event</a>)</span>
         </li>
         <li class="news-item">
             <span class="news-date">2024/10/12</span>
-            <span class="news-content"><strong> LLM-Driven Internet Misinformation Rehearsal and Detection Enhancement</strong><br><strong>大模型驱动的互联网虚假信息预演及检测增强</strong>
+            <span class="news-content"><strong>LLM-Driven Internet Misinformation Rehearsal and Detection Enhancement</strong><br><strong>大模型驱动的互联网虚假信息预演及检测增强</strong>
                 <br>
                 @ SMP 2024 (<a href="https://mp.weixin.qq.com/s/LHkiPb_xulmXQlgMnL780g">Event</a>)</span>
         </li>
         <li class="news-item">
             <span class="news-date">2024/6/1</span>
-            <span class="news-content"><strong> AIGC: Techniques, Challenges, and Countermeasures</strong><br><strong>AIGC: 技术、挑战和应对</strong>
+            <span class="news-content"><strong>AIGC: Techniques, Challenges, and Countermeasures</strong><br><strong>AIGC: 技术、挑战和应对</strong>
                 <br>
                 @ Beijing Film Academy (<a href="https://mp.weixin.qq.com/s/pbIKQPPf7q7tH0XJT6StDQ">Event</a>)</span>
         </li>
         <li class="news-item">
             <span class="news-date">2023/6/28</span>
-            <span class="news-content"><strong> Improving Research Zooming Capability: Three Views of Application Research (提升科研“变焦”能力：应用问题研究的三个视角) </strong>
+            <span class="news-content"><strong>Improving Research Zooming Capability: Three Views of Application Research</strong><br><strong>提升科研“变焦”能力：应用问题研究的三个视角</strong>
                 <br>
                 @ Advanced Computing Technology Seminar, ICT, CAS</span>
         </li>
@@ -711,19 +931,19 @@
         </li>
         <li class="news-item">
             <span class="news-date">2023/3/3</span>
-            <span class="news-content"><strong> The Birth of Papers on Top-Tier Journals and Conferences: Works Done Behind </strong><br><strong>顶会顶刊论文的诞生：你看不到的那些工作</strong>
+            <span class="news-content"><strong>The Birth of Papers on Top-Tier Journals and Conferences: Works Done Behind</strong><br><strong>顶会顶刊论文的诞生：你看不到的那些工作</strong>
                 <br>
                 @ Student Career Development Association, ICT, CAS</span>
         </li>
         <li class="news-item">
             <span class="news-date">2023/3/1</span>
-            <span class="news-content"><strong> ChatGPT: Techniques, Impacts, and Countermeasures </strong><br><strong>ChatGPT: 技术、影响和应对</strong>
+            <span class="news-content"><strong>ChatGPT: Techniques, Impacts, and Countermeasures</strong><br><strong>ChatGPT: 技术、影响和应对</strong>
                 <br>
                 @ Ruijian AI</span>
         </li>
         <li class="news-item">
             <span class="news-date">2023/3/1</span>
-            <span class="news-content"><strong> ChatGPT: Techniques, Impacts, and Countermeasures </strong><br><strong>ChatGPT: 技术、影响和应对</strong>
+            <span class="news-content"><strong>ChatGPT: Techniques, Impacts, and Countermeasures</strong><br><strong>ChatGPT: 技术、影响和应对</strong>
                 <br>
                 @ Beijing Film Academy (<a href="https://mp.weixin.qq.com/s/KAiSrol7yIZzYzmhWwiITA">Event</a>)</span>
         </li>
@@ -735,14 +955,14 @@
         </li>
         <li class="news-item">
             <span class="news-date">2022/12/17</span>
-            <span class="news-content"><strong> Three Views of Application Research: Cases in Fake News Detection (应用问题研究的三个视角：以虚假新闻检测为例) </strong>
+            <span class="news-content"><strong>Three Views of Application Research: Cases in Fake News Detection</strong><br><strong>应用问题研究的三个视角：以虚假新闻检测为例</strong>
                 <br>
                 @ CSSNLP 2022 (<a href="https://event.baai.ac.cn/activities/629">Event</a> / 
                 <a href="https://www.bilibili.com/video/BV1MV4y1c7zF">Video</a>)</span>
         </li>
         <li class="news-item">
             <span class="news-date">2022/10/4</span>
-            <span class="news-content"><strong> Zoom Out and Observe: News Environment Perception for Fake News Detection (新闻环境感知下的虚假新闻检测) </strong>
+            <span class="news-content"><strong>Zoom Out and Observe: News Environment Perception for Fake News Detection</strong><br><strong>新闻环境感知下的虚假新闻检测</strong>
                 <br>
                 @ MLNLP Paper Reading (<a href="https://mp.weixin.qq.com/s/qafvi5R6lcd96BLayPy__Q">Event</a> / 
                 <a href="https://www.bilibili.com/video/BV16P411E73j/">Video</a>)</span>
@@ -761,21 +981,21 @@
         </li>
         <li class="news-item">
             <span class="news-date">2022/5/14</span>
-            <span class="news-content"><strong> Zoom Out and Observe: News Environment Perception for Fake News Detection (新闻环境感知下的虚假新闻检测) </strong>
+            <span class="news-content"><strong>Zoom Out and Observe: News Environment Perception for Fake News Detection</strong><br><strong>新闻环境感知下的虚假新闻检测</strong>
               <br>
               @ AIS 2022 (NLU Session) (<a href="https://event.baai.ac.cn/activities/385">Event</a> / 
               <a href="https://event-cdn.baai.ac.cn/live/20220516-01/1/session4.mp4">Video</a>)</span>
         </li>
         <li class="news-item">
             <span class="news-date">2022/4/24</span>
-            <span class="news-content"><strong> Zoom Out and Observe: News Environment Perception for Fake News Detection (新闻环境感知下的虚假新闻检测) </strong>
+            <span class="news-content"><strong>Zoom Out and Observe: News Environment Perception for Fake News Detection</strong><br><strong>新闻环境感知下的虚假新闻检测</strong>
                 <br>
                 @ BUAFAI 2022 (NLP & Speech Forum) (<a href="https://mp.weixin.qq.com/s/h07yRc46bRkDvmrtXvpYOQ">Event</a> / 
                 <a href="https://www.koushare.com/lives/room/685619">Video</a>)</span>
         </li>
         <li class="news-item">
             <span class="news-date">2022/4/20</span>
-            <span class="news-content"><strong> Zoom Out and Observe: News Environment Perception for Fake News Detection (新闻环境感知下的虚假新闻检测) </strong>
+            <span class="news-content"><strong>Zoom Out and Observe: News Environment Perception for Fake News Detection</strong><br><strong>新闻环境感知下的虚假新闻检测</strong>
                 <br>
                 @ AI TIME Live (<a href="https://mp.weixin.qq.com/s/s3tfoLZdYW_K2lq_yYejtA">Event</a> / 
                 <a href="https://www.bilibili.com/video/BV1MS4y1e7PY">Video</a> /

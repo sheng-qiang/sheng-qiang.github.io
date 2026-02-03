@@ -1,0 +1,1481 @@
+ <!--
+ * @Author: Jon Barron
+ * @Date: 2019-05-11 22:15:22
+ * @Editors: whyisyoung
+ * @EditTime: 2020-10-23 10:57:25
+ * @LastEditors:sheng-qiang
+ * @LastEditTime: 2021-02-05 22:39:00
+ -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<html>
+
+<head>
+  <meta name=viewport content="width=device-width">
+  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
+  <meta name="google-site-verification" content="p7SNRHPF7y83Q-nNBLkrxFhAAosW2t40unwTxByZ0vo" />
+  <style type="text/css">
+    /* Color scheme stolen from Sergey Karayev */
+
+    a {
+      color: #1772d0;
+      /* color: #07889b; */
+      text-decoration: none;
+    }
+   
+    a.black {
+      color: #000000;
+      /* color: #07889b; */
+      text-decoration: none;
+    }
+
+    a:focus,
+    a:hover {
+      color: #e37222; /* #f09228; */
+      text-decoration: none;
+    }
+
+    body,
+    td,
+    th,
+    tr,
+    p,
+    a {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 16px
+    }
+
+    strong {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 16px;
+    }
+
+    heading {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 22px;
+      color: #e37222;
+    }
+
+    subheading {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 18px;
+      font-style:italic;
+      color: #e37222;
+    }
+
+    papertitle {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    name {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 32px;
+    }
+
+    .footer {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 14px;
+      opacity: 0.75;
+      color: #777;
+    }
+
+    .one {
+      width: 160px;
+      height: 160px;
+      position: relative;
+    }
+
+    .two {
+      width: 160px;
+      height: 160px;
+      position: absolute;
+      transition: opacity .2s ease-in-out;
+      -moz-transition: opacity .2s ease-in-out;
+      -webkit-transition: opacity .2s ease-in-out;
+    }
+
+    .fade {
+      transition: opacity .2s ease-in-out;
+      -moz-transition: opacity .2s ease-in-out;
+      -webkit-transition: opacity .2s ease-in-out;
+    }
+
+    span.highlight {
+      background-color: #ffffd0;
+    }
+
+    span.artifact {
+      color:#6cb41b;
+      padding: 1px;
+    }
+
+    span.underline {
+      border-bottom:1px solid black;
+      padding-bottom:1px;
+    }
+
+    span.tag {
+      color: #FFFFFF;
+      background-color:#0076df;
+      padding:1px 5px 2px 5px;
+    }
+
+    span.tldr {
+      color: #555555;
+    }
+
+    em.highlight {
+      color: #e37222;
+    }
+  </style>
+  <link rel="icon" type="image/png" href="images/sq-icon.png">
+  <title>Qiang Sheng's Homepage</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <table width="960" border="0" align="center" cellspacing="0" cellpadding="0">
+    <tr>
+      <td>
+        <!-- Intro Begin -->
+        <table width="100%" align="left" border="0" cellspacing="0" cellpadding="12" style="table-layout:fixed;">
+          <colgroup>
+            <col span="1" style="width: 23%;">
+            <col span="1" style="width: 77%;">
+          </colgroup>
+          <tr>
+            <td valign="middle">
+              <img style="border-radius:50%;" src="images/qiangsheng.jpg" height="170px">
+            </td>
+            <td valign="middle">
+              <p align="left">
+                <name>Qiang Sheng 盛强</name>
+              </p>
+              <p>
+                I am an Associate Professor/Researcher at the Media Synthesis and Forensics Lab, <a href="http://www.ict.ac.cn/">Institute of Computing Technology</a>, <a href="http://www.cas.cn/">Chinese Academy of Sciences</a>. I am also a supervisor at School of Computer Science and Technology, <a href="https://www.ucas.ac.cn/">University of Chinese Academy of Sciences (UCAS)</a>, where I got my Ph.D. degree under the supervision of Professor Juan Cao. My research interests include:
+              </p>
+              <ul>
+                <li>Application: Fake News/Misinformation Detection, Fact-Checking, Machine-Generated Content Detection</li>
+                <li>Direction: Natural Language Understanding and Social Media Mining</li>
+                <li>Vision: Make the World More Credible</li>
+              </ul>
+              <p align=left>Contact: shengqiang18z AT ict dot ac dot cn</p>
+              <p align=left>
+               <!-- <a href="data/CV_QiangSheng.pdf"><b>Currículum Vitae</b></a> &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp; -->
+                <a href="https://github.com//sheng-qiang/"> GitHub </a> &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
+                <a href="https://scholar.google.com/citations?user=8BEUQ9UAAAAJ">Google Scholar</a> &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
+                <a href="https://www.researchgate.net/profile/Qiang_Sheng5/">ResearchGate</a> &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
+                <a href="https://orcid.org/0000-0002-2481-5023"> ORCID </a> &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
+                <a href="https://dblp.org/pid/199/7557-1.html"> DBLP </a>
+              </p>
+              <p align=left>
+                <a href="https://www.zhihu.com/column/c_1394265881195753473"> Zhihu Column </a>  &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
+                <a href="https://aclanthology.org/people/q/qiang-sheng/">ACL Anthology</a> &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
+                <a href="https://ir.webis.de/anthology/people/q/qiang+sheng/"> IR Anthology </a> 
+              </p>
+            </td>
+          </tr>
+        </table>
+        <!-- Intro End -->
+
+        <!-- News Begin -->
+        <table width="100%" align="center" border="0" cellpadding="12" style="table-layout:fixed;">
+          <tr>
+            <td>
+              <div style="background-color: #F3F7FC!important;padding: 14px;">
+                <p>
+                  <font size="+1"><b> &#9997 &nbsp; Hightlights</b></font>
+                </p>
+                <p>
+                  - Github Repo (Maintaining): <a href="https://github.com/ICTMCG/Awesome-Machine-Generated-Text" target="_blank">Awesome-Generated-Text</a>, <a href="https://github.com/ICTMCG/LLM-for-misinformation-research" target="_blank">LLM-for-misinformation-research</a>
+                </p>
+                <p>
+                  - I will have one position enrolled in Sep. 2026, and also recruit highly motivated research interns (1-2 positions, onsite preferred). Anyone who is interested in <b>combating misinformation in the era of large language models</b> may send me their resume by email.
+                </p>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="12">
+          <tr>
+            <td>
+              <heading>News</heading>
+            </td>
+          </tr>
+        </table>
+        <table width="100%" align="center" border="0" cellpadding="12" style="table-layout:fixed;">
+          <colgroup>
+            <col span="1" style="width: 23%;">
+            <col span="1" style="width: 77%;">
+          </colgroup>
+            <tr>
+            <td valign="center">
+              09/2025
+            </td>
+            <td valign="center">
+              One co-authored paper got accepted by AAAI 2026.
+            </td>
+           </tr>
+            <tr>
+            <td valign="center">
+              09/2025
+            </td>
+            <td valign="center">
+              One co-authored paper got accepted by NeurIPS 2025.
+            </td>
+           </tr>
+            <tr>
+            <td valign="center">
+              08/2025
+            </td>
+            <td valign="center">
+              Two co-authored papers got accepted by EMNLP 2025 Main/Findings.
+            </td>
+           </tr>
+            <tr>
+            <td valign="center">
+              08/2025
+            </td>
+            <td valign="center">
+              Two co-authored papers on fake news detection got accepted by CIKM 2025.
+            </td>
+           </tr>
+           <tr>
+            <td valign="center">
+              07/2025
+            </td>
+            <td valign="center">
+              Received the Best PC Member Award (among 20 awardees) at SIGIR 2025.
+            </td>
+           </tr>
+           <tr>
+            <td valign="center">
+              06/2025
+            </td>
+            <td valign="center">
+              Will present our recent work on fake news detection at YSSNLP 2025.
+            </td>
+           </tr>
+           <tr>
+            <td valign="center">
+              02/2025
+            </td>
+            <td valign="center">
+             Will serve as an Area Chair and co-offer a tutorial named <b>Combating Online Misinformation Videos: Characterization, Detection, and Prevention</b> at MM 2025. See you in Dublin!
+            </td>
+           </tr>
+           <tr>
+            <td valign="center">
+              10/2024
+            </td>
+            <td valign="center">
+              Recognized as an <a href="https://dl.acm.org/action/showFmPdf?doi=10.1145%2F3664647">Outstanding Area Chair</a> at MM 2024.
+            </td>
+           </tr>
+           <tr>
+            <td valign="center">
+              10/2024
+            </td>
+            <td valign="center">
+              Will introduce our latest works on LLM-driven misinformation detection at <a href="https://mp.weixin.qq.com/s/LHkiPb_xulmXQlgMnL780g">SMP 2024</a>.
+            </td>
+           </tr>
+          <tr>
+           <td>
+           <a href="news.html">Full List</a>
+           </td>
+          </tr>
+        </table>
+        <!-- News End -->
+
+        <!-- Publications Begin -->
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="12">
+          <tr>
+            <td>
+              <heading>Publications</heading>
+            </td>
+          </tr>
+        </table>
+        <table width="100%" align="center" border="0" cellpadding="12" style="table-layout:fixed;">
+          <!-- <colgroup>
+            <col span="1" style="width: 23%;">
+            <col span="1" style="width: 77%;">
+          </colgroup> -->
+          <td>
+            <subheading>Preprints</subheading>
+          </td>
+          <tr>
+            <td valign="center">
+                <b>PhantomHunter: Detecting Unseen Privately-Tuned LLM-Generated Text via Family-Aware Learning</b>
+                <br>
+                <a class="black" href="https://scholar.google.com/citations?user=xAw_fukAAAAJ">Yuhui Shi</a>, <a class="black" href="http://undground.fun">Yehan Yang</a>, <span class="underline">Qiang Sheng</span>, <a class="black" href="https://scholar.google.com/citations?user=RxULDkAAAAAJ">Hao Mi</a>, <a class="black" href="https://beanandrew.github.io/">Beizhe Hu</a>, <a class="black" href="https://scholar.google.com/citations?user=0z9o2CIAAAAJ">Chaoxi Xu</a>, and <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>
+                <br>
+                <a href="https://arxiv.org/abs/2506.15683">Preprint</a> / 
+                Media Coverage: <a href="https://www.unite.ai/personalized-language-models-are-easy-to-make-and-harder-to-detect/">Unite.AI</a>
+            </td>
+          </tr>
+          <td>
+            <subheading>2026</subheading>
+          </td>
+          <tr>
+            <td valign="center">
+                <papertitle id="TVCG2026"> <span class="tag">IEEE TVCG</span> Interactive Visual Assessment for Text-to-Image Generation Models</papertitle>
+                <br>
+                <a class="black" href="https://scholar.google.com/citations?user=9eDMXxMAAAAJ">Xiaoyue Mi</a>,  <a class="black" href="https://scholar.google.com/citations?user=PdKElfwAAAAJ">Fan Tang</a>, <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>, <span class="underline">Qiang Sheng</span>, <a class="black" href="https://scholar.google.com/citations?user=nijlf5YAAAAJ">Ziyao Huang</a>, <a class="black" href="https://scholar.google.com/citations?user=hgYzkOQAAAAJ">Peng Li</a>, <a class="black" href="https://scholar.google.com/citations?user=lVhoKNcAAAAJ">Yang Liu</a>, <a class="black" href="https://scholar.google.com/citations?user=V3PTB98AAAAJ">Tong-Yee Lee</a>
+                <br>
+                <i>IEEE Transactions on Visualization and Computer Graphics (IEEE TVCG)</i>
+                <br>
+                <a href="https://arxiv.org/pdf/2411.15509">Preprint</a>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                <papertitle id="EACL2026"> <span class="tag">EACL'26</span> Tailoring Rumor Debunking to You: Diversifying Chinese Rumor-Debunking Passages with an LLM-Driven Simulated Feedback-Enhanced Framework</papertitle>
+                <br>
+                <a class="black" href="#">Xinle Pang</a>, <a class="black" href="https://scholar.google.com/citations?user=hGZwK0cAAAAJ">Danding Wang</a>, <span class="underline">Qiang Sheng</span>, <a class="black" href="https://scholar.google.com/citations?user=sv7uxi4AAAAJ">Yifan Sun</a>, <a class="black" href="https://beanandrew.github.io/">Beizhe Hu</a>, and <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>
+                <br>
+                <i>Proceedings of the 19th Conference of the European Chapter of the Association for Computational Linguistics</i>
+                <br>
+                <a href="#">Paper (TBA)</a>
+                <br>
+                <span class="tldr">TL;DR: We build an LLM-driven framework that generates rumor-debunking passages for various groups of people.</span>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                <papertitle id="AAAI2026"> <span class="tag">AAAI'26</span> Reasoning About the Unsaid: Misinformation Detection with Omission-Aware Graph Inference</papertitle>
+                <br>
+                <a class="black" href="https://zhengjiawa.github.io/">Zhengjia Wang</a>, <a class="black" href="https://scholar.google.com/citations?user=hGZwK0cAAAAJ">Danding Wang</a>, <span class="underline">Qiang Sheng</span>, <a class="black" href="https://jiayingwu19.github.io/">Jiaying Wu</a>, and <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>
+                <br>
+                <i>Proceedings of the 40th AAAI Conference on Artificial Intelligence (Acceptance Rate: 4167/23680=17.60%)</i>
+                <br>
+                <a href="https://arxiv.org/abs/2512.01728">Preprint</a>
+                <br>
+                <span class="tldr">TL;DR: We consider the omitted information to better reason the creator's intent for misinformation detection.</span>
+            </td>
+          </tr>
+          <td>
+            <subheading>2025</subheading>
+          </td>
+          <tr>
+            <td valign="center">
+                <papertitle id="NeurIPS2025"> <span class="tag">NeurIPS'25</span> From Judgment to Interference: Early Stopping LLM Harmful Outputs via Streaming Content Monitoring</papertitle>
+                <br>
+                <a class="black" href="https://liesy.github.io/">Yang Li</a>, <span class="underline">Qiang Sheng</span>, <a class="black" href="http://undground.fun">Yehan Yang</a>, <a class="black" href="https://www.zhangxueyao.com/">Xueyao Zhang</a>, and <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>
+                <br>
+                <i>Proceedings of the 39th Annual Conference on Neural Information Processing Systems (Acceptance Rate: 5290/21575=24.52%)</i>
+                <br>
+                <a href="https://arxiv.org/abs/2506.09996">Preprint</a> / 
+                <a href="#">Paper (TBA)</a> / 
+                <a href="https://liesy.github.io/SCM/">Project Page</a> / 
+                <a href="https://github.com/ICTMCG/SCM">Github Repo</a> / 
+                <a href="https://mp.weixin.qq.com/s/rHu1SeQmwBcVbB34MAHD7w">Chinese Blog</a> / 
+                <a href="https://www.bilibili.com/video/BV1NYUqBKEcX/">Chinese Video</a>
+                <br>
+                <span class="tldr">TL;DR: We build a content moderator that can early stop LLMs' harmful outputs with low latency. </span>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                <papertitle id="EMNLP2025Main"> <span class="tag">EMNLP'25</span> The Staircase of Ethics: Probing LLM Value Priorities through Multi-Step Induction to Complex Moral Dilemmas</papertitle>
+                <br>
+                <a class="black" href="https://scholar.google.com/citations?user=aaz-LdwAAAAJ">Ya Wu</a>, <span class="underline">Qiang Sheng</span>, <a class="black" href="https://scholar.google.com/citations?user=hGZwK0cAAAAJ">Danding Wang</a>, <a class="black" href="https://scholar.google.com/citations?user=DKCzZXsAAAAJ">Guang Yang</a>, <a class="black" href="https://scholar.google.com/citations?user=sv7uxi4AAAAJ">Yifan Sun</a>, <a class="black" href="https://zhengjiawa.github.io/">Zhengjia Wang</a>, <a class="black" href="https://scholar.google.com/citations?user=i9SLGsEAAAAJ">Yuyan Bu</a>, and <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>
+                <br>
+                <i>Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (Acceptance Rate: 1811/8174=22.16%)</i>
+                <br>
+                <a href="https://arxiv.org/abs/2505.18154">Preprint</a> / 
+                <a href="https://aclanthology.org/2025.emnlp-main.806/">Paper</a> /
+                <a href="https://isir-wuya.github.io/Multi-step-Moral-Dilemmas/">Project Page</a> / 
+                <a href="https://mp.weixin.qq.com/s/923kvfRuptKkhBmB6FFJ9w">Chinese Blog</a> 
+                <br> 
+                <span class="tldr">TL;DR: We build the MMD benchmark to probe the LLMs' value preferences in complex moral dilemmas. </span>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                <papertitle id="EMNLP2025Findings"> <span class="tag">EMNLP'25 Findings</span> Forewarned is Forearmed: Pre-Synthesizing Jailbreak-like Instructions to Enhance LLM Safety Guardrail to Potential Attacks</papertitle>
+                <br>
+                <a class="black" href="https://scholar.google.com/citations?user=c00aVP0AAAAJ">Sheng Liu</a>, <span class="underline">Qiang Sheng</span>, <a class="black" href="https://scholar.google.com/citations?user=hGZwK0cAAAAJ">Danding Wang</a>,  <a class="black" href="https://liesy.github.io/">Yang Li</a>, <a class="black" href="https://scholar.google.com/citations?user=DKCzZXsAAAAJ">Guang Yang</a>, and <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>
+                <br>
+                <a href="https://arxiv.org/abs/2508.20038">Preprint</a> / 
+                <a href="https://aclanthology.org/2025.findings-emnlp.266">Paper</a> / 
+                <a href="https://mp.weixin.qq.com/s/j2pIJTCRtPIkg7ewPx3W_A">Chinese Blog</a> 
+                <br>
+                <i>Findings of the Association for Computational Linguistics: EMNLP 2025 (Acceptance Rate: 1417/8174=17.34%) </i>
+                <br>
+                <span class="tldr">TL;DR: We enhance LLM resistance to jailbreaking by synthesizing instructions that may fall into the potentially risky space.</span>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                <papertitle id="CIKM2025full"> <span class="tag">CIKM'25</span> Bridging Thoughts and Words: Graph-Based Intent-Semantic Joint Learning for Fake News Detection</papertitle>
+                <br>
+                <a class="black" href="https://zhengjiawa.github.io/">Zhengjia Wang</a>, <span class="underline">Qiang Sheng</span>, <a class="black" href="https://scholar.google.com/citations?user=hGZwK0cAAAAJ">Danding Wang</a>, <a class="black" href="https://beanandrew.github.io/">Beizhe Hu</a>, and <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>
+                <br>
+                <i>Proceedings of the 34th ACM International Conference on Information and Knowledge Management (Acceptance Rate: 443/1627=27.2%)</i>
+                <br>
+                <a href="https://arxiv.org/abs/2509.01660">Preprint</a> / 
+                <a href="https://doi.org/10.1145/3746252.3761400">Paper</a> / 
+                <a href="https://mp.weixin.qq.com/s/N4veR9fy1rhHtrormOVfYg">Chinese Blog</a>
+                <br>
+                <span class="tldr">TL;DR: We propose to inject intent information with graph-based joint learning into fake news detection. </span>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                <papertitle id="CIKM2025short"> <span class="tag">CIKM'25</span>  Enhancing Fake News Video Detection via LLM-Driven Creative Process Simulation</papertitle>
+                <br>
+                <a class="black" href="https://scholar.google.com/citations?user=i9SLGsEAAAAJ">Yuyan Bu</a>, <span class="underline">Qiang Sheng</span>, <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>, <a class="black" href="#">Shaofei Wang</a>, <a class="black" href="https://pengqi.website/">Peng Qi</a>, <a class="black" href="https://scholar.google.com/citations?user=xAw_fukAAAAJ">Yuhui Shi</a>, and <a class="black" href="https://beanandrew.github.io/">Beizhe Hu</a>
+                <br>
+                <i>Proceedings of the 34th ACM International Conference on Information and Knowledge Management (Acceptance Rate: 185/604=30.6%)</i>
+                <br>
+                <a href="https://arxiv.org/abs/2510.04024">Preprint</a> / 
+                <a href="https://doi.org/10.1145/3746252.3760933">Paper</a> / 
+                Media Coverage: <a href="https://mp.weixin.qq.com/s/t9RNvAhscjDPrz3q8_K2ZA"> 52CV</a>
+                <br>
+                <span class="tldr">TL;DR: We propose AgentAug, which simulates the creative process of fake news videos using LLMs to mitigate the data scarcity issue. </span>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                <papertitle id="IPM2025"> <span class="tag">IP&M</span> Exploring News Intent and Its Application: A Theory-Driven Approach</papertitle>
+                <br>
+                <a class="black" href="https://zhengjiawa.github.io/">Zhengjia Wang</a>,  <a class="black" href="https://scholar.google.com/citations?user=hGZwK0cAAAAJ">Danding Wang</a>, <span class="underline">Qiang Sheng</span>, <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>, <a class="black" href="https://siyuanma.org/">Siyuan Ma</a>, and <a class="black" href="https://haonancheng.cn/">Haonan Cheng</a>
+                <br>
+                <a href="https://arxiv.org/pdf/2312.16490">Preprint</a> / 
+                <a href="https://doi.org/10.1016/j.ipm.2025.104229">Paper</a> / 
+                <a href="https://mp.weixin.qq.com/s/PGOGAkA7iRI160TufYCPQA">Chinese Blog</a>
+                <br>
+                <i><a class="black" href="https://www.sciencedirect.com/journal/information-processing-and-management">Information Processing and Management</a>, 2025</i>
+                <br>
+                <span class="tldr">TL;DR: We, for the first time, conceptualize and computerize news intent modeling and showcase its application on fake news detection, popularity prediction, and propaganda detection.</span>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                <papertitle id="ACL2025Findings"> <span class="tag">ACL'25 Findings</span> Enhancing the Comprehensibility of Text Explanations via Unsupervised Concept Discovery</papertitle>
+                <br>
+                <a class="black" href="https://scholar.google.com/citations?user=sv7uxi4AAAAJ">Yifan Sun</a>, <a class="black" href="https://scholar.google.com/citations?user=hGZwK0cAAAAJ">Danding Wang</a>, <span class="underline">Qiang Sheng</span>, <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>, and <a class="black" href="http://www.ict.ac.cn/sourcedb/cn/jssrck/200909/t20090917_2496657.html">Jintao Li</a>
+                <br>
+                <a href="https://arxiv.org/abs/2505.20293">Preprint</a> / 
+                <a href="https://aclanthology.org/2025.findings-acl.758/">Paper</a> / 
+                <a href="https://mp.weixin.qq.com/s/sNgQQ9wrLVa4LfCDI6FdCQ">Chinese Blog</a>
+                <br>
+                <i>Findings of the Association for Computational Linguistics: ACL 2025</i>
+                <br>
+                <span class="tldr">TL;DR: We exploit LLMs to automatically discover key concepts for text classification to enhance the comprehensibility of text explanations.</span>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                <papertitle id="SIGIR2025"> <span class="tag">SIGIR'25</span> LLM-Generated Fake News Induces Truth Decay in News Ecosystem: A Case Study on Neural News Recommendation</papertitle>
+                <br>
+                <a class="black" href="https://beanandrew.github.io/">Beizhe Hu</a>, <span class="underline">Qiang Sheng</span>, <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>, <a class="black" href="https://liesy.github.io/">Yang Li</a>, and <a class="black" href="https://scholar.google.com/citations?user=hGZwK0cAAAAJ">Danding Wang</a>
+                <br>
+                <i>Proceedings of The 48th International ACM SIGIR Conference on Research and Development in Information Retrieval (Acceptance Rate: 239/1071=22.3%)</i>
+                <br>
+                <a href="https://arxiv.org/abs/2504.20013">Preprint</a> /
+                <a href="https://doi.org/10.1145/3726302.3730027">Paper</a> / 
+                <a href="https://beanandrew.github.io/projects/TruthDecay">Project Page</a>
+                <br>
+                <span class="tldr">TL;DR: We reveal the truth-decay phenomenon where real news gradually loses its top-ranked advantage against fake news when LLM-generated news penetrates. </span>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                <papertitle id="CASB2025"> <span class="tag">CAS Bulletin</span> Challenges on Public Security System in AI Era</papertitle>
+                <br>
+                <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>, <span class="underline">Qiang Sheng</span>, <a class="black" href="https://www.ict.ac.cn/sourcedb/cn/jssrck/200909/t20090917_2496654.html">Guojie Li</a>
+                <br>
+                <i>Bulletin of Chinese Academy of Sciences</i>
+                <br>
+                <a href="http://www.bulletin.cas.cn/BCAS_CH/doi/10.16418/j.issn.1000-3045.20241027003">Paper</a> /
+                Media Coverage: <a href="http://paper.jyb.cn/zgjyb/html/2025-04/17/content_144744_18446043.htm">中国教育报</a>, <a href="https://lib.cqvip.com/Qikan/Article/Detail?id=7201658711">新华文摘</a>
+                <br>
+                <span class="tldr">TL;DR: We discussed new challenges and countermeasures in public security brought by AIGC techniques. </span>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                <papertitle id="FCS2025"> <span class="tag">FCS</span> Exploiting User Comments for Early Detection of Fake News Prior to Users' Commenting</papertitle>
+                <br>
+                <a class="black" href="https://scholar.google.com/citations?user=ZKGK1AIAAAAJ">Qiong Nan</a>, <span class="underline">Qiang Sheng</span>, <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>, <a class="black" href="https://easezyc.github.io/">Yongchun Zhu</a>, <a class="black" href="https://scholar.google.com/citations?user=hGZwK0cAAAAJ">Danding Wang</a>, <a class="black" href="https://scholar.google.com/citations?user=DKCzZXsAAAAJ">Guang Yang</a>, and <a class="black" href="http://www.ict.ac.cn/sourcedb/cn/jssrck/200909/t20090917_2496657.html">Jintao Li</a>
+                <br>
+                <i>Frontiers of Computer Science</i>
+                <br>
+                <a href="https://arxiv.org/pdf/2310.10429">Preprint</a> / 
+                <a href="https://doi.org/10.1007/s11704-024-40674-6">Paper</a>
+                <br>
+                <span class="tldr">TL;DR: We explored how to let a comment-based model effectively help a content-only one in fake news early detection. </span>
+            </td>
+          </tr>
+          <td>
+            <subheading>2024</subheading>
+          </td>
+          <tr>
+            <td valign="center">
+                <papertitle id="CIKM2024"> <span class="tag">CIKM'24</span> Let Silence Speak: Enhancing Fake News Detection with Generated Comments from Large Language Models</papertitle>
+                <br>
+                <a class="black" href="https://scholar.google.com/citations?user=ZKGK1AIAAAAJ">Qiong Nan</a>, <span class="underline">Qiang Sheng</span>, <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>, <a class="black" href="https://beanandrew.github.io/">Beizhe Hu</a>, <a class="black" href="https://scholar.google.com/citations?user=hGZwK0cAAAAJ">Danding Wang</a>, and <a class="black" href="http://www.ict.ac.cn/sourcedb/cn/jssrck/200909/t20090917_2496657.html">Jintao Li</a>
+                <br>
+                <i>Proceedings of the 33rd ACM International Conference on Information and Knowledge Management (Acceptance Rate: 347/1496=23.2%)</i>
+                <br>
+                <a href="https://arxiv.org/pdf/2405.16631">Preprint</a> / 
+                <a href="https://doi.org/10.1145/3627673.3679519">Paper</a> / 
+                <a href="https://github.com/ICTMCG/GenFEND">GitHub Repo</a> / 
+                <a href="https://mp.weixin.qq.com/s/ClcpdlO3iZPcnm_v_ryHLA">Chinese Blog</a>
+                <br>
+                <span class="tldr">TL;DR: We prompt LLMs to role-play social media users to obtain generated comments for enhancing fake news detection. </span>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                <papertitle id="MM2024"> <span class="tag">MM'24</span> FakingRecipe: Detecting Fake News on Short Video Platforms from the Perspective of Creative Process</papertitle>
+                <br>
+                <a class="black" href="https://scholar.google.com/citations?user=i9SLGsEAAAAJ">Yuyan Bu</a>, <span class="underline">Qiang Sheng</span>, <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>, <a class="black" href="https://pengqi.website/">Peng Qi</a>, <a class="black" href="https://scholar.google.com/citations?user=hGZwK0cAAAAJ">Danding Wang</a>, and <a class="black" href="http://www.ict.ac.cn/sourcedb/cn/jssrck/200909/t20090917_2496657.html">Jintao Li</a>
+                <br>
+                <i>Proceedings of the 32nd ACM International Conference on Multimedia (Acceptance Rate: 1149/4385=26.2%)</i>
+                <br>
+                <a href="https://arxiv.org/pdf/2407.16670">Preprint</a> / 
+                <a href="	https://doi.org/10.1145/3664647.3680663">Paper</a> / 
+                <a href="https://github.com/ICTMCG/FakingRecipe">GitHub Repo</a> / 
+                <a href="https://mp.weixin.qq.com/s/AmB0eDr0s-AF0KufV_IlkA">Chinese Blog</a> / 
+                <a href="https://mp.weixin.qq.com/s/lORtwWWUW8ewlt78luJ0uQ">CSIG MM论文导读</a>
+                <br>
+                <span class="tldr">TL;DR: We detect fake news on short video platforms by modeling videos from the faking process perspective and constructed a FakeSV's sister dataset in English, namely FakeTT. </span>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                <papertitle id="IJCAI2024-1"> <span class="tag">IJCAI'24</span> Ten Words Only Still Help: Improving Black-Box AI-Generated Text Detection via Proxy-Guided Efficient Re-Sampling</papertitle>
+                <br>
+                <a class="black" href="https://scholar.google.com/citations?user=xAw_fukAAAAJ">Yuhui Shi</a>, <span class="underline">Qiang Sheng</span>, <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>, <a class="black" href="https://scholar.google.com/citations?user=RxULDkAAAAAJ">Hao Mi</a>, <a class="black" href="https://beanandrew.github.io/">Beizhe Hu</a>, and <a class="black" href="https://scholar.google.com/citations?user=hGZwK0cAAAAJ">Danding Wang</a>
+                <br>
+                <i>Proceedings of the 33rd International Joint Conference on Artificial Intelligence (Acceptance Rate: 791/5651=14.0%)</i>
+                <br>
+                <a href="https://arxiv.org/pdf/2402.09199">Preprint</a> / 
+                <a href="https://doi.org/10.24963/ijcai.2024/55">Paper</a> / 
+                <a href="https://github.com/ICTMCG/POGER">GitHub Repo</a> / 
+                <a href="data/POGER-Slides.pdf">Slides</a> /
+                <a href="https://mp.weixin.qq.com/s/2-cWJAxvOuGanR6wo6J9jQ">Chinese Blog</a>
+                <br>
+                <span class="tldr">TL;DR: To detect and attribute text generated by black-box LMs, we estimate their generation probabilities of representative words guided by a white-box proxy LM to obtain a strong feature. </span>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                <papertitle id="IJCAI2024-2"> <span class="tag">IJCAI'24</span> Vision-fused Attack: Advancing Aggressive and Stealthy Adversarial Text against Neural Machine Translation</papertitle>
+                <br>
+                Yanni Xue, Haojie Hao, <a class="black" href="https://jiakaiwangcn.github.io/">Jiakai Wang</a>, <span class="underline">Qiang Sheng</span>, <a class="black" href="https://rstao-bjtu.github.io/">Renshuai Tao</a>, <a class="black" href="#">Yu Liang</a>, <a class="black" href="#">Pu Feng</a>, and <a class="black" href="https://xlliu-beihang.github.io/">Xianglong Liu</a>
+                <br>
+                <i>Proceedings of the 33rd International Joint Conference on Artificial Intelligence (Acceptance Rate: 791/5651=14.0%)</i>
+                <br>
+                <a href="https://doi.org/10.24963/ijcai.2024/730">Paper</a> / 
+                <a href="https://github.com/Levelower/VFA">GitHub Repo</a> / 
+                <a href="https://mp.weixin.qq.com/s/YfV-pqaLSXz2zWVgR8x8Ew">Chinese Blog</a>
+                <br>
+                <span class="tldr">TL;DR: We propose a vision-fused attack framework to acquire powerful adversarial text (i.e., more aggressive and stealthy) in neural machine translation. </span>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                <papertitle id="AAAI2024"> <span class="tag">AAAI'24</span> Bad Actor, Good Advisor: Exploring the Role of Large Language Models in Fake News Detection</papertitle>
+                <br>
+                <a class="black" href="https://beanandrew.github.io/">Beizhe Hu</a>, <span class="underline">Qiang Sheng</span>, <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>, <a class="black" href="https://scholar.google.com/citations?user=xAw_fukAAAAJ">Yuhui Shi</a>, <a class="black" href="https://liesy.github.io/">Yang Li</a>, <a class="black" href="https://scholar.google.com/citations?user=hGZwK0cAAAAJ">Danding Wang</a>, and <a class="black" href="https://pengqi.website/">Peng Qi</a>
+                <br>
+                <i>Proceedings of the 38th AAAI Conference on Artificial Intelligence</i>
+                <br>
+                <a href="https://arxiv.org/pdf/2309.12247">Preprint</a> / 
+                <a href="https://doi.org/10.1609/aaai.v38i20.30214">Paper</a> / 
+                <a href="https://github.com/ICTMCG/ARG">GitHub Repo</a> /
+                <a href="https://underline.io/lecture/94054-bad-actor-good-advisor-exploring-the-role-of-large-language-models-in-fake-news-detection">English Video & Slides</a>
+                <br>
+                <span class="tldr">TL;DR: Large LMs generally underperform fine-tuned Small LMs for fake news detection, but they can be good advisors by providing rationales. </span>
+            </td>
+          </tr>
+          <td>
+            <subheading>2023</subheading>
+          </td>
+          <tr>
+            <td valign="center">
+                <papertitle id="CCCF2023"> <span class="tag">CCCF</span> The Safety in the AIGC era: Techniques Make the World More Credible</papertitle> (AIGC时代的安全：用技术让世界更可信)
+                <br>
+                <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>, and <span class="underline">Qiang Sheng</span>
+                <br>
+                <i>Communications of the China Computer Federation, October 2023</i>
+                <br>
+                <a href="https://dl.ccf.org.cn/article/articleDetail.html?id=6693892601366528">Paper</a> / 
+                <a href="https://mp.weixin.qq.com/s/AUiDKYaLkjtcoqldgFNJFA">WeChat Release</a>
+                <br>
+                <span class="tldr">TL;DR: Our perspective paper on the safety issues brought by AI-generated content. </span>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                <papertitle id="MM2023"> <span class="tag">MM'23</span> Combating Online Misinformation Videos: Characterization, Detection, and Future Directions</papertitle>
+                <br>
+                <a class="black" href="https://yuyan-b.github.io/">Yuyan Bu</a>, <span class="underline">Qiang Sheng</span>, <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>, <a class="black" href="https://pengqi.website/">Peng Qi</a>, <a class="black" href="https://scholar.google.com/citations?user=hGZwK0cAAAAJ">Danding Wang</a>, and <a class="black" href="http://www.ict.ac.cn/sourcedb/cn/jssrck/200909/t20090917_2496657.html">Jintao Li</a>
+                <br>
+                <i>Proceedings of the 31st ACM International Conference on Multimedia (Acceptance Rate: 902/3669=24.6%) </i>
+                <br>
+                <a href="https://arxiv.org/pdf/2302.03242">Preprint</a> / 
+                <a href="https://dl.acm.org/doi/abs/10.1145/3581783.3612426">Paper</a> / 
+                <a href="https://github.com/ICTMCG/Awesome-Misinfo-Video-Detection">GitHub Repo</a> / 
+                <a href="https://mp.weixin.qq.com/s/V00ArOksaKi3GXFSZEDsNA">Chinese Blog</a>
+                <br>
+                <span class="tldr">TL;DR: We conduct the very first survey focusing on online misinformation video detection, to the best of our knowledge.</span>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                <papertitle id="ACL2023"> <span class="tag">ACL'23</span> Learn over Past, Evolve for Future: Forecasting Temporal Trends for Fake News Detection</papertitle>
+                <br>
+                <a class="black" href="https://beanandrew.github.io/">Beizhe Hu</a>, <span class="underline">Qiang Sheng</span>, <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>, <a class="black" href="https://easezyc.github.io/">Yongchun Zhu</a>, <a class="black" href="https://scholar.google.com/citations?user=hGZwK0cAAAAJ">Danding Wang</a>, <a class="black" href="https://zhengjiawa.github.io/">Zhengjia Wang</a>, and <a class="black" href="https://scholar.google.com/citations?user=iv22mK4AAAAJ">Zhiwei Jin</a>
+                <br>
+                <i>Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics</i>
+                <br>
+                <a href="https://arxiv.org/pdf/2306.14728">Preprint</a> /
+                <a href="https://aclanthology.org/2023.acl-industry.13.pdf">Paper</a> /
+                <a href="https://github.com/ICTMCG/FTT-ACL23">Code</a> /
+                <a href="https://beanandrew.github.io/data/FTT-Poster.pdf">Poster</a> /
+                <a href="https://beanandrew.github.io/data/FTT-Slides%20no%20video.pdf">Slides</a> /
+                <a href="https://doi.org/10.48448/bydk-ay78">English Video</a> /
+                <a href="https://medium.com/@explanatory.ai/arxiv-weekly-roundup-14-f0d4c1cec19c">Explanatory AI arXiv Weekly Roundup</a>
+                <br>
+                <span class="tldr">TL;DR: We propose to address the temporal shift issue in real-world fake news detection systems via forecasting topic-level trends and accordingly adjusting the detector update strategy.</span>
+            </td>
+          </tr>
+          <td>
+            <subheading>2022</subheading>
+          </td>
+          <tr>
+            <td valign="center">
+                <papertitle id="COLING2022"> <span class="tag">COLING'22</span> Improving Fake News Detection of Influential Domain via Domain- and Instance-Level Transfer</papertitle>
+                <br>
+                <a class="black" href="https://scholar.google.com/citations?user=ZKGK1AIAAAAJ">Qiong Nan</a>, <a class="black" href="https://scholar.google.com/citations?user=hGZwK0cAAAAJ">Danding Wang</a>, <a class="black" href="https://easezyc.github.io/">Yongchun Zhu</a>, <span class="underline">Qiang Sheng</span>, <a class="black" href="https://scholar.google.com/citations?user=xAw_fukAAAAJ">Yuhui Shi</a>, <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>, and <a class="black" href="http://www.ict.ac.cn/sourcedb/cn/jssrck/200909/t20090917_2496657.html">Jintao Li</a>
+                <br>
+                <i>Proceedings of the 29th International Conference on Computational Linguistics (Acceptance Rate: 632/2253=28.1%)</i>
+                <br>
+                <a href="https://arxiv.org/pdf/2209.08902">Preprint</a> /
+                <a href="https://aclanthology.org/2022.coling-1.250.pdf">Paper</a> /
+                <a href="https://github.com/ICTMCG/DITFEND">Code</a> /
+                <a href="https://doi.org/10.48448/qcyv-ms24">English Video</a> /
+                <a href="https://mp.weixin.qq.com/s/GpENICRa0dePwvw_3jNL3Q">Chinese Blog 1</a>/
+                <a href="https://zhuanlan.zhihu.com/p/563985492">2</a>
+                <br>
+                <span class="tldr">TL;DR: We propose a domain- and instance-level transfer framework for detecting fake news of target domains.</span>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                <papertitle id="TKDE2022"> <span class="tag">IEEE TKDE</span> Memory-Guided Multi-View Multi-Domain Fake News Detection</papertitle>
+                <br>
+                <a class="black" href="https://easezyc.github.io/">Yongchun Zhu</a>, <span class="underline">Qiang Sheng</span>, <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>, <a class="black" href="https://scholar.google.com/citations?user=ZKGK1AIAAAAJ">Qiong Nan</a>, <a class="black" href="http://www.cs.iit.edu/~kshu/">Kai Shu</a>, <a class="black" href="https://scholar.google.com/citations?user=KqSSa-kAAAAJ">Minghui Wu</a>, <a class="black" href="https://jd92.wang/">Jindong Wang</a>, and <a class="black" href="https://fuzhenzhuang.github.io/">Fuzhen Zhuang</a>
+                <br>
+                <i><a class="black" href="https://www.computer.org/csdl/journal/tk">IEEE Transactions on Knowledge and Data Engineering</a>, 2022</i>
+                <br>
+                <a href="https://arxiv.org/pdf/2206.12808">Preprint</a> /
+                <a href="https://ieeexplore.ieee.org/document/9802916">Paper</a> /
+                <a href="https://github.com/ICTMCG/M3FEND">Code</a> /
+                <a href="https://mp.weixin.qq.com/s/FAHFq6ArRAF8OPNpzs1XYg">Chinese Blog</a>
+                <br>
+                <span class="tldr">TL;DR: We tackle the issue of domain shift and domain labeling incompleteness for simultaneously modeling multi-domain fake news via multi-view encoding and memory bank mechanism. </span>
+            </td>
+           </tr>
+          <tr>
+            <td valign="center">
+                <papertitle id="IPM2022"> <span class="tag">IP&M</span>Characterizing Multi-Domain False News and Underlying User Effects on Chinese Weibo</papertitle>
+                <br>
+                <span class="underline">Qiang Sheng</span>, <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>, <a class="black" href="https://hrussellbernard.com/">H. Russell Bernard</a>, <a class="black" href="http://www.cs.iit.edu/~kshu/">Kai Shu</a>, <a class="black" href="http://www.ict.ac.cn/sourcedb/cn/jssrck/200909/t20090917_2496657.html">Jintao Li</a>, and <a class="black" href="https://www.public.asu.edu/~huanliu/">Huan Liu</a>
+                <br>
+                <i><a class="black" href="https://www.sciencedirect.com/journal/information-processing-and-management">Information Processing and Management</a>, 2022</i>
+                <br>
+                <a href="https://arxiv.org/pdf/2205.03068">Preprint</a> /
+                <a href="https://doi.org/10.1016/j.ipm.2022.102959">Paper</a> /
+                <a href="https://github.com/ICTMCG/Characterizing-Weibo-Multi-Domain-False-News">Code</a> /
+                <a href="https://forms.office.com/r/9jNpP003Cp">Dataset</a> /
+                <a href="https://mp.weixin.qq.com/s/bZDTdwBzGrBKwPeImp1v-A">Chinese Brief</a>
+                <br>
+                <span class="tldr">TL;DR: Based on the largest false news dataset on Chinese Weibo (44k+), we characterize the spread of false news in nine domains and analyze the underlying user effects. </span>
+            </td>
+           </tr>
+            <tr>
+             <td valign="center">
+                <papertitle id="SIGIR2022"> <span class="tag">SIGIR'22</span> Generalizing to the Future: Mitigating Entity Bias in Fake News Detection</papertitle>
+                <br>
+                <a class="black" href="https://easezyc.github.io/">Yongchun Zhu</a>, <span class="underline">Qiang Sheng</span>, <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>, <a class="black" href="https://lisk123.github.io/">Shuokai Li</a>, <a class="black" href="https://scholar.google.com/citations?user=hGZwK0cAAAAJ">Danding Wang</a>, and <a class="black" href="https://fuzhenzhuang.github.io/">Fuzhen Zhuang</a>
+                <br>
+                <i>Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2022) (Acceptance Rate: 165/667=24.7%)</i>
+                <br>
+                <a href="https://arxiv.org/pdf/2204.09484">Preprint</a> /
+                <a href="https://doi.org/10.1145/3477495.3531816">Paper</a> /
+                <a href="https://github.com/ICTMCG/ENDEF-SIGIR2022">Code</a> /
+                <a href="https://mp.weixin.qq.com/s/IhzpelbFNq9nheYqnxBZ6A">Chinese Blog</a>
+                <br>
+                <span class="tldr">TL;DR: We reveal the entity bias in fake news detection datasets and propose a causal framework to mitigate such bias for better generalization to future data. </span>
+            </td>
+           </tr>
+           <tr>
+            <td valign="center">
+                <papertitle id="ACL2022"> <span class="tag">ACL'22</span> Zoom Out and Observe: News Environment Perception for Fake News Detection</papertitle>
+                <br>
+                <span class="underline">Qiang Sheng</span>, <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>, <a class="black" href="https://www.zhangxueyao.com/">Xueyao Zhang</a>, <a class="black" href="https://scholar.google.com/citations?user=PfmGvVQAAAAJ">Rundong Li</a>, <a class="black" href="https://scholar.google.com/citations?user=hGZwK0cAAAAJ">Danding Wang</a>, and <a class="black" href="https://easezyc.github.io/">Yongchun Zhu</a>
+                <br>
+                <i>Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Acceptance Rate: 701/3378=20.75%) </i>
+                <br>
+                <a href="https://arxiv.org/pdf/2203.10885">Preprint</a> /
+                <a href="https://aclanthology.org/2022.acl-long.311.pdf">Paper</a> /
+                <a href="data/NEP-Poster.pdf">Poster</a> /
+                <a href="https://github.com/ICTMCG/News-Environment-Perception">Code</a> /
+                <a href="https://forms.office.com/r/Tr6FMGQJt0">Dataset</a> /
+                <a href="https://www.bilibili.com/video/BV1MS4y1e7PY">Chinese Video</a> /
+                <a href="https://mp.weixin.qq.com/s/aTFeuCYIpSoazeRi52jqew">Chinese Blog</a> /
+                <a href="https://doi.org/10.48448/q2am-2315">English Video</a> /
+                <a href="https://montrealethics.ai/zoom-out-and-observe-news-environment-perception-for-fake-news-detection/">English Blog</a>
+                <br>
+                <span class="tldr">TL;DR: For the first time, we propose to perceive signals from the news environment for fake news detection. </span>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                <papertitle> <span class="tag">AAAI'22</span> DRAG: Dynamic Region-Aware GCN for Privacy-Leaking Image Detection</papertitle>
+                <br>
+                <a class="black" href="https://scholar.google.com/citations?user=DKCzZXsAAAAJ">Guang Yang</a>, <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>, <span class="underline">Qiang Sheng</span>, <a class="black" href="https://pengqi.website/">Peng Qi</a>, <a class="black" href="http://lixirong.net/">Xirong Li</a>, and <a class="black" href="http://www.ict.ac.cn/sourcedb/cn/jssrck/200909/t20090917_2496657.html">Jintao Li</a>
+                <br>
+                <i>Proceedings of the 36th AAAI Conference on Artificial Intelligence (Acceptance Rate: 1349/9020=15.0%)</i>
+                <br>
+                <a href="https://arxiv.org/pdf/2203.09121">Preprint</a> /
+                <a href="https://ojs.aaai.org/index.php/AAAI/article/view/21482/21231">Paper</a> /
+                <a href="https://aaai-2022.virtualchair.net/poster_aisi2085">English Video</a> 
+                <br>
+                <span class="tldr">TL;DR: We propose a GCN-based method to find out crucial privacy-indicative regions for privacy-leaking image detection dynamically. </span>
+            </td>
+          </tr>
+          <td>
+            <subheading>2021</subheading>
+          </td>
+          <tr>
+            <td valign="center">
+                <papertitle> <span class="tag">MM'21</span> Improving Fake News Detection by Using an Entity-enhanced Framework to Fuse Diverse Multimodal Clues</papertitle>
+                <br>
+                <a class="black" href="https://pengqi.website/">Peng Qi</a>, <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>, <a class="black" href="http://lixirong.net/">Xirong Li</a>, Huan Liu, <span class="underline">Qiang Sheng</span>, <a class="black" href="https://scholar.google.com/citations?user=9eDMXxMAAAAJ">Xiaoyue Mi</a>, Qin He, Yongbiao Lv, Chenyang Guo, and Yingchao Yu
+                <br>
+                <i><a class="black" href="https://dl.acm.org/doi/proceedings/10.1145/3474085">Proceedings of the 29th ACM International Conference on Multimedia</a></i>
+                <br>
+                <a href="https://arxiv.org/pdf/2108.10509">Preprint</a> / 
+                <a href="https://doi.org/10.1145/3474085.3481548">Paper</a> /
+                <a href="https://zhuanlan.zhihu.com/p/444460038">Chinese Blog 1</a>/
+                <a href="https://mp.weixin.qq.com/s/7li2LDfvCgRY4VSfQu_fRw">2</a>
+                <br>
+                <span class="tldr">TL;DR: We point out three valuable text-image correlations in multimodal fake news and propose an entity-enhanced fusion framework for cross-modal correlation modeling in fake news detection. </span>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                <papertitle> <span class="tag">CIKM'21</span> Integrating Pattern- and Fact-based Fake News Detection via Model Preference Learning</papertitle>
+                <br>
+                <span class="underline">Qiang Sheng</span>*, <a class="black" href="https://www.zhangxueyao.com/">Xueyao Zhang</a>*, <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>, and <a class="black" href="https://scholar.google.com/citations?hl=zh-CN&user=60YtlrIAAAAJ">Lei Zhong</a> (*:Equal Contribution)
+                <br>
+                <i><a class="black" href="https://dl.acm.org/doi/proceedings/10.1145/3459637">Proceedings of the 30th ACM International Conference on Information and Knowledge Management</a> (Acceptance Rate:271/1251=21.7%)</i>
+                <br>
+                <a href="https://arxiv.org/pdf/2109.11333">Preprint</a> / 
+                <a href="https://dl.acm.org/doi/10.1145/3459637.3482440">Paper</a> /
+                <a href="data/Pref-FEND-Poster.pdf">Poster</a> /
+                <a href="https://github.com/ICTMCG/Pref-FEND">Code</a> /
+                <a href="https://forms.office.com/r/HF00qdb3ZkD">Datasets</a> /
+                <a href="https://zhuanlan.zhihu.com/p/414464291">Chinese Blog 1</a>/
+                <a href="https://mp.weixin.qq.com/s/ciqsGeGDJgnxcNgbbBNthQ">2</a>/
+                <a href="https://mp.weixin.qq.com/s/vAwT0z_-zaNj0Li7PPyxmA">3</a>
+                <br>
+                <span class="tldr">TL;DR: We propose a graph-based model preference learning framework to separately handle the pattern and fact indicators in fake news detection. </span>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                <papertitle> <span class="tag">ACL'21</span> Article Reranking by Memory-enhanced Key Sentence Matching for Detecting Previously Fact-checked Claims</papertitle>
+                <br>
+                <span class="underline">Qiang Sheng</span>, <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>, <a class="black" href="https://www.zhangxueyao.com/">Xueyao Zhang</a>, <a class="black" href="http://lixirong.net/">Xirong Li</a>, and <a class="black" href="https://scholar.google.com/citations?hl=zh-CN&user=60YtlrIAAAAJ">Lei Zhong</a>
+                <br>
+                <i><a class="black" href="https://aclanthology.org/events/acl-2021/#2021-acl-long">Proceedings of the Joint Conference of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing</a> (Acceptance Rate:571/2327=24.5%)</i>
+                <br>
+                <a href="https://arxiv.org/pdf/2112.10322">Preprint</a> / 
+                <a href="https://aclanthology.org/2021.acl-long.425.pdf">Paper</a> / 
+                <a href="data/MTM-Poster.pdf">Poster</a> /
+                <a href="https://github.com/ICTMCG/MTM">Code</a> /
+                <a href="https://forms.office.com/r/FWVetbSM7p">Chinese Dataset</a> /
+                <a href="https://doi.org/10.48448/18a9-p519">English Video</a> /
+                <a href="https://zhuanlan.zhihu.com/p/393615707">Chinese Blog 1</a>/
+                <a href="https://mp.weixin.qq.com/s/YIfYlPEIXrF3dLvFHfqENQ">2</a>/
+                <a href="https://mp.weixin.qq.com/s/11puyPCKpfeJC53nuBJTPw">3</a>
+                <br>
+                <span class="tldr">TL;DR: We detect previously fact-checked claims by matching them against the key sentences in fact-checking articles. </span>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                <papertitle> <span class="tag">J-CRAD</span> Semantics-Enhanced Multi-modal Fake News Detection</papertitle> (语义增强的多模态虚假新闻检测)
+                <br>
+                <a class="black" href="https://pengqi.website/">Peng Qi</a>, <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>, and <span class="underline">Qiang Sheng</span>
+                <br>
+                <i><a class="black" href="https://crad.ict.ac.cn/CN/volumn/volumn_1346.shtml">Journal of Computer Research and Development, 2021</a></i>
+                <br>
+                <a href="https://crad.ict.ac.cn/CN/article/downloadArticleFile.do?attachType=PDF&id=4456">Paper</a>
+                <br>
+                <span class="tldr">TL;DR: We focus on the role of explicit semantics for fake news detection via visual semantic extraction and knowledge-guided multi-modal semantic interaction. </span>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                <papertitle> <span class="tag">WWW'21</span> Mining Dual Emotion for Fake News Detection</papertitle>
+                <br>
+                <a class="black" href="https://www.zhangxueyao.com/">Xueyao Zhang</a>, <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>, <a class="black" href="http://lixirong.net/">Xirong Li</a>, <span class="underline">Qiang Sheng</span>, <a class="black" href="https://scholar.google.com/citations?hl=zh-CN&user=60YtlrIAAAAJ">Lei Zhong</a>, and <a class="black" href="http://www.cs.iit.edu/~kshu/">Kai Shu</a>
+                <br>
+                <i><a class="black" href="https://dl.acm.org/doi/proceedings/10.1145/3442381">Proceedings of the 30th Web Conference</a> (Acceptance Rate:357/1736=20.6%)</i>
+                <br>
+                <a href="https://arxiv.org/pdf/1903.01728.pdf">Preprint</a> / 
+                <a href="https://dl.acm.org/doi/10.1145/3442381.3450004">Paper</a> / 
+                <a href="https://github.com/RMSnow/WWW2021">Code</a> /
+                <a href="https://www.bilibili.com/video/BV13o4y1m7c3">Chinese Video</a>
+                <br>
+                <span class="tldr">TL;DR: We leverage both publisher emotion and social emotion for fake news detection. </span>
+            </td>
+          </tr>
+          <td>
+            <subheading>2020</subheading>
+          </td>
+          <tr>
+            <td valign="center">
+                <papertitle> <span class="tag">ACL'20</span> Integrating Semantic and Structural Information with Graph Convolutional Network for Controversy Detection</papertitle>
+                <br>
+                <a class="black" href="https://scholar.google.com/citations?hl=zh-CN&user=60YtlrIAAAAJ">Lei Zhong</a>, <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>, <span class="underline">Qiang Sheng</span>, <a class="black" href="https://scholar.google.com/citations?user=4Lzd8P8AAAAJ">Junbo Guo</a>, and <a class="black" href="https://scholar.google.com/citations?user=GNG7gk8AAAAJ">Ziang Wang</a>
+                <br>
+                <i><a class="black" href="https://aclanthology.org/events/acl-2020/#2020-acl-main">Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics</a> (Acceptance Rate:571/2244=25.4%)</i>
+                <br>
+                <a href="https://www.aclweb.org/anthology/2020.acl-main.49.pdf">Paper</a> /
+                <a href="https://docs.google.com/forms/d/1htPeuD5HupX5MAI5QGw93n4aNvwDhTgsfP1YT3AR8w4">Chinese Dataset</a>
+                <br>
+                <span class="tldr">TL;DR: We propose a GCN-based method for post-level controversy detection. Also, we release the first Chinese dataset for this task.</span>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                <papertitle> <span class="tag">CCCF</span> Fake News and Disinformation Detection on the Internet: Recent Advances and Future Prospects</papertitle> (互联网虚假信息检测进展与展望)
+                <br>
+                <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>, <span class="underline">Qiang Sheng</span>, and <a class="black" href="https://pengqi.website/">Peng Qi</a>
+                <br>
+                <i>Communications of the China Computer Federation, March 2020</i>
+                <br>
+                <a href="https://dl.ccf.org.cn/institude/institudeDetail?id=4844057093933056&_ack=1">Webpage Version</a> /
+                <a href="https://mp.weixin.qq.com/s/cqF5egtdRonADJIOg5EaXQ">WeChat Release</a> 
+                <br>
+                <span class="tldr">TL;DR: We review the recent advances of detecting fake news and disinformation and propose potential directions. </span>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                <papertitle> <span class="tag">Springer Book Chapter</span> Exploring the Role of Visual Content in Fake News Detection</papertitle>
+                <br>
+                <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>, <a class="black" href="https://pengqi.website/">Peng Qi</a>, <span class="underline">Qiang Sheng</span>, <a class="black" href="https://scholar.google.com/citations?user=4u_oHeEAAAAJ">Tianyun Yang</a>, <a class="black" href="https://scholar.google.com/citations?user=4Lzd8P8AAAAJ">Junbo Guo</a>, and <a class="black" href="http://www.ict.ac.cn/sourcedb/cn/jssrck/200909/t20090917_2496657.html">Jintao Li</a>
+                <br>
+                <i><a class="black" href="https://www.springer.com/gp/book/9783030426989">Disinformation, Misinformation, and Fake News in Social Media: Emerging Research Challenges and Opportunities, Lecture Notes in Social Network (LNSN)</a></i>
+                <br>
+                <a href="https://arxiv.org/abs/2003.05096">Preprint</a> /
+                <a href="https://link.springer.com/chapter/10.1007/978-3-030-42699-6_8">Springer Link</a>
+                <br>
+                <span class="tldr">TL;DR: A survey chapter that focuses on the visual information for fake news detection. </span>
+            </td>
+          </tr>
+
+        </table>
+        <!-- Publications End -->
+       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="12">
+          <tr>
+            <td>
+              <heading>Tutorials</heading>
+            </td>
+          </tr>
+        </table>
+        <table width="100%" align="center" border="0" cellpadding="12" style="table-layout:fixed;">
+          <tr>
+             <td valign="center">
+                <papertitle> <span class="tag">MM'25</span> Combating Online Misinformation Videos: Characterization, Detection, and Prevention</papertitle>
+                <br>
+                <span class="underline">Qiang Sheng</span>, <a class="black" href="https://pengqi.website/">Peng Qi</a>, <a class="black" href="https://scholar.google.com/citations?user=4u_oHeEAAAAJ">Tianyun Yang</a>, <a class="black" href="https://yuyan-b.github.io/">Yuyan Bu</a>, <a class="black" href="https://scholar.google.com/citations?user=ljyBjv8AAAAJ">Wynne Hsu</a>, <a class="black" href="https://scholar.google.com/citations?user=_xFTK8wAAAAJ">Mong Li Lee</a>, and <a class="black" href="https://scholar.google.com/citations?user=fSBdNg0AAAAJ">Juan Cao</a>
+                <br>
+                <i>The 33rd ACM International Conference on Multimedia (MM 2025)</i>
+                <br>
+                <a href="http://misinfo-video.github.io/">Webpage</a> /
+                <a href="https://doi.org/10.1145/3746027.3759206">ACM DL</a>
+            </td>  
+          </tr>
+          <tr>
+             <td valign="center">
+                <papertitle> <span class="tag">SIGIR'24</span> Preventing and Detecting Misinformation Generated by Large Language Models</papertitle>
+                <br>
+                <a class="black" href="https://exlaw.github.io/">Aiwei Liu</a>, <span class="underline">Qiang Sheng</span>, and <a class="black" href=https://xuminghu.github.io/>Xuming Hu</a>
+                <br>
+                <i><a class="black" href="https://sigir-2024.github.io/attend_Tutorials.html">The 47th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2024)</a></i>
+                <br>
+                <a href="https://sigir24-llm-misinformation.github.io/">Webpage</a> /
+                <a href="https://doi.org/10.1145/3626772.3661377">ACM DL</a>
+            </td>  
+          </tr>
+        </table>
+        <!-- Talks Begin -->
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="12">
+          <tr>
+            <td>
+              <heading>Talks</heading>
+            </td>
+          </tr>
+        </table>
+        <table width="100%" align="center" border="0" cellpadding="12" style="table-layout:fixed;">
+          <colgroup>
+                <col span="1" style="width: 23%;">
+                <col span="1" style="width: 77%;">
+          </colgroup>
+         <tr>
+            <td valign="center">
+                2025/11/15
+            </td>
+            <td>
+                <strong> Advances and Changes of Misinformation Detection in the LLM era（大模型时代虚假信息检测的发展与变化）</strong>
+                <br>
+                @ People's Public Security University of China
+            </td>
+         </tr>
+         <tr>
+            <td valign="center">
+                2025/9/11
+            </td>
+            <td>
+                <strong> Advances and Changes of Misinformation Detection in the LLM era（大模型时代虚假信息检测的发展与变化）</strong>
+                <br>
+                @ Institute of Information Engineering, Chinese Academy of Sciences
+            </td>
+         </tr>
+         <tr>
+            <td valign="center">
+                2025/6/28
+            </td>
+            <td>
+                <strong> Content Safety in the LLM era: From Detection to Interference（大模型时代的内容安全：从识别到干预）</strong>
+                <br>
+                @ The Youth Forum on AI Language Capabilities and Safety Governance, Beijing Foreign Studies University (<a href="https://mp.weixin.qq.com/s/WUWaf5Wr2sVO_em2eQxtGA">Event</a>)
+            </td>
+         </tr>
+         <tr>
+            <td valign="center">
+                2025/6/14
+            </td>
+            <td>
+                <strong> Advances and Changes of Misinformation Detection in the LLM era（大模型时代虚假信息检测的发展与变化）</strong>
+                <br>
+                @ YSSNLP 2025 (<a href="https://mp.weixin.qq.com/s/buWUqwltl2dcIK4z4tMrYQ">Event</a>)
+            </td>
+         </tr>
+         <tr>
+            <td valign="center">
+                2025/1/16
+            </td>
+            <td>
+                <strong> LLMs and Misinformation Detection（大模型与虚假信息检测）</strong>
+                <br>
+                @ AI TIME (<a href="https://mp.weixin.qq.com/s/ejXVBUDSp-T0INjTH5JrDQ">Event</a>)
+            </td>
+         </tr>
+         <tr>
+            <td valign="center">
+                2024/11/8
+            </td>
+            <td>
+                <strong> Misinformation Detection in the Era of LLMs: Recent Advances and Discussions（大模型时代的虚假信息检测：进展与探讨）</strong>
+                <br>
+                @ Institute of Information Engineering, Chinese Academy of Sciences (<a href="https://mp.weixin.qq.com/s/LcqhK_1TOeraQKOdSMbcLw">Event</a>)
+            </td>
+          </tr>
+         <tr>
+            <td valign="center">
+                2024/10/12
+            </td>
+            <td>
+                <strong> LLM-Driven Internet Misinformation Rehearsal and Detection Enhancement（大模型驱动的互联网虚假信息预演及检测增强）</strong>
+                <br>
+                @ SMP 2024 (<a href="https://mp.weixin.qq.com/s/LHkiPb_xulmXQlgMnL780g">Event</a>)
+            </td>
+         </tr>
+         <tr>
+            <td valign="center">
+                2024/6/1
+            </td>
+            <td>
+                <strong> AIGC: Techniques, Challenges, and Countermeasures（AIGC: 技术、挑战和应对）</strong>
+                <br>
+                @ Beijing Film Academy (<a href="https://mp.weixin.qq.com/s/pbIKQPPf7q7tH0XJT6StDQ">Event</a>)
+            </td>
+         </tr>
+         <tr>
+            <td valign="center">
+                2023/6/28
+            </td>
+            <td>
+                <strong> Improving Research Zooming Capability: Three Views of Application Research (提升科研“变焦”能力：应用问题研究的三个视角) </strong>
+                <br>
+                @ Advanced Computing Technology Seminar, ICT, CAS
+            </td>
+         </tr>
+         <tr>
+            <td valign="center">
+                2023/6/8
+            </td>
+            <td>
+                <strong> Generalization and Multi-Modality Issues in Real-World Fake News Detection and Beyond </strong>
+                <br>
+                @ Illinois Institute of Technology
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                2023/3/3
+            </td>
+            <td>
+                <strong> The Birth of Papers on Top-Tier Journals and Conferences: Works Done Behind （顶会顶刊论文的诞生：你看不到的那些工作）</strong>
+                <br>
+                @ Student Career Development Association, ICT, CAS
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                2023/3/1
+            </td>
+            <td>
+                <strong> ChatGPT: Techniques, Impacts, and Countermeasures （ChatGPT: 技术、影响和应对）</strong>
+                <br>
+                @ Ruijian AI
+            </td>
+           </tr>
+           <tr>
+            <td valign="center">
+                2023/3/1
+            </td>
+            <td>
+                <strong> ChatGPT: Techniques, Impacts, and Countermeasures （ChatGPT: 技术、影响和应对）</strong>
+                <br>
+                @ Beijing Film Academy (<a href="https://mp.weixin.qq.com/s/KAiSrol7yIZzYzmhWwiITA">Event</a>)
+            </td>
+           </tr>
+           <tr>
+            <td valign="center">
+                2022/12/30
+            </td>
+            <td>
+                <strong> Towards Real-World Fake News Detection </strong>
+                <br>
+                @ Tsinghua University
+            </td>
+           </tr>
+           <tr>
+            <td valign="center">
+                2022/12/17
+            </td>
+            <td>
+                <strong> Three Views of Application Research: Cases in Fake News Detection (应用问题研究的三个视角：以虚假新闻检测为例) </strong>
+                <br>
+                @ CSSNLP 2022 (<a href="https://event.baai.ac.cn/activities/629">Event</a> / 
+                <a href="https://www.bilibili.com/video/BV1MV4y1c7zF">Video</a>)
+            </td>
+           </tr>
+           <tr>
+            <td valign="center">
+                2022/10/4
+            </td>
+            <td>
+                <strong> Zoom Out and Observe: News Environment Perception for Fake News Detection (新闻环境感知下的虚假新闻检测) </strong>
+                <br>
+                @ MLNLP Paper Reading (<a href="https://mp.weixin.qq.com/s/qafvi5R6lcd96BLayPy__Q">Event</a> / 
+                <a href="https://www.bilibili.com/video/BV16P411E73j/">Video</a>)
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                2022/9/2
+            </td>
+            <td>
+                <strong>Online Fake News Detection: Method, System, and Thinking</strong>
+                <br>
+                @ Baidu Search
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                2022/8/31
+            </td>
+            <td>
+              <strong>Online Fake News Detection: Method, System, and Thinking</strong>
+              <br>
+              @ ByteDance AI Lab
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                2022/5/14
+            </td>
+            <td>
+              <strong> Zoom Out and Observe: News Environment Perception for Fake News Detection (新闻环境感知下的虚假新闻检测) </strong>
+              <br>
+              @ AIS 2022 (NLU Session) (<a href="https://event.baai.ac.cn/activities/385">Event</a> / 
+              <a href="https://event-cdn.baai.ac.cn/live/20220516-01/1/session4.mp4">Video</a>)
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                2022/4/24
+            </td>
+            <td>
+                <strong> Zoom Out and Observe: News Environment Perception for Fake News Detection (新闻环境感知下的虚假新闻检测) </strong>
+                <br>
+                @ BUAFAI 2022 (NLP & Speech Forum) (<a href="https://mp.weixin.qq.com/s/h07yRc46bRkDvmrtXvpYOQ">Event</a> / 
+                <a href="https://www.koushare.com/lives/room/685619">Video</a>)
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                2022/4/20
+            </td>
+            <td>
+                <strong> Zoom Out and Observe: News Environment Perception for Fake News Detection (新闻环境感知下的虚假新闻检测) </strong>
+                <br>
+                @ AI TIME Live (<a href="https://mp.weixin.qq.com/s/s3tfoLZdYW_K2lq_yYejtA">Event</a> / 
+                <a href="https://www.bilibili.com/video/BV1MS4y1e7PY">Video</a> /
+                <a href="https://mp.weixin.qq.com/s/aTFeuCYIpSoazeRi52jqew">WeChat Article</a>)
+            </td>
+          </tr>
+        </table>
+        <!-- Talks End -->
+   
+        <!-- Teaching Begin -->
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="12">
+          <tr>
+            <td>
+              <heading>Teaching Experience</heading>
+            </td>
+          </tr>
+        </table>
+        <table width="100%" align="center" border="0" cellpadding="12" style="table-layout:fixed;">
+          <colgroup>
+                <col span="1" style="width: 23%;">
+                <col span="1" style="width: 77%;">
+          </colgroup>
+          <tr>
+            <td valign="center">
+                2020/2021 Spring
+            </td>
+            <td>
+                <strong>Teaching Assistant</strong>,
+                081203M05008H: Multimedia Technology,
+                UCAS
+            </td>
+          </tr>
+        </table>
+        <!-- Teaching End -->
+
+        <!-- Profession Begin -->
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="12">
+          <tr>
+            <td>
+              <heading>Academic Services</heading>
+            </td>
+          </tr>
+        </table>
+        <table width="100%" align="center" border="0" cellpadding="12" style="table-layout:fixed;">
+          <colgroup>
+                <col span="1" style="width: 23%;">
+                <col span="1" style="width: 77%;">
+          </colgroup>
+        </table>
+        <table width="100%" align="center" border="0" cellpadding="12" style="table-layout:fixed;">
+          <colgroup>
+                <col span="1" style="width: 23%;">
+                <col span="1" style="width: 77%;">
+          </colgroup>
+          <tr>
+            <td valign="center">
+                Area Chair/SPC Member
+            </td>
+            <td>
+                MM <a class="black" href="https://dl.acm.org/action/showFmPdf?doi=10.1145%2F3664647">2024 <b>(Outstanding Area Chair)</b></a>, <a class="black" href="https://dl.acm.org/action/showFmPdf?doi=10.1145%2F3746027">2025</a>
+                <br>
+                ACL Rolling Review (Oct. 2025~)
+                <br>
+                ICMR 2026
+                <br>
+                IJCAI 2026
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                Conf. Reviewer/PC Member
+            </td>
+            <td>
+                AAAI 2022, 2023, <a class="black" href="https://aaai.org/aaai-24-conference/aaai-24-program-committee/">2024</a>, 2025, 2026
+                <br>
+                ACL <a class="black" href="https://aclanthology.org/2022.acl-long.0.pdf">2022</a>, <a class="black" href="https://aclanthology.org/2023.acl-long.0.pdf">2023</a>, <a class="black" href="https://aclanthology.org/2024.acl-long.0.pdf">2024</a>, <a class="black" href="https://aclanthology.org/2025.acl-long.0.pdf">20</a><a class="black" href="https://aclanthology.org/2025.acl-industry.0.pdf">25</a>, 2026
+                <br>
+                <a class="black" href="https://aclrollingreview.org/people">ACL Rolling Review</a> (Nov. 2021~July 2025), Great Reviews Marked in: <a class="black" href="https://aclrollingreview.org/great-oct23-reviewers/">Oct. 2023</a>, <a class="black" href="https://stats.aclrollingreview.org/iterations/2024/april/"> Apr. 2024, <a class="black" href="https://stats.aclrollingreview.org/iterations/2025/february/"> Feb. 2025</a>, <a class="black" href="https://stats.aclrollingreview.org/iterations/2025/may/"> May 2025</a>)
+                <br>
+                CIKM <a class="black" href="https://dl.acm.org/action/showFmPdf?doi=10.1145%2F3583780">2023</a>, <a class="black" href="https://dl.acm.org/action/showFmPdf?doi=10.1145%2F3627673">2024</a>, <a class="black" href="https://dl.acm.org/action/showFmPdf?doi=10.1145%2F3746252">2025</a>
+                <br>
+                CSCW <a class="black" href="https://dl.acm.org/action/showFmPdf?doi=10.1145%2F3462204">2021 <b>(Recognized for Excellent Reviewing)</b></a>
+                <br>
+                CVPR 2026
+                <br>
+                EACL <a class="black" href="https://aclanthology.org/2023.eacl-main.0.pdf">2023</a>, <a class="black" href="https://aclanthology.org/2024.eacl-long.0.pdf">2024</a>, 2026
+                <br>
+                ECML-PKDD <a class="black" href="https://link.springer.com/content/pdf/bfm:978-3-031-43412-9/1?pdf=chapter%20toc">2023</a>, <a class="black" href="https://link.springer.com/content/pdf/bfm:978-3-031-70341-6/1">2024</a>, <a class="black" href="https://link.springer.com/content/pdf/bfm:978-3-032-05981-9/1">2025</a>, 2026
+                <br>
+                EMNLP <a class="black" href="https://aclanthology.org/2021.emnlp-main.0.pdf">2021</a>, 2022, <a class="black" href="https://aclanthology.org/2023.emnlp-main.0.pdf">20</a><a class="black" href="https://aclanthology.org/2023.emnlp-industry.0.pdf">23</a>, <a class="black" href="https://aclanthology.org/2024.emnlp-main.0.pdf">20</a><a class="black" href="https://aclanthology.org/2024.emnlp-industry.0.pdf">24</a>, <a class="black" href="https://aclanthology.org/2025.emnlp-main.0.pdf">20</a><a class="black" href="https://aclanthology.org/2025.emnlp-industry.0.pdf">25</a>
+                <br>
+                ICME <a class="black" href="https://ieeexplore.ieee.org/ielx8/11208895/11208897/11209086.pdf">2025</a>
+                <br>
+                IJCAI <a class="black" href="https://ijcai-23.org/pc-member-list/">2023</a>, <a class="black" href="https://ijcai24.org/program-committee-pcs/">2024</a>, <a class="black" href="https://certificates.ijcai.org/?q=reviewers&y=2025&id=a723721f-0421-4bd9-a4d8-f291255482f7">2025</a>
+                <br>
+                KDD <a class="black" href="https://dl.acm.org/action/showFmPdf?doi=10.1145%2F3580305">2023</a>,  <a class="black" href="https://dl.acm.org/action/showFmPdf?doi=10.1145%2F3637528">2024</a>
+                <br>
+                MM <a class="black" href="https://dl.acm.org/action/showFmPdf?doi=10.1145%2F3581783">2023</a>
+                <br>
+                NAACL <a class="black" href="https://aclanthology.org/2022.naacl-main.0.pdf">2022 <b>(Outstanding Reviewer)</b></a>, <a class="black" href="https://aclanthology.org/2024.naacl-long.0.pdf">2024</a>, 2025
+                <br>
+                NeurIPS 2025 <a class="black" href="https://neurips.cc/Conferences/2025/ProgramCommittee#top-reviewer"><b>(Top Reviewer)</b></a>
+                <br> 
+                NLPCC <a class="black" href="https://link.springer.com/content/pdf/bfm:978-981-97-9437-9/1">2024</a>, <a class="black" href="https://link.springer.com/content/pdf/bfm:978-981-95-3352-7/1">2025</a>
+                <br>
+                SDM 2024
+                <br>
+                SIGIR <a class="black" href="https://dl.acm.org/action/showFmPdf?doi=10.1145%2F3539618">2023</a>, <a class="black" href="https://dl.acm.org/action/showFmPdf?doi=10.1145%2F3626772">2024</a>, <a class="black" href="https://dl.acm.org/action/showFmPdf?doi=10.1145%2F3726302">2025</a> <a class="black" href="images/sigir25-best-pc-member.jpg"><b>(Best PC Member Award)</b></a>, 2026
+                <br>
+                SIGIR-AP <a class="black" href="https://dl.acm.org/action/showFmPdf?doi=10.1145%2F3624918">2023</a>
+                <br>
+                TheWebConf (WWW) <a class="black" href="https://dl.acm.org/action/showFmPdf?doi=10.1145%2F3543507">2023</a>,  <a class="black" href="https://dl.acm.org/action/showFmPdf?doi=10.1145%2F3589334">2024</a>, <a class="black" href="https://dl.acm.org/action/showFmPdf?doi=10.1145%2F3696410">2025</a>, 2026
+                <br>
+                WSDM 2026
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                Journal Reviewer
+            </td>
+            <td>
+                ACM Transactions on Information Systems (TOIS)
+                <br>
+                Computational Intelligence
+                <br>
+                IEEE Transactions on Audio, Speech and Language Processing (TASLP)
+                <br>
+                IEEE Transactions on Computational Social Systems (TCSS)
+                <br>
+                IEEE Transactions on Information Forensics and Security (TIFS)
+                <br>
+                IEEE Transactions on Knowledge and Data Engineering (TKDE)
+                <br>
+                IEEE Transactions on Multimedia (TMM)
+                <br>
+                Information Processing and Management (IP&M)
+                <br>
+                Journal of Computer Research and Development (计算机研究与发展)
+                <br>
+                Multimedia Systems
+                <br>
+                Social Network Analysis and Mining
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+                Student Volunteer
+            </td>
+            <td>
+                IEEE ICDM 2019
+            </td>
+          </tr>
+        </table>
+        <!-- Profession End -->
+
+        <!-- Education Begin -->
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="12">
+          <tr>
+            <td>
+              <heading>Education</heading>
+            </td>
+          </tr>
+        </table>
+        <table width="100%" align="center" border="0" cellpadding="12" style="table-layout:fixed;">
+          <colgroup>
+                <col span="1" style="width: 23%;">
+                <col span="1" style="width: 77%;">
+          </colgroup>
+          <tr>
+            <td valign="center">
+              2018-2023
+            </td>
+            <td> 
+                Ph.D in Computer Science and Technology
+                <br>
+                <span><a class="black" href="https://www.ucas.ac.cn/">University of Chinese Academy of Sciences</a> (Cultivation Unit: <a class="black" href="http://www.ict.ac.cn/">Institute of Computing Technology</a>, <a class="black" href="http://www.cas.cn/">CAS</a>)</span>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+              2014-2018
+            </td>
+            <td>
+                B. Eng in Communication Engineering
+                <br>
+                <span><a class="black" href="https://sice.bupt.edu.cn/">School of Information and Communication Engineering</a>, <a class="black" href="https://www.bupt.edu.cn/">Beijing University of Posts and Telecommunications</a></span>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+              2011-2014
+            </td>
+            <td>
+             <span> <a class="black" href="http://www.wffms.com/">Weifang No.1 Middle School</a> </span>
+            </td>
+          </tr>
+        </table>
+        <!-- Education End -->
+       
+       <!-- Awards Begin -->
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="12">
+          <tr>
+            <td>
+              <heading>Honors and Awards</heading>
+            </td>
+          </tr>
+        </table>
+        <table width="100%" align="center" border="0" cellpadding="12" style="table-layout:fixed;">
+          <colgroup>
+                <col span="1" style="width: 23%;">
+                <col span="1" style="width: 77%;">
+          </colgroup>
+          <tr>
+            <td valign="center">
+              2024
+            </td>
+            <td> 
+               Star of Excellence, ICT, CAS
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+              2023
+            </td>
+            <td> 
+                Excellent Prize of the President Scholarship, CAS
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+              2023
+            </td>
+            <td> 
+                Special Prize of the President Scholarship, ICT, CAS
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+              2022
+            </td>
+            <td> 
+                Pacemaker to Merit Student of UCAS, UCAS
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+              2022
+            </td>
+            <td> 
+                E Fund Scholarship, Guangdong E Fund Education Foundation & ICT, CAS
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+              2021, 2022
+            </td>
+            <td> 
+                First-Class Academic Scholarship, University of Chinese Academy of Sciences
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+              2019, 2020
+            </td>
+            <td> 
+                Merit Student, University of Chinese Academy of Sciences
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+              2018
+            </td>
+            <td>
+                Outstanding Graduate, Beijing Municipal Commission of Education
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+              <a class="black" href="http://www.moe.gov.cn/srcsite/A05/s7505/201601/t20160120_228481.html">2015</a>, <a class="black" href="http://www.moe.gov.cn/srcsite/A05/s7505/201612/t20161230_293528.html">2016</a>, <a class="black" href="http://www.moe.gov.cn/srcsite/A05/s7505/201711/t20171108_318697.html">2017</a>, 2022
+            </td>
+            <td>
+                National Scholarship, Ministry of Education of China
+            </td>
+          </tr>
+        </table>
+        <!-- Awards End -->
+
+        <!-- Students Begin -->
+       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="12">
+        <tr>
+          <td>
+            <heading>Team Members and Alumni</heading>
+          </td>
+        </tr>
+       </table>
+       <ul>
+        <li><a class="black" href="#">Yuanlong Yu</a> (2026-, Co-Supervised with Juan Cao)</li> 
+        <li><a class="black" href="http://undground.fun">Yehan Yang</a> (2025-, Co-Supervised with Juan Cao)</li> 
+        <li><a class="black" href="https://scholar.google.com/citations?user=RxULDkAAAAAJ">Hao Mi</a> (2024-, Co-Supervised with Juan Cao)</li>
+        <li><a class="black" href="https://liesy.github.io/">Yang Li</a> (2023-, Co-Supervised with Juan Cao)</li>
+        <li><a class="black" href="https://scholar.google.com/citations?user=c00aVP0AAAAJ">Sheng Liu</a> (2023-, Co-Supervised with Juan Cao)</li>
+        <li><a class="black" href="https://scholar.google.com/citations?user=aaz-LdwAAAAJ">Ya Wu</a> (2023-2026, Co-Supervised with Juan Cao and Danding Wang)</li>
+        <li><a class="black" href="https://scholar.google.com/citations?user=i9SLGsEAAAAJ">Yuyan Bu</a> (2022-2025, Co-Supervised with Jintao Li, -> Beijing Academy of Artificial Intelligence)</li> 
+        <li><a class="black" href="https://scholar.google.com/citations?user=xAw_fukAAAAJ">Yuhui Shi</a> (2022-2025, Co-Supervised with Juan Cao, -> The HQ of China Consturction Bank)</li>
+        <li><a class="black" href="https://zhengjiawa.github.io/">Zhengjia Wang</a> (2021-, Co-Supervised with Juan Cao and Danding Wang)</li> 
+        <li><a class="black" href="https://beanandrew.github.io/">Beizhe Hu</a> (2021-, Co-Supervised with Juan Cao)</li>
+        <li><a class="black" href="https://scholar.google.com/citations?user=ZKGK1AIAAAAJ">Qiong Nan</a> (2019-2024, Co-Supervised with Jintao Li, -> CNCERT/CC)</li>
+       </ul>
+        <!-- Students End -->
+
+        <table width="100%" align="center" border="0" cellpadding="12">
+          <tr>
+            <td width="100%" valign="center">
+              <p class="footer">
+                Design: <a href="https://jonbarron.info/" target="_blank" style="color: #777; font-size: 14px;">Jon Barron</a> and <a href="https://liminyang.web.illinois.edu/  " target="_blank" style="color: #777; font-size: 14px;">Limin Yang</a> <br>
+              Last updated:
+                <script>
+                  t = new Date(document.lastModified).toLocaleDateString()
+                  document.write(t);
+                </script>
+               &nbsp;&nbsp;
+               <span id="busuanzi_container_site_pv">#Visit: <span id="busuanzi_value_site_pv"></span> (2021/8/2~)</span>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>

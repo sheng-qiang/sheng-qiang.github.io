@@ -1,6 +1,7 @@
 
 import re
 import os
+import json
 
 def read_file(path):
     with open(path, 'r', encoding='utf-8') as f:
@@ -13,6 +14,59 @@ def write_file(path, content):
 base_path = '/Users/sq/Documents/github-personal-page/sheng-qiang.github.io'
 original_html = read_file(os.path.join(base_path, 'original_index.html'))
 current_html = read_file(os.path.join(base_path, 'index.html'))
+
+# Load BibTeX data
+bibtex_path = os.path.join(base_path, 'data/bibtex.json')
+bibtex_data = {}
+if os.path.exists(bibtex_path):
+    with open(bibtex_path, 'r', encoding='utf-8') as f:
+        bibtex_data = json.load(f)
+
+# BibTeX Injection Script
+bibtex_script = f'''
+<script>
+    const bibtexData = {json.dumps(bibtex_data)};
+
+    function copyBibtex(paperId) {{
+        const bibtex = bibtexData[paperId];
+        if (bibtex) {{
+            navigator.clipboard.writeText(bibtex).then(() => {{
+                showNotification("BibTeX copied to clipboard!");
+            }}).catch(err => {{
+                console.error('Failed to copy: ', err);
+                alert("Failed to copy BibTeX.");
+            }});
+        }} else {{
+            alert("BibTeX not found for this paper.");
+        }}
+    }}
+
+    function showNotification(message) {{
+        let notification = document.createElement('div');
+        notification.innerText = message;
+        notification.style.position = 'fixed';
+        notification.style.bottom = '20px';
+        notification.style.right = '20px';
+        notification.style.backgroundColor = '#333';
+        notification.style.color = '#fff';
+        notification.style.padding = '10px 20px';
+        notification.style.borderRadius = '5px';
+        notification.style.zIndex = '1000';
+        notification.style.opacity = '0';
+        notification.style.transition = 'opacity 0.5s';
+        document.body.appendChild(notification);
+
+        // Fade in
+        setTimeout(() => {{ notification.style.opacity = '1'; }}, 10);
+
+        // Fade out and remove
+        setTimeout(() => {{
+            notification.style.opacity = '0';
+            setTimeout(() => {{ document.body.removeChild(notification); }}, 500);
+        }}, 2000);
+    }}
+</script>
+'''
 
 # Helper to extract content between markers
 def extract_section(html, start_marker, end_marker):
@@ -33,6 +87,27 @@ def process_publications(html):
     def pub_replacer(match):
         content = match.group(1)
         if not content.strip(): return ''
+        
+        # Inject BibTeX link if ID matches
+        paper_id_match = re.search(r'<papertitle id="(.*?)">', content)
+        if paper_id_match:
+            paper_id = paper_id_match.group(1)
+            if paper_id in bibtex_data:
+                bibtex_link = f' / <a href="javascript:void(0)" onclick="copyBibtex(\'{paper_id}\')">BibTeX</a>'
+                
+                # Intelligent placement of BibTeX link
+                # 1. Try to place before TL;DR section
+                tldr_match = re.search(r'(\s*<br>\s*<span class="tldr">)', content)
+                if tldr_match:
+                    # Insert before the <br> that precedes tldr
+                    insert_pos = tldr_match.start()
+                    content = content[:insert_pos] + bibtex_link + content[insert_pos:]
+                else:
+                    # 2. If no TL;DR, append to the end, but check for trailing tags like </td> (though regex excludes </td>)
+                    # The content is what's inside <td>...</td>.
+                    # Usually ends with a link or text.
+                    content += bibtex_link
+
         return f'<div class="publication-item"><div class="pub-content">{content}</div></div>'
 
     processed = re.sub(r'<tr>\s*<td[^>]*>(.*?)</td>\s*</tr>', pub_replacer, processed, flags=re.DOTALL)
@@ -64,7 +139,8 @@ def process_talks(html):
         # Format bilingual titles
         # Pattern: <strong>English（Chinese）</strong>
         # Replace with: <strong>English</strong><br><strong>Chinese</strong>
-        content = re.sub(r'<strong>(.*?)[\(（](.*?)[\)）]</strong>', r'<strong>\1</strong><br><strong>\2</strong>', content)
+        # More robust regex to handle spacing and different parentheses
+        content = re.sub(r'<strong>\s*(.*?)\s*[（\(](.*?)[）\)]\s*</strong>', r'<strong>\1</strong><br><strong>\2</strong>', content)
         
         output += f'''        <li class="news-item">
             <span class="news-date">{date}</span>
@@ -187,7 +263,15 @@ if 'Zhihu Column' not in intro_section:
 intro_section = f'<section class="intro-section">{intro_section}</section>'
 
 # Header Part
-header_part = current_html.split('<div class="container">')[0] + '<div class="container">\n'
+# Inject BibTeX script into head
+header_part = current_html.split('<div class="container">')[0]
+if '</head>' in header_part:
+    header_part = header_part.replace('</head>', bibtex_script + '\n</head>')
+else:
+    # Fallback if head tag not found easily (unlikely)
+    header_part += bibtex_script
+
+header_part += '<div class="container">\n'
 
 # 3. Extract and Process Sections from Original
 publications_content = process_publications(original_html)
