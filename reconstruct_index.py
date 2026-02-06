@@ -96,17 +96,33 @@ def process_publications(html):
                 bibtex_link = f' / <a href="javascript:void(0)" onclick="copyBibtex(\'{paper_id}\')">BibTeX</a>'
                 
                 # Intelligent placement of BibTeX link
-                # 1. Try to place before TL;DR section
+                
+                # Define keywords that indicate the "Links" line
+                link_keywords = [
+                    'Preprint', 'Paper', 'Code', 'Chinese Blog', 'Video', 'Slides', 
+                    'Website', 'Demo', 'Poster', 'Dataset', 'Project Page', 'HuggingFace', 'Model'
+                ]
+                link_pattern = r'(?:' + '|'.join(map(re.escape, link_keywords)) + r')'
+                
+                # Find the last occurrence of a link keyword
+                link_matches = list(re.finditer(link_pattern, content))
+                last_link_end = link_matches[-1].end() if link_matches else -1
+                
+                # Find potential insertion points
+                venue_match = re.search(r'(\s*<br>\s*<i>)', content)
                 tldr_match = re.search(r'(\s*<br>\s*<span class="tldr">)', content)
-                if tldr_match:
-                    # Insert before the <br> that precedes tldr
+                
+                insert_pos = len(content) # Default: append to end
+                
+                # Priority 1: Before Venue (only if links are before venue)
+                if venue_match and last_link_end != -1 and last_link_end < venue_match.start():
+                    insert_pos = venue_match.start()
+                
+                # Priority 2: Before TL;DR (only if links are before TL;DR)
+                elif tldr_match and last_link_end != -1 and last_link_end < tldr_match.start():
                     insert_pos = tldr_match.start()
-                    content = content[:insert_pos] + bibtex_link + content[insert_pos:]
-                else:
-                    # 2. If no TL;DR, append to the end, but check for trailing tags like </td> (though regex excludes </td>)
-                    # The content is what's inside <td>...</td>.
-                    # Usually ends with a link or text.
-                    content += bibtex_link
+                
+                content = content[:insert_pos] + bibtex_link + content[insert_pos:]
 
         return f'<div class="publication-item"><div class="pub-content">{content}</div></div>'
 
@@ -265,6 +281,10 @@ intro_section = f'<section class="intro-section">{intro_section}</section>'
 # Header Part
 # Inject BibTeX script into head
 header_part = current_html.split('<div class="container">')[0]
+
+# Remove existing BibTeX script to avoid duplication
+header_part = re.sub(r'<script>\s*const bibtexData = .*?</script>', '', header_part, flags=re.DOTALL)
+
 if '</head>' in header_part:
     header_part = header_part.replace('</head>', bibtex_script + '\n</head>')
 else:
