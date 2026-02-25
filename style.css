@@ -250,13 +250,14 @@ footer {
 @media (max-width: 768px) {
   .intro-section {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     padding: var(--spacing-lg) 0;
   }
 
   .profile-photo {
     width: 150px;
     height: 150px;
+    margin: 0 auto;
   }
 
   .contact-links {
