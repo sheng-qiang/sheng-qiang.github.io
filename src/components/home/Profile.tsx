@@ -89,7 +89,7 @@ export default function Profile({ author, social, researchInterests }: ProfilePr
         ...((social as Record<string, string>).acl ? [{
             name: 'ACL Anthology',
             href: (social as Record<string, string>).acl,
-            icon: () => <img src="/acl-logo.webp" alt="ACL" className="h-5 w-5 object-contain dark:invert" style={{ filter: 'grayscale(1) brightness(0.4)' }} onMouseEnter={e => (e.currentTarget.style.filter = 'none')} onMouseLeave={e => (e.currentTarget.style.filter = 'grayscale(1) brightness(0.4)')} />
+            icon: () => <span className="h-5 w-5 inline-block" style={{ WebkitMaskImage: 'url(/acl-logo.webp)', maskImage: 'url(/acl-logo.webp)', WebkitMaskSize: 'contain', maskSize: 'contain', WebkitMaskRepeat: 'no-repeat', maskRepeat: 'no-repeat', WebkitMaskPosition: 'center', maskPosition: 'center', backgroundColor: 'currentColor' }} />
         }] : []),
         ...((social as Record<string, string>).zhihu ? [{
             name: 'Zhihu',
