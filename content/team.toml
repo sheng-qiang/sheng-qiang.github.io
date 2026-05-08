@@ -1,0 +1,138 @@
+type = "card"
+title = "Team"
+
+layout = "double"
+
+[groups]
+
+[groups.current]
+title = "Current Students"
+
+[groups.alumni]
+title = "Alumni"
+
+[[items]]
+title = "Beizhe Hu"
+subtitle = ""
+date = "2021-"
+group = "current"
+avatar = "/team/beizhe_hu.png"
+link = "https://beanandrew.github.io/"
+content = "Co-Supervised w. Juan Cao"
+
+[[items]]
+title = "Yang Li"
+subtitle = ""
+date = "2023-"
+group = "current"
+avatar = "/team/yang_li.jpg"
+link = "https://liesy.github.io/"
+content = "Co-Supervised w. Juan Cao"
+
+[[items]]
+title = "Sheng Liu"
+subtitle = ""
+date = "2023-"
+group = "current"
+avatar = "/team/sheng_liu.jpg"
+link = "https://scholar.google.com/citations?user=c00aVP0AAAAJ"
+content = "Co-Supervised w. Juan Cao"
+
+[[items]]
+title = "Hao Mi"
+subtitle = ""
+date = "2024-"
+group = "current"
+avatar = "/team/hao_mi.jpg"
+link = "https://summerrice.github.io/"
+content = "Co-Supervised w. Juan Cao"
+
+[[items]]
+title = "Yehan Yang"
+subtitle = ""
+date = "2025-"
+group = "current"
+avatar = "/team/yehan_yang.jpg"
+link = "http://undground.fun"
+content = "Co-Supervised w. Juan Cao"
+
+[[items]]
+title = "Yuanlong Yu"
+subtitle = ""
+date = "2026-"
+group = "current"
+avatar = "/team/yuanlong_yu.jpg"
+link = "https://scholar.google.com/citations?user=YxVekJwAAAAJ"
+content = "Co-Supervised w. Juan Cao"
+
+[[items]]
+title = "Jinhui Chen"
+subtitle = ""
+date = "2026-"
+group = "current"
+avatar = "/team/jinhui_chen.jpg"
+link = "https://scholar.google.com/"
+
+
+[[items]]
+title = "Hengqi Zeng"
+subtitle = ""
+date = "2026-"
+group = "current"
+avatar = "/team/hengqi_zeng.jpg"
+link = "https://scholar.google.com/"
+content = "Co-Supervised w. Juan Cao"
+
+[[items]]
+title = "Qiong Nan"
+subtitle = "→ CNCERT/CC"
+date = "2019-2024"
+group = "alumni"
+avatar = "/team/qiong_nan.jpg"
+link = "https://scholar.google.com/citations?user=ZKGK1AIAAAAJ"
+content = "Co-Supervised w. Jintao Li"
+
+[[items]]
+title = "Yuyan Bu"
+subtitle = "→ Beijing Academy of Artificial Intelligence"
+date = "2022-2025"
+group = "alumni"
+avatar = "/team/yuyan_bu.jpg"
+link = "https://scholar.google.com/citations?user=i9SLGsEAAAAJ"
+content = "Co-Supervised w. Jintao Li"
+
+[[items]]
+title = "Yuhui Shi"
+subtitle = "→ HQ of China Construction Bank"
+date = "2022-2025"
+group = "alumni"
+avatar = "/team/yuhui_shi.jpg"
+link = "https://scholar.google.com/citations?user=xAw_fukAAAAJ"
+content = "Co-Supervised w. Juan Cao"
+
+[[items]]
+title = "Zhengjia Wang"
+subtitle = "→ SiCarrier"
+date = "2021-2026"
+group = "alumni"
+avatar = "/team/zhengjia_wang.png"
+link = "https://zhengjiawa.github.io/"
+content = "Co-Supervised w. Juan Cao and Danding Wang"
+
+[[items]]
+title = "Ya Wu"
+subtitle = ""
+date = "2023-2026"
+group = "alumni"
+avatar = "/team/ya_wu.jpg"
+link = "https://scholar.google.com/citations?user=aaz-LdwAAAAJ"
+content = "Co-Supervised w. Juan Cao and Danding Wang"
+
+[[items]]
+title = "Yuchen Wang"
+subtitle = "→ Baidu"
+date = "2023-2026"
+group = "alumni"
+avatar = "/team/yuchen_wang.jpg"
+content = "Co-Supervised w. Juan Cao @ Hangzhou Institute for Advanced Study, UCAS"
+
