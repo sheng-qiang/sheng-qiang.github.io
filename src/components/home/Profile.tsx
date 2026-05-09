@@ -131,7 +131,7 @@ export default function Profile({ author, social, researchInterests }: ProfilePr
             <div className="text-center mb-6">
             <h1 className="text-3xl font-serif font-bold text-primary mb-2">
                     {author.name}
-                    {(() => { const n = (author as Record<string, string>).name_native; return n ? <span className="ml-2 text-2xl font-normal text-neutral-500">({n})</span> : null; })()}
+                    {(() => { const n = (author as Record<string, string>).name_native; return n ? <span className="ml-2 text-2xl font-normal text-neutral-500">{n}</span> : null; })()}
                 </h1>
                 <p className="text-lg text-accent font-medium mb-1">
                     {author.title}

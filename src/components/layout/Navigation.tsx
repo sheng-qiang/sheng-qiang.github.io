@@ -165,7 +165,7 @@ export default function Navigation({
           <motion.div
             initial={{ y: -100 }}
             animate={{ y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0 }}
             className={cn(
               'transition-all duration-300 ease-out',
               scrolled
@@ -184,7 +184,7 @@ export default function Navigation({
                     href="/"
                     className="text-xl lg:text-2xl font-serif font-semibold text-primary hover:text-accent transition-colors duration-200"
                   >
-                    {effectiveSiteTitle}
+                    {effectiveSiteTitle} 盛强
                   </Link>
                 </motion.div>
 
