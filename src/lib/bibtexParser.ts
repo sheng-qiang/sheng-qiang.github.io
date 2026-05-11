@@ -82,15 +82,34 @@ export function parseBibTeX(bibtexContent: string, locale?: string): Publication
       issue: tags.number,
       pages: tags.pages,
       doi: tags.doi,
-      url: tags.url,
+      pdfUrl: tags.url,
       code: tags.code,
       abstract: cleanBibTeXString(tags.abstract),
       description: cleanBibTeXString(tags.description || tags.note),
       selected,
       preview,
+      preprint: tags.preprint,
+      project: tags.project,
+      video: tags.video,
+      slides: tags.slides,
+      dataset: tags.dataset,
+      paper: tags.paper,
+      media: tags.media,
+      blogs: tags.blog ? tags.blog.split(',').map((b: string) => {
+        const parts = b.split('|');
+        if (parts.length === 2) return { name: parts[0].trim(), url: parts[1].trim() };
+        return { name: 'Blog', url: parts[0].trim() };
+      }) : undefined,
+      venue_tag: tags.venue_tag,
+      ccfRank: tags.ccf_rank ? `CCF-${tags.ccf_rank.toUpperCase()}` as 'CCF-A' | 'CCF-B' | 'CCF-C' : 'Others',
+      acceptanceRate: tags.acceptance_rate,
 
-      // Store original BibTeX (excluding custom fields)
-      bibtex: reconstructBibTeX(entry, ['selected', 'preview', 'description', 'keywords', 'code']),
+      // Store BibTeX for user display (excluding custom/internal fields)
+      bibtex: reconstructBibTeX(entry, [
+        'selected', 'preview', 'description', 'keywords', 'code',
+        'venue_tag', 'preprint', 'project', 'video', 'slides',
+        'dataset', 'paper', 'media', 'blog', 'note', 'ccf_rank', 'acceptance_rate',
+      ]),
     };
 
     // Clean up undefined fields
@@ -169,7 +188,63 @@ function buildNameVariants(name: string): Set<string> {
   return variants;
 }
 
-function parseAuthors(authorsStr: string, highlightNames: string[]): Array<{ name: string; isHighlighted?: boolean; isCorresponding?: boolean; isCoAuthor?: boolean }> {
+const authorLinks: Record<string, string> = {
+  "shaofei wang": "https://scholar.google.com/citations?user=clCHEnkAAAAJ",
+  "yuhui shi": "https://scholar.google.com/citations?user=xAw_fukAAAAJ",
+  "yehan yang": "http://undground.fun",
+  "hao mi": "https://summerrice.github.io/",
+  "beizhe hu": "https://beanandrew.github.io/",
+  "chaoxi xu": "https://scholar.google.com/citations?user=0z9o2CIAAAAJ",
+  "juan cao": "https://scholar.google.com/citations?user=fSBdNg0AAAAJ",
+  "zehao li": "https://alphagolzh.github.io/",
+  "yang li": "https://liesy.github.io/",
+  "zhenlong yuan": "https://zhenlongyuan.github.io/",
+  "yujun cai": "https://vanoracai.github.io/",
+  "yifan sun": "https://scholar.google.com/citations?user=sv7uxi4AAAAJ",
+  "zhengjia wang": "https://zhengjiawa.github.io/",
+  "danding wang": "https://scholar.google.com/citations?user=hGZwK0cAAAAJ",
+  "xiaoyue mi": "https://scholar.google.com/citations?user=9eDMXxMAAAAJ",
+  "fan tang": "https://scholar.google.com/citations?user=PdKElfwAAAAJ",
+  "ziyao huang": "https://scholar.google.com/citations?user=nijlf5YAAAAJ",
+  "peng li": "https://scholar.google.com/citations?user=hgYzkOQAAAAJ",
+  "yang liu": "https://scholar.google.com/citations?user=lVhoKNcAAAAJ",
+  "tong-yee lee": "https://scholar.google.com/citations?user=V3PTB98AAAAJ",
+  "jiaying wu": "https://jiayingwu19.github.io/",
+  "xueyao zhang": "https://www.zhangxueyao.com/",
+  "ya wu": "https://scholar.google.com/citations?user=aaz-LdwAAAAJ",
+  "guang yang": "https://scholar.google.com/citations?user=DKCzZXsAAAAJ",
+  "yuyan bu": "https://scholar.google.com/citations?user=i9SLGsEAAAAJ",
+  "sheng liu": "https://scholar.google.com/citations?user=c00aVP0AAAAJ",
+  "peng qi": "https://pengqi.website/",
+  "siyuan ma": "https://siyuanma.org/",
+  "haonan cheng": "https://haonancheng.cn/",
+  "jintao li": "http://www.ict.ac.cn/sourcedb/cn/jssrck/200909/t20090917_2496657.html",
+  "guojie li": "https://www.ict.ac.cn/sourcedb/cn/jssrck/200909/t20090917_2496654.html",
+  "qiong nan": "https://scholar.google.com/citations?user=ZKGK1AIAAAAJ",
+  "yongchun zhu": "https://easezyc.github.io/",
+  "jiakai wang": "https://jiakaiwangcn.github.io/",
+  "renshuai tao": "https://rstao-bjtu.github.io/",
+  "xianglong liu": "https://xlliu-beihang.github.io/",
+  "zhiwei jin": "https://scholar.google.com/citations?user=iv22mK4AAAAJ",
+  "kai shu": "https://www.cs.emory.edu/~kshu5/",
+  "minghui wu": "https://scholar.google.com/citations?user=KqSSa-kAAAAJ",
+  "jindong wang": "https://jd92.wang/",
+  "fuzhen zhuang": "https://fuzhenzhuang.github.io/",
+  "h. russell bernard": "https://hrussellbernard.com/",
+  "huan liu": "https://www.public.asu.edu/~huanliu/",
+  "shuokai li": "https://lisk123.github.io/",
+  "rundong li": "https://scholar.google.com/citations?user=PfmGvVQAAAAJ",
+  "xirong li": "http://lixirong.net/",
+  "lei zhong": "https://scholar.google.com/citations?hl=zh-CN&user=60YtlrIAAAAJ",
+  "junbo guo": "https://scholar.google.com/citations?user=4Lzd8P8AAAAJ",
+  "ziang wang": "https://scholar.google.com/citations?user=GNG7gk8AAAAJ",
+  "tianyun yang": "https://scholar.google.com/citations?user=4u_oHeEAAAAJ",
+  "zhaoqi wang": "http://english.ict.cas.cn/people/scien/bln/202303/t20230315_328238.html",
+  "baolong bi": "https://byronbbl.github.io/",
+  "yilong xu": "https://scholar.google.com/citations?user=6B5N_cQAAAAJ"
+};
+
+function parseAuthors(authorsStr: string, highlightNames: string[]): Array<{ name: string; isHighlighted?: boolean; isCorresponding?: boolean; isCoAuthor?: boolean; url?: string }> {
   if (!authorsStr) return [];
 
   const highlightTextCandidates = new Set<string>();
@@ -217,11 +292,14 @@ function parseAuthors(authorsStr: string, highlightNames: string[]): Array<{ nam
         highlightTextList.some((candidate) => lowerName.includes(candidate)) ||
         highlightNormalizedList.some((candidate) => normalizedName.includes(candidate));
 
+      const url = authorLinks[lowerName] || undefined;
+
       return {
         name,
         isHighlighted,
         isCorresponding,
         isCoAuthor,
+        url,
       };
     })
     .filter(author => author.name);
