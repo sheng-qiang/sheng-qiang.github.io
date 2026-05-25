@@ -286,6 +286,11 @@ export default function PublicationsList({ config, publications, embedded = fals
                                                         {pub.venue_tag}
                                                     </span>
                                                 )}
+                                                {pub.isOral && (
+                                                    <span className="text-red-600 mr-2 border border-red-600/30 bg-red-50 dark:bg-red-900/20 px-2 py-0.5 rounded text-sm whitespace-nowrap">
+                                                        Oral
+                                                    </span>
+                                                )}
                                                 {pub.url || pub.doi || pub.paper ? (
                                                     <a href={pub.paper || pub.url || `https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
                                                         {pub.title}

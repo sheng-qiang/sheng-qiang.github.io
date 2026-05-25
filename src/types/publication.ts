@@ -55,6 +55,7 @@ export interface Publication {
   selected?: boolean;
   preview?: string;
   summary?: string;
+  isOral?: boolean;
   researchArea: ResearchArea;
   description?: string;
 }

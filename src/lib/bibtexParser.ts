@@ -104,12 +104,13 @@ export function parseBibTeX(bibtexContent: string, locale?: string): Publication
       ccfRank: tags.ccf_rank ? `CCF-${tags.ccf_rank.toUpperCase()}` as 'CCF-A' | 'CCF-B' | 'CCF-C' : 'Others',
       acceptanceRate: tags.acceptance_rate,
       awards: tags.award ? tags.award.split('|').map((a: string) => cleanBibTeXString(a)) : undefined,
+      isOral: tags.oral === 'true' || tags.oral === 'yes' || tags.oral === '1',
 
       // Store BibTeX for user display (excluding custom/internal fields)
       bibtex: reconstructBibTeX(entry, [
         'selected', 'preview', 'description', 'keywords', 'code',
         'venue_tag', 'preprint', 'project', 'video', 'slides',
-        'dataset', 'paper', 'media', 'blog', 'note', 'ccf_rank', 'acceptance_rate', 'award'
+        'dataset', 'paper', 'media', 'blog', 'note', 'ccf_rank', 'acceptance_rate', 'award', 'oral'
       ]),
     };
 
