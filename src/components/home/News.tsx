@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion';
 import { useMessages } from '@/lib/i18n/useMessages';
 
+import Link from 'next/link';
+
 export interface NewsItem {
     date: string;
     content: string;
@@ -11,9 +13,10 @@ export interface NewsItem {
 interface NewsProps {
     items: NewsItem[];
     title?: string;
+    enableOnePageMode?: boolean;
 }
 
-export default function News({ items, title }: NewsProps) {
+export default function News({ items, title, enableOnePageMode }: NewsProps) {
     const messages = useMessages();
     const resolvedTitle = title || messages.home.news;
 
@@ -21,9 +24,18 @@ export default function News({ items, title }: NewsProps) {
         <motion.section
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+            transition={{ duration: 0 }}
         >
-            <h2 className="text-2xl font-serif font-bold text-primary mb-4">{resolvedTitle}</h2>
+            <div className="flex items-center justify-between mb-4">
+                <h2 className="text-2xl font-serif font-bold text-primary">{resolvedTitle}</h2>
+                <Link
+                    href={enableOnePageMode ? "/#news" : "/news"}
+                    prefetch={true}
+                    className="text-accent hover:text-accent-dark text-sm font-medium transition-all duration-200 rounded hover:bg-accent/10 hover:shadow-sm"
+                >
+                    {messages.home.viewAll} →
+                </Link>
+            </div>
             <div className="space-y-3">
                 {items.map((item, index) => (
                     <div key={index} className="flex items-start space-x-3">

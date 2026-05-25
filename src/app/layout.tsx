@@ -7,6 +7,7 @@ import { LocaleProvider } from '@/components/ui/LocaleProvider';
 import { getConfig } from '@/lib/config';
 import { getRuntimeI18nConfig } from '@/lib/i18n/config';
 import type { SiteConfig } from '@/lib/config';
+import Script from 'next/script';
 
 export async function generateMetadata(): Promise<Metadata> {
   const config = getConfig();
@@ -15,8 +16,8 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     title: {
-      default: config.site.title,
-      template: `%s | ${config.site.title}`,
+      default: `${config.site.title} - Homepage`,
+      template: `%s | ${config.site.title} - Homepage`,
     },
     description: config.site.description,
     keywords: [config.author.name, 'PhD', 'Research', config.author.institution],
@@ -29,7 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       type: 'website',
       locale: openGraphLocale,
-      title: config.site.title,
+      title: `${config.site.title} - Homepage`,
       description: config.site.description,
       siteName: `${config.author.name}'s Academic Website`,
     },
@@ -186,6 +187,7 @@ export default function RootLayout({
             />
           </LocaleProvider>
         </ThemeProvider>
+        <Script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" strategy="afterInteractive" />
       </body>
     </html>
   );

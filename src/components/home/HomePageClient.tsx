@@ -91,8 +91,9 @@ export default function HomePageClient({ dataByLocale, defaultLocale }: HomePage
                     return (
                       <News
                         key={section.id}
-                        items={section.items || []}
+                        items={section.limit ? (section.items || []).slice(0, section.limit) : (section.items || [])}
                         title={section.title}
+                        enableOnePageMode={data.enableOnePageMode}
                       />
                     );
                   default:

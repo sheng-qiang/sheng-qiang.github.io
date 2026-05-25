@@ -11,6 +11,7 @@
   "dependencies": {
     "@headlessui/react": "^2.2.4",
     "@heroicons/react": "^2.2.0",
+    "academicons": "^1.9.5",
     "bibtex-parse-js": "^0.0.24",
     "clsx": "^2.1.1",
     "framer-motion": "^12.18.1",
@@ -40,6 +41,6 @@
     "lightningcss-linux-x64-gnu": "^1"
   },
   "engines": {
-    "node": ">=22.0.0"
+    "node": ">=18.0.0"
   }
 }

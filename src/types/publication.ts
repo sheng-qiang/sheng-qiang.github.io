@@ -7,6 +7,7 @@ export interface Author {
   isHighlighted?: boolean;
   isCorresponding?: boolean;
   isCoAuthor?: boolean;
+  url?: string;
 }
 
 export interface Publication {
@@ -28,6 +29,16 @@ export interface Publication {
   url?: string;
   code?: string;
   pdfUrl?: string;
+  preprint?: string;
+  project?: string;
+  video?: string;
+  slides?: string;
+  dataset?: string;
+  paper?: string;
+  media?: string;
+  blogs?: { name: string; url: string }[];
+  venue_tag?: string;
+  ccfRank?: 'CCF-A' | 'CCF-B' | 'CCF-C' | 'Others';
   tags: string[];
   keywords?: string[];
   type: PublicationType;
@@ -37,6 +48,7 @@ export interface Publication {
   quartile?: 'Q1' | 'Q2' | 'Q3' | 'Q4';
   bibtex?: string;
   venue?: string;
+  acceptanceRate?: string;
   location?: string;
   awards?: string[];
   featured?: boolean;

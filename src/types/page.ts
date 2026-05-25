@@ -22,9 +22,13 @@ export interface CardItem {
     tags?: string[];
     link?: string;
     image?: string;
+    avatar?: string;
+    group?: string;
 }
 
 export interface CardPageConfig extends BasePageConfig {
     type: 'card';
     items: CardItem[];
+    groups?: Record<string, { title: string }>;
+    layout?: 'single' | 'double' | 'compact';
 }

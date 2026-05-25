@@ -3,9 +3,7 @@ title = "About"
 
 [profile]
 research_interests = [
-  "Computational Physics",
-  "Mathematical Principles",
-  "Proof of Theorems"
+  "I will have one position enrolled in Sep. 2027, and also recruit highly motivated research interns (1-2 positions, onsite preferred). Anyone who is interested in **combating misinformation in the era of large language models** may send me their resume by email."
 ]
 
 [[sections]]
@@ -15,15 +13,15 @@ source = "bio.md"
 title = "About"
 
 [[sections]]
+id = "news"
+type = "list"
+title = "News"
+source = "news_data.toml"
+limit = 5
+
+[[sections]]
 id = "featured_publications"
 type = "publications"
 title = "Selected Publications"
 filter = "selected"
-limit = 5
-
-[[sections]]
-id = "news"
-type = "list"
-title = "News"
-source = "news.toml"
-
+limit = 10

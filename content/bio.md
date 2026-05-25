@@ -1,5 +1,5 @@
-I am a PhD student at the School of Science, University of Example, advised by [Prof. Advisor One](https://example.com) and [Dr. Advisor Two](https://example.com).
+I am an Associate Professor/Researcher at the Media Synthesis and Forensics Lab, [Institute of Computing Technology](http://www.ict.ac.cn/), [Chinese Academy of Sciences](http://www.cas.cn/). I am also a supervisor at School of Computer Science and Technology, [University of Chinese Academy of Sciences (UCAS)](https://www.ucas.ac.cn/), where I got my Ph.D. degree under the supervision of Professor Juan Cao. My research interests include:
 
-Prior to this, I obtained a BSc degree with First Class Honours in Natural Science from the University of Example.
-
-My current research focuses on investigating the mathematical principles of natural philosophy.
+- **Application**: Fake News/Misinformation Detection, Fact-Checking, Machine-Generated Content Detection
+- **Direction**: Natural Language Understanding and Social Media Mining
+- **Vision**: Make the World More Credible

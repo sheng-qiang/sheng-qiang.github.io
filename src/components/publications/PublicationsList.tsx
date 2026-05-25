@@ -9,7 +9,8 @@ import {
     CalendarIcon,
     BookOpenIcon,
     ClipboardDocumentIcon,
-    DocumentTextIcon
+    DocumentTextIcon,
+    AcademicCapIcon
 } from '@heroicons/react/24/outline';
 import { Publication } from '@/types/publication';
 import { PublicationPageConfig } from '@/types/page';
@@ -27,6 +28,7 @@ export default function PublicationsList({ config, publications, embedded = fals
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedYear, setSelectedYear] = useState<number | 'all'>('all');
     const [selectedType, setSelectedType] = useState<string | 'all'>('all');
+    const [selectedCCFRank, setSelectedCCFRank] = useState<string | 'all'>('all');
     const [showFilters, setShowFilters] = useState(false);
     const [expandedBibtexId, setExpandedBibtexId] = useState<string | null>(null);
     const [expandedAbstractId, setExpandedAbstractId] = useState<string | null>(null);
@@ -42,6 +44,31 @@ export default function PublicationsList({ config, publications, embedded = fals
         return uniqueTypes.sort();
     }, [publications]);
 
+    const ccfRanks = useMemo(() => {
+        const ranks = Array.from(new Set(publications.map(p => p.ccfRank || 'Others')));
+        const order = ['CCF-A', 'CCF-B', 'CCF-C', 'Others'];
+        return ranks.sort((a, b) => order.indexOf(a) - order.indexOf(b));
+    }, [publications]);
+
+    // Compute counts for each filter value
+    const yearCounts = useMemo(() => {
+        const counts: Record<number, number> = {};
+        publications.forEach(p => { counts[p.year] = (counts[p.year] || 0) + 1; });
+        return counts;
+    }, [publications]);
+
+    const typeCounts = useMemo(() => {
+        const counts: Record<string, number> = {};
+        publications.forEach(p => { counts[p.type] = (counts[p.type] || 0) + 1; });
+        return counts;
+    }, [publications]);
+
+    const ccfRankCounts = useMemo(() => {
+        const counts: Record<string, number> = {};
+        publications.forEach(p => { const r = p.ccfRank || 'Others'; counts[r] = (counts[r] || 0) + 1; });
+        return counts;
+    }, [publications]);
+
     // Filter publications
     const filteredPublications = useMemo(() => {
         return publications.filter(pub => {
@@ -53,17 +80,14 @@ export default function PublicationsList({ config, publications, embedded = fals
 
             const matchesYear = selectedYear === 'all' || pub.year === selectedYear;
             const matchesType = selectedType === 'all' || pub.type === selectedType;
+            const matchesCCFRank = selectedCCFRank === 'all' || (pub.ccfRank || 'Others') === selectedCCFRank;
 
-            return matchesSearch && matchesYear && matchesType;
+            return matchesSearch && matchesYear && matchesType && matchesCCFRank;
         });
-    }, [publications, searchQuery, selectedYear, selectedType]);
+    }, [publications, searchQuery, selectedYear, selectedType, selectedCCFRank]);
 
     return (
-        <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-        >
+        <div>
             <div className="mb-8">
                 <h1 className={`${embedded ? "text-2xl" : "text-4xl"} font-serif font-bold text-primary mb-4`}>{config.title}</h1>
                 {config.description && (
@@ -138,7 +162,7 @@ export default function PublicationsList({ config, publications, embedded = fals
                                                         : "bg-white dark:bg-neutral-800 text-neutral-600 hover:bg-neutral-100 dark:hover:bg-neutral-700"
                                                 )}
                                             >
-                                                {year}
+                                                {year} ({yearCounts[year] || 0})
                                             </button>
                                         ))}
                                     </div>
@@ -172,7 +196,41 @@ export default function PublicationsList({ config, publications, embedded = fals
                                                         : "bg-white dark:bg-neutral-800 text-neutral-600 hover:bg-neutral-100 dark:hover:bg-neutral-700"
                                                 )}
                                             >
-                                                {type.replace('-', ' ')}
+                                                {type.replace('-', ' ')} ({typeCounts[type] || 0})
+                                            </button>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* CCF Rank Filter */}
+                                <div className="space-y-2">
+                                    <label className="text-sm font-medium text-neutral-700 dark:text-neutral-300 flex items-center">
+                                        <AcademicCapIcon className="h-4 w-4 mr-1" /> CCF Rank
+                                    </label>
+                                    <div className="flex flex-wrap gap-2">
+                                        <button
+                                            onClick={() => setSelectedCCFRank('all')}
+                                            className={cn(
+                                                "px-3 py-1 text-xs rounded-full transition-colors",
+                                                selectedCCFRank === 'all'
+                                                    ? "bg-accent text-white"
+                                                    : "bg-white dark:bg-neutral-800 text-neutral-600 hover:bg-neutral-100 dark:hover:bg-neutral-700"
+                                            )}
+                                        >
+                                            {messages.common.all}
+                                        </button>
+                                        {ccfRanks.map(rank => (
+                                            <button
+                                                key={rank}
+                                                onClick={() => setSelectedCCFRank(rank)}
+                                                className={cn(
+                                                    "px-3 py-1 text-xs rounded-full transition-colors",
+                                                    selectedCCFRank === rank
+                                                        ? "bg-accent text-white"
+                                                        : "bg-white dark:bg-neutral-800 text-neutral-600 hover:bg-neutral-100 dark:hover:bg-neutral-700"
+                                                )}
+                                            >
+                                                {rank} ({ccfRankCounts[rank] || 0})
                                             </button>
                                         ))}
                                     </div>
@@ -190,38 +248,66 @@ export default function PublicationsList({ config, publications, embedded = fals
                         {messages.publications.noResults}
                     </div>
                 ) : (
-                    filteredPublications.map((pub, index) => (
-                        <motion.div
-                            key={pub.id}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.4, delay: 0.1 * index }}
-                            className="bg-white dark:bg-neutral-900 p-6 rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-800 hover:shadow-md transition-all duration-200"
-                        >
-                            <div className="flex flex-col md:flex-row gap-6">
-                                {pub.preview && (
-                                    <div className="w-full md:w-48 flex-shrink-0">
-                                        <div className="aspect-video md:aspect-[4/3] relative rounded-lg overflow-hidden bg-neutral-100 dark:bg-neutral-800">
-                                            <Image
-                                                src={`/papers/${pub.preview}`}
-                                                alt={pub.title}
-                                                fill
-                                                className="object-cover"
-                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                            />
-                                        </div>
-                                    </div>
-                                )}
-                                <div className="flex-grow">
-                                    <h3 className={`${embedded ? "text-lg" : "text-xl"} font-semibold text-primary mb-2 leading-tight`}>
-                                        {pub.title}
-                                    </h3>
+                    Object.entries(
+                        filteredPublications.reduce((acc, pub) => {
+                            if (!acc[pub.year]) acc[pub.year] = [];
+                            acc[pub.year].push(pub);
+                            return acc;
+                        }, {} as Record<number, typeof filteredPublications>)
+                    )
+                    .sort(([yearA], [yearB]) => Number(yearB) - Number(yearA))
+                    .map(([year, pubs]) => (
+                        <div key={year} className="mb-10">
+                            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-6 border-b pb-2 border-neutral-200 dark:border-neutral-800">{year}</h2>
+                            <div className="flex flex-col gap-6">
+                            {pubs.map((pub) => (
+                                <div
+                                    key={pub.id}
+                                    className="bg-white dark:bg-neutral-900 p-6 rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-800 hover:shadow-md transition-all duration-200"
+                                >
+                                    <div className="flex flex-col md:flex-row gap-6">
+                                        {pub.preview && (
+                                            <div className="w-full md:w-48 flex-shrink-0">
+                                                <div className="aspect-video md:aspect-[4/3] relative rounded-lg overflow-hidden bg-neutral-100 dark:bg-neutral-800">
+                                                    <Image
+                                                        src={`/papers/${pub.preview}`}
+                                                        alt={pub.title}
+                                                        fill
+                                                        className="object-cover"
+                                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                                    />
+                                                </div>
+                                            </div>
+                                        )}
+                                        <div className="flex-grow">
+                                            <h3 className={`${embedded ? "text-lg" : "text-xl"} font-semibold text-primary mb-2 leading-tight`}>
+                                                {pub.venue_tag && (
+                                                    <span className="text-accent mr-2 border border-accent/30 bg-accent/5 px-2 py-0.5 rounded text-sm whitespace-nowrap">
+                                                        {pub.venue_tag}
+                                                    </span>
+                                                )}
+                                                {pub.url || pub.doi || pub.paper ? (
+                                                    <a href={pub.paper || pub.url || `https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                                                        {pub.title}
+                                                    </a>
+                                                ) : (
+                                                    pub.title
+                                                )}
+                                            </h3>
                                     <p className={`${embedded ? "text-sm" : "text-base"} text-neutral-600 dark:text-neutral-400 mb-2`}>
                                         {pub.authors.map((author, idx) => (
                                             <span key={idx}>
-                                                <span className={`${author.isHighlighted ? 'font-semibold text-accent' : ''} ${author.isCoAuthor ? `underline underline-offset-4 ${author.isHighlighted ? 'decoration-accent' : 'decoration-neutral-400'}` : ''}`}>
-                                                    {author.name}
-                                                </span>
+                                                {author.url ? (
+                                                    <a href={author.url} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors hover:underline">
+                                                        <span className={`${author.isHighlighted ? 'font-semibold text-accent' : 'text-neutral-800 dark:text-neutral-200'} ${author.isCoAuthor ? `underline underline-offset-4 ${author.isHighlighted ? 'decoration-accent' : 'decoration-neutral-400'}` : ''}`}>
+                                                            {author.name}
+                                                        </span>
+                                                    </a>
+                                                ) : (
+                                                    <span className={`${author.isHighlighted ? 'font-semibold text-accent' : ''} ${author.isCoAuthor ? `underline underline-offset-4 ${author.isHighlighted ? 'decoration-accent' : 'decoration-neutral-400'}` : ''}`}>
+                                                        {author.name}
+                                                    </span>
+                                                )}
                                                 {author.isCorresponding && (
                                                     <sup className={`ml-0 ${author.isHighlighted ? 'text-accent' : 'text-neutral-600 dark:text-neutral-400'}`}>†</sup>
                                                 )}
@@ -230,34 +316,90 @@ export default function PublicationsList({ config, publications, embedded = fals
                                         ))}
                                     </p>
                                     <p className="text-sm font-medium text-neutral-800 dark:text-neutral-600 mb-3">
-                                        {pub.journal || pub.conference} {pub.year}
+                                        {pub.journal || pub.conference} {pub.acceptanceRate && <span className="font-normal italic">(Acceptance Rate: {pub.acceptanceRate})</span>}
                                     </p>
 
                                     {pub.description && (
-                                        <p className="text-sm text-neutral-600 dark:text-neutral-500 mb-4 line-clamp-3">
+                                        <p className="text-sm text-neutral-600 dark:text-neutral-500 mb-2 line-clamp-3">
                                             {pub.description}
                                         </p>
                                     )}
 
+                                    {pub.awards && pub.awards.length > 0 && (
+                                        <div className="mb-3 space-y-1">
+                                            {pub.awards.map((award, idx) => (
+                                                <p key={idx} className="text-sm font-medium text-amber-600 dark:text-amber-500 flex items-start">
+                                                    <span className="mr-1.5 mt-0.5" title="Award">🏆</span>
+                                                    <span>{award}</span>
+                                                </p>
+                                            ))}
+                                        </div>
+                                    )}
+
+                                    {pub.tags && pub.tags.length > 0 && (
+                                        <div className="flex flex-wrap gap-2 mb-4">
+                                            {pub.tags.map(tag => (
+                                                <span key={tag} className="px-2 py-0.5 bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 border border-neutral-200 dark:border-neutral-700 rounded-md text-xs font-medium">
+                                                    {tag}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    )}
+
                                     <div className="flex flex-wrap gap-2 mt-auto">
-                                        {pub.doi && (
-                                            <a
-                                                href={`https://doi.org/${pub.doi}`}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-accent hover:text-white transition-colors"
-                                            >
-                                                DOI
+                                        {pub.preprint && (
+                                            <a href={pub.preprint} target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-accent hover:text-white transition-colors">
+                                                Preprint
+                                            </a>
+                                        )}
+                                        {pub.paper && (
+                                            <a href={pub.paper} target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-accent hover:text-white transition-colors">
+                                                Paper
+                                            </a>
+                                        )}
+                                        {pub.pdfUrl && !pub.paper && (
+                                            <a href={pub.pdfUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-accent hover:text-white transition-colors">
+                                                PDF
+                                            </a>
+                                        )}
+                                        {pub.url && !pub.pdfUrl && !pub.paper && (
+                                            <a href={pub.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-accent hover:text-white transition-colors">
+                                                Link
+                                            </a>
+                                        )}
+                                        {pub.project && (
+                                            <a href={pub.project} target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-accent hover:text-white transition-colors">
+                                                Project Page
                                             </a>
                                         )}
                                         {pub.code && (
-                                            <a
-                                                href={pub.code}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-accent hover:text-white transition-colors"
-                                            >
-                                                {messages.publications.code}
+                                            <a href={pub.code} target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-accent hover:text-white transition-colors">
+                                                Code / Github
+                                            </a>
+                                        )}
+                                        {pub.dataset && (
+                                            <a href={pub.dataset} target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-accent hover:text-white transition-colors">
+                                                Dataset
+                                            </a>
+                                        )}
+                                        {pub.video && (
+                                            <a href={pub.video} target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-accent hover:text-white transition-colors">
+                                                Video
+                                            </a>
+                                        )}
+                                        {pub.slides && (
+                                            <a href={pub.slides} target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-accent hover:text-white transition-colors">
+                                                Slides
+                                            </a>
+                                        )}
+                                        {pub.blogs && pub.blogs.map((blog, idx) => (
+                                            <a key={`blog-${idx}`} href={blog.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-accent hover:text-white transition-colors">
+                                                {blog.name}
+                                            </a>
+                                        ))}
+                                        {pub.media && (
+                                            <a href={pub.media} target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-accent hover:text-white transition-colors">
+                                                Media
                                             </a>
                                         )}
                                         {pub.abstract && (
@@ -334,10 +476,13 @@ export default function PublicationsList({ config, publications, embedded = fals
                                     </AnimatePresence>
                                 </div>
                             </div>
-                        </motion.div>
+                                </div>
+                            ))}
+                            </div>
+                        </div>
                     ))
                 )}
             </div>
-        </motion.div>
+        </div>
     );
 }
