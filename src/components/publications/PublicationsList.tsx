@@ -287,7 +287,7 @@ export default function PublicationsList({ config, publications, embedded = fals
                                                     </span>
                                                 )}
                                                 {pub.isOral && (
-                                                    <span className="text-red-600 mr-2 border border-red-600/30 bg-red-50 dark:bg-red-900/20 px-2 py-0.5 rounded text-sm whitespace-nowrap">
+                                                    <span className="text-accent mr-2 border border-accent/30 bg-accent/5 px-2 py-0.5 rounded text-sm whitespace-nowrap">
                                                         Oral
                                                     </span>
                                                 )}
