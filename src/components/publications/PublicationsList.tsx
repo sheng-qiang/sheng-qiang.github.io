@@ -291,8 +291,8 @@ export default function PublicationsList({ config, publications, embedded = fals
                                                         Oral
                                                     </span>
                                                 )}
-                                                {pub.url || pub.doi || pub.paper ? (
-                                                    <a href={pub.paper || pub.url || `https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                                                {pub.paper || pub.preprint || pub.url || pub.doi ? (
+                                                    <a href={pub.paper || pub.preprint || pub.url || `https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
                                                         {pub.title}
                                                     </a>
                                                 ) : (

@@ -48,7 +48,13 @@ export default function SelectedPublications({ publications, title, enableOnePag
                                     {pub.venue_tag}
                                 </span>
                             )}
-                            {pub.title}
+                            {pub.paper || pub.preprint || pub.url || pub.doi ? (
+                                <a href={pub.paper || pub.preprint || pub.url || `https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                                    {pub.title}
+                                </a>
+                            ) : (
+                                pub.title
+                            )}
                         </h3>
                         <p className="text-sm text-neutral-600 dark:text-neutral-500 mb-1">
                             {pub.authors.map((author, idx) => (
