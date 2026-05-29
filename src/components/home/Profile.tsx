@@ -311,7 +311,7 @@ export default function Profile({ author, social, researchInterests }: ProfilePr
             {/* Highlights */}
             {researchInterests && researchInterests.length > 0 && (
                 <div className="bg-neutral-100 dark:bg-neutral-800 rounded-lg p-4 mb-6 hover:shadow-lg transition-all duration-200 hover:scale-[1.02]">
-                    <h3 className="font-semibold text-primary mb-3">Highlights</h3>
+                    <h3 className="font-semibold text-primary mb-3">Calls</h3>
                     <div className="space-y-3 text-sm text-neutral-700 dark:text-neutral-500">
                         {researchInterests.map((interest, index) => (
                             <div key={index} className="leading-relaxed" dangerouslySetInnerHTML={{ __html: interest.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" style="color: var(--accent); font-weight: 500;">$1</a>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }}></div>
