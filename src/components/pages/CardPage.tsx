@@ -9,14 +9,26 @@ const markdownComponents = {
     ul: ({ children }: React.ComponentProps<'ul'>) => <ul className="list-disc list-inside mb-3 space-y-1">{children}</ul>,
     ol: ({ children }: React.ComponentProps<'ol'>) => <ol className="list-decimal list-inside mb-3 space-y-1">{children}</ol>,
     li: ({ children }: React.ComponentProps<'li'>) => <li className="mb-1">{children}</li>,
-    a: ({ ...props }) => (
-        <a
-            {...props}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent font-medium transition-all duration-200 rounded hover:bg-accent/10 hover:shadow-sm"
-        />
-    ),
+    a: ({ title, ...props }: React.ComponentProps<'a'>) => {
+        if (title === 'author') {
+            return (
+                <a
+                    {...props}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline transition-all duration-200"
+                />
+            );
+        }
+        return (
+            <a
+                {...props}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent font-medium transition-all duration-200 rounded hover:bg-accent/10 hover:shadow-sm"
+            />
+        );
+    },
     blockquote: ({ children }: React.ComponentProps<'blockquote'>) => (
         <blockquote className="border-l-4 border-accent/50 pl-4 italic my-4 text-neutral-600 dark:text-neutral-500">
             {children}

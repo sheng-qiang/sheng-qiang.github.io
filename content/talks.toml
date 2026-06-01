@@ -32,7 +32,7 @@ link = "https://mp.weixin.qq.com/s/tPe1EDH1xyE2z1-d4Nvg8Q"
 title = "Misinformation Detection in the LLM era: From What It Shows, How It is Made, to Why It is Written"
 subtitle = "大模型时代的虚假信息检测：从表现、过程到意图"
 date = "2026/5/30"
-content = "@ Beijing Foreign Studies University ([Event](https://mp.weixin.qq.com/s/tPe1EDH1xyE2z1-d4Nvg8Q))"
+content = "@ The 2nd Youth Forum on Generative AI Language Capabilities and Safety Governance, Beijing Foreign Studies University ([Event](https://mp.weixin.qq.com/s/tPe1EDH1xyE2z1-d4Nvg8Q))"
 
 [[items]]
 group = "talks"
