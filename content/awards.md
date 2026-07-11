@@ -1,9 +1,0 @@
-- **2024**: Star of Excellence, ICT, CAS
-- **2023**: Excellent Prize of the President Scholarship, CAS
-- **2023**: Special Prize of the President Scholarship, ICT, CAS
-- **2022**: Pacemaker to Merit Student of UCAS, UCAS
-- **2022**: E Fund Scholarship, Guangdong E Fund Education Foundation & ICT, CAS
-- **2021, 2022**: First-Class Academic Scholarship, University of Chinese Academy of Sciences
-- **2019, 2020**: Merit Student, University of Chinese Academy of Sciences
-- **2018**: Outstanding Graduate, Beijing Municipal Commission of Education
-- **[2015](http://www.moe.gov.cn/srcsite/A05/s7505/201601/t20160120_228481.html), [2016](http://www.moe.gov.cn/srcsite/A05/s7505/201612/t20161230_293528.html), [2017](http://www.moe.gov.cn/srcsite/A05/s7505/201711/t20171108_318697.html), 2022**: National Scholarship (×4), Ministry of Education of China
