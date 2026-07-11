@@ -10,12 +10,47 @@ import {
     BookOpenIcon,
     ClipboardDocumentIcon,
     DocumentTextIcon,
-    AcademicCapIcon
+    AcademicCapIcon,
+    TagIcon
 } from '@heroicons/react/24/outline';
 import { Publication } from '@/types/publication';
 import { PublicationPageConfig } from '@/types/page';
 import { cn } from '@/lib/utils';
 import { useMessages } from '@/lib/i18n/useMessages';
+
+// Map base venue name to its filter group.
+// Venues not listed here default to 'Others'.
+const VENUE_GROUPS: Record<string, string> = {
+    'ACL': 'ACL',
+    'CIKM': 'CIKM',
+    'MM': 'MM',
+    'AAAI': 'AAAI',
+    'IJCAI': 'IJCAI',
+    'SIGIR': 'SIGIR',
+    'EMNLP': 'EMNLP',
+    'IP&M': 'IP&M',
+    'NeurIPS': 'NeurIPS',
+    'ICML': 'ICML',
+    'KDD': 'KDD',
+    'WWW': 'WWW',
+    'COLING': 'COLING',
+    'IEEE TKDE': 'IEEE TKDE',
+    'IEEE TVCG': 'IEEE TVCG',
+    'FCS': 'FCS',
+    // Venues merged into Others
+    'CAS Bulletin': 'Others',
+    'J-CRAD': 'Others',
+    'EACL': 'Others',
+    'CCCF': 'Others',
+};
+
+// Derive the venue group from a venue_tag by stripping year suffix and Findings.
+function getVenueGroup(venueTag?: string): string | null {
+    if (!venueTag) return null;
+    // Remove year suffix like '26, '2026 and optional "Findings"
+    const base = venueTag.replace(/'\d{2,4}(?:\s+Findings)?/, '').trim();
+    return VENUE_GROUPS[base] || 'Others';
+}
 
 interface PublicationsListProps {
     config: PublicationPageConfig;
@@ -29,6 +64,7 @@ export default function PublicationsList({ config, publications, embedded = fals
     const [selectedYear, setSelectedYear] = useState<number | 'all'>('all');
     const [selectedType, setSelectedType] = useState<string | 'all'>('all');
     const [selectedCCFRank, setSelectedCCFRank] = useState<string | 'all'>('all');
+    const [selectedVenue, setSelectedVenue] = useState<string | 'all'>('all');
     const [showFilters, setShowFilters] = useState(false);
     const [expandedBibtexId, setExpandedBibtexId] = useState<string | null>(null);
     const [expandedAbstractId, setExpandedAbstractId] = useState<string | null>(null);
@@ -50,6 +86,18 @@ export default function PublicationsList({ config, publications, embedded = fals
         return ranks.sort((a, b) => order.indexOf(a) - order.indexOf(b));
     }, [publications]);
 
+    const venues = useMemo(() => {
+        const groups = Array.from(new Set(
+            publications.map(p => getVenueGroup(p.venue_tag)).filter(Boolean) as string[]
+        ));
+        // Sort: named venues first (alphabetically), Others last
+        return groups.sort((a, b) => {
+            if (a === 'Others') return 1;
+            if (b === 'Others') return -1;
+            return a.localeCompare(b);
+        });
+    }, [publications]);
+
     // Compute counts for each filter value
     const yearCounts = useMemo(() => {
         const counts: Record<number, number> = {};
@@ -69,6 +117,15 @@ export default function PublicationsList({ config, publications, embedded = fals
         return counts;
     }, [publications]);
 
+    const venueCounts = useMemo(() => {
+        const counts: Record<string, number> = {};
+        publications.forEach(p => {
+            const g = getVenueGroup(p.venue_tag);
+            if (g) counts[g] = (counts[g] || 0) + 1;
+        });
+        return counts;
+    }, [publications]);
+
     // Filter publications
     const filteredPublications = useMemo(() => {
         return publications.filter(pub => {
@@ -81,10 +138,11 @@ export default function PublicationsList({ config, publications, embedded = fals
             const matchesYear = selectedYear === 'all' || pub.year === selectedYear;
             const matchesType = selectedType === 'all' || pub.type === selectedType;
             const matchesCCFRank = selectedCCFRank === 'all' || (pub.ccfRank || 'Others') === selectedCCFRank;
+            const matchesVenue = selectedVenue === 'all' || getVenueGroup(pub.venue_tag) === selectedVenue;
 
-            return matchesSearch && matchesYear && matchesType && matchesCCFRank;
+            return matchesSearch && matchesYear && matchesType && matchesCCFRank && matchesVenue;
         });
-    }, [publications, searchQuery, selectedYear, selectedType, selectedCCFRank]);
+    }, [publications, searchQuery, selectedYear, selectedType, selectedCCFRank, selectedVenue]);
 
     return (
         <div>
@@ -231,6 +289,40 @@ export default function PublicationsList({ config, publications, embedded = fals
                                                 )}
                                             >
                                                 {rank} ({ccfRankCounts[rank] || 0})
+                                            </button>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* Venue Filter */}
+                                <div className="space-y-2">
+                                    <label className="text-sm font-medium text-neutral-700 dark:text-neutral-300 flex items-center">
+                                        <TagIcon className="h-4 w-4 mr-1" /> {messages.publications.venue}
+                                    </label>
+                                    <div className="flex flex-wrap gap-2">
+                                        <button
+                                            onClick={() => setSelectedVenue('all')}
+                                            className={cn(
+                                                "px-3 py-1 text-xs rounded-full transition-colors",
+                                                selectedVenue === 'all'
+                                                    ? "bg-accent text-white"
+                                                    : "bg-white dark:bg-neutral-800 text-neutral-600 hover:bg-neutral-100 dark:hover:bg-neutral-700"
+                                            )}
+                                        >
+                                            {messages.common.all}
+                                        </button>
+                                        {venues.map(venue => (
+                                            <button
+                                                key={venue}
+                                                onClick={() => setSelectedVenue(venue)}
+                                                className={cn(
+                                                    "px-3 py-1 text-xs rounded-full transition-colors",
+                                                    selectedVenue === venue
+                                                        ? "bg-accent text-white"
+                                                        : "bg-white dark:bg-neutral-800 text-neutral-600 hover:bg-neutral-100 dark:hover:bg-neutral-700"
+                                                )}
+                                            >
+                                                {venue} ({venueCounts[venue] || 0})
                                             </button>
                                         ))}
                                     </div>

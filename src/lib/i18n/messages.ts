@@ -37,6 +37,7 @@ export interface LocaleMessages {
     filters: string;
     year: string;
     type: string;
+    venue: string;
     noResults: string;
     abstract: string;
     bibtex: string;
@@ -87,6 +88,7 @@ const en: LocaleMessages = {
     filters: 'Filters',
     year: 'Year',
     type: 'Type',
+    venue: 'Venue',
     noResults: 'No publications found matching your criteria.',
     abstract: 'Abstract',
     bibtex: 'BibTeX',
@@ -137,6 +139,7 @@ const zh: LocaleMessages = {
     filters: '筛选',
     year: '年份',
     type: '类型',
+    venue: '会议/期刊',
     noResults: '没有找到符合条件的论文。',
     abstract: '摘要',
     bibtex: 'BibTeX',
