@@ -246,7 +246,9 @@ const authorLinks: Record<string, string> = {
   "yilong xu": "https://scholar.google.com/citations?user=6B5N_cQAAAAJ",
   "xuming hu": "https://xuminghu.github.io/",
   "yuanlong yu": "https://scholar.google.com/citations?user=YxVekJwAAAAJ",
-  "hengqi zeng": "https://scholar.google.com/citations?user=r8Wbo-EAAAAJ"
+  "hengqi zeng": "https://scholar.google.com/citations?user=r8Wbo-EAAAAJ",
+  "yu li": "https://scholar.google.com/citations?user=4-1R-bMAAAAJ",
+  "chenming zhou": "https://scholar.google.com/citations?user=-F7rukcAAAAJ"
 };
 
 function parseAuthors(authorsStr: string, highlightNames: string[]): Array<{ name: string; isHighlighted?: boolean; isCorresponding?: boolean; isCoAuthor?: boolean; url?: string }> {

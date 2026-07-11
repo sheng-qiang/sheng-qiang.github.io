@@ -5,6 +5,16 @@ layout = "compact"
 
 [[items]]
 title = ""
+date = "2026-07"
+content = "Our paper on fine-grained LLM-generated text detection received **[ACL 2026 Outstanding Paper Award](https://2026.aclweb.org/program/best_papers/#outstanding-papers)** and is selected as an **SAC Highlight**."
+
+[[items]]
+title = ""
+date = "2026-07"
+content = "One paper got accepted by MM 2026."
+
+[[items]]
+title = ""
 date = "2026-05"
 content = "One co-authored paper got accepted by KDD 2026."
 

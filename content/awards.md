@@ -1,3 +1,5 @@
+- **2026**: ACL 2026 Outstanding Paper Award & SAC Highlight
+- **2025**: SIGIR 2025 Best PC Member Award
 - **2024**: Star of Excellence, ICT, CAS
 - **2023**: Excellent Prize of the President Scholarship, CAS
 - **2023**: Special Prize of the President Scholarship, ICT, CAS
