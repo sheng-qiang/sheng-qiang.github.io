@@ -61,7 +61,7 @@ title = "Yuanlong Yu"
 subtitle = ""
 date = "2026-"
 group = "current"
-avatar = "/team/yuanlong_yu.jpg"
+  avatar = "/team/yuanlong_yu.png"
 link = "https://scholar.google.com/citations?user=YxVekJwAAAAJ"
 content = "Co-Supervised w. Juan Cao"
 
@@ -82,6 +82,14 @@ group = "current"
 avatar = "/team/hengqi_zeng.jpg"
 link = "https://scholar.google.com/citations?user=r8Wbo-EAAAAJ"
 content = "Co-Supervised w. Juan Cao"
+
+[[items]]
+title = "Kangbo Hu"
+subtitle = ""
+date = "2027-"
+group = "current"
+avatar = "/team/kangbo_hu.png"
+link = "https://scholar.google.com/citations?user=LAMTrQSZG8QC"
 
 [[items]]
 title = "Qiong Nan"

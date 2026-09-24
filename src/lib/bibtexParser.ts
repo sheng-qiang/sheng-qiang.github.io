@@ -207,6 +207,7 @@ const authorLinks: Record<string, string> = {
   "danding wang": "https://scholar.google.com/citations?user=hGZwK0cAAAAJ",
   "xiaoyue mi": "https://scholar.google.com/citations?user=9eDMXxMAAAAJ",
   "fan tang": "https://scholar.google.com/citations?user=PdKElfwAAAAJ",
+  "sheng tang": "https://scholar.google.com/citations?user=rUcF4BkAAAAJ",
   "ziyao huang": "https://scholar.google.com/citations?user=nijlf5YAAAAJ",
   "peng li": "https://scholar.google.com/citations?user=hgYzkOQAAAAJ",
   "yang liu": "https://scholar.google.com/citations?user=lVhoKNcAAAAJ",
