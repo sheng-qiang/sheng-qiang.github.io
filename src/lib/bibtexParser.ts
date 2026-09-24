@@ -191,6 +191,7 @@ function buildNameVariants(name: string): Set<string> {
 }
 
 const authorLinks: Record<string, string> = {
+  "haipeng fang": "https://scholar.google.com/citations?user=yJ_E_F4AAAAJ",
   "shaofei wang": "https://scholar.google.com/citations?user=clCHEnkAAAAJ",
   "yuhui shi": "https://scholar.google.com/citations?user=xAw_fukAAAAJ",
   "yehan yang": "http://undground.fun",
