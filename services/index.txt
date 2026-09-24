@@ -67,7 +67,7 @@ c:["$","$15",null,{"fallback":null,"children":["$","$L16",null,{"promise":"$@17"
 **CIKM** [2023](https://dl.acm.org/action/showFmPdf?doi=10.1145%2F3583780), [2024](https://dl.acm.org/action/showFmPdf?doi=10.1145%2F3627673), [2025](https://dl.acm.org/action/showFmPdf?doi=10.1145%2F3746252)  
 **CSCW** [2021 **(Recognized for Excellent Reviewing)**](https://dl.acm.org/action/showFmPdf?doi=10.1145%2F3462204)  
 **EACL** [2023](https://aclanthology.org/2023.eacl-main.0.pdf), [2024](https://aclanthology.org/2024.eacl-long.0.pdf), [2026](https://aclanthology.org/2026.eacl-industry.0.pdf)  
-**ECML-PKDD** [2023](https://link.springer.com/content/pdf/bfm:978-3-031-43412-9/1?pdf=chapter%20toc), [2024](https://link.springer.com/content/pdf/bfm:978-3-031-70341-6/1), [2025](https://link.springer.com/content/pdf/bfm:978-3-032-05981-9/1), 2026  
+**ECML-PKDD** [2023](https://link.springer.com/content/pdf/bfm:978-3-031-43412-9/1?pdf=chapter%20toc), [2024](https://link.springer.com/content/pdf/bfm:978-3-031-70341-6/1), [2025](https://link.springer.com/content/pdf/bfm:978-3-032-05981-9/1), [2026](https://link.springer.com/content/pdf/bfm:978-3-032-37654-1/1)  
 **EMNLP** [2021](https://aclanthology.org/2021.emnlp-main.0.pdf), 2022, [2023](https://aclanthology.org/2023.emnlp-main.0.pdf), [2024](https://aclanthology.org/2024.emnlp-main.0.pdf), [2025](https://aclanthology.org/2025.emnlp-main.0.pdf)  
 **ICME** [2025](https://ieeexplore.ieee.org/ielx8/11208895/11208897/11209086.pdf)  
 **IJCAI** [2023](https://ijcai-23.org/pc-member-list/), [2024](https://ijcai24.org/program-committee-pcs/), [2025](https://certificates.ijcai.org/?q=reviewers&y=2025&id=a723721f-0421-4bd9-a4d8-f291255482f7)  
