@@ -2,7 +2,7 @@
 title = "Qiang Sheng"
 description = "Associate Professor/Researcher at the Institute of Computing Technology, Chinese Academy of Sciences. Research on Misinformation Detection, Fact-Checking, and Machine-Generated Content Detection."
 favicon = "/favicon.svg"
-last_updated = "September 25, 2026"
+last_updated = "October 6, 2026"
 
 [author]
 name = "Qiang Sheng"
@@ -20,6 +20,7 @@ location_details = [
   "Beijing, China"
 ]
 google_scholar = "https://scholar.google.com/citations?user=8BEUQ9UAAAAJ"
+semantic_scholar = "https://www.semanticscholar.org/author/Qiang-Sheng/46630548"
 orcid = "https://orcid.org/0000-0002-2481-5023"
 github = "https://github.com/sheng-qiang/"
 zhihu = "https://www.zhihu.com/column/c_1394265881195753473"
